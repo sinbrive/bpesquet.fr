@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Introduction au Deep Learning - Baptiste Pesquet</title>
+
+	<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../reveal.js/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background="images/ml_background.jpg">
+				<h2>Introduction au Deep Learning</h2>
+				<p>
+					<a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a>
+				</p>
+				<p>
+					<a href="http://bpesquet.com">Baptiste Pesquet</a>
+				</p>
+			</section>
+			<section>
+				<img data-src="images/deep_learning_meme_keras.png" />
+			</section>
+			<section>
+				<h3>Sommaire</h3>
+				<ul>
+					<li>IA, Machine Learning et Deep Learning</li>
+					<li>Les réseaux de neurones</li>
+				</ul>
+			</section>
+			<section>
+				<h2>IA, Machine Learning et Deep Learning</h2>
+			</section>
+			<section>
+				<a href="http://www.prowesscorp.com/whats-the-difference-between-artificial-intelligence-ai-machine-learning-and-deep-learning/">
+					<img data-src="images/ai_ml_dl.png" />
+				</a>
+			</section>
+			<section>
+				<section>
+					<h3>Intelligence artificielle</h3>
+					<blockquote>"L'IA consiste à parvenir à faire faire aux machines ce que l’homme fait aujourd’hui mieux qu’elles, notamment s’adapter,
+						apprendre, communiquer et interagir d’une manière riche et variée avec leur environnement."</blockquote>
+					(Source :
+					<a href="https://www.economie.gouv.fr/France-IA-intelligence-artificielle">#FranceIA</a>)
+				</section>
+				<section>
+					<h3>De nombreux domaines d'étude</h3>
+					<ul>
+						<li>Logique et raisonnement</li>
+						<li>Bases de connaissances, Web sémantique</li>
+						<li>Apprentissage automatique</li>
+						<li>Traitement du langage naturel</li>
+						<li>Robotique</li>
+						<li>Sciences cognitives</li>
+						<li>Aide à la décision</li>
+						<li>...</li>
+					</ul>
+					<p>(Source :
+						<a href="https://www.inria.fr/actualite/actualites-inria/livre-blanc-sur-l-intelligence-artificielle">INRIA</a>)
+					</p>
+				</section>
+				<section>
+					<h3>Une histoire jeune et mouvementée</h3>
+					<a href="https://www.slideshare.net/dlavenda/ai-and-productivity">
+						<img data-src="images/ai_timeline.jpg" />
+					</a>
+				</section>
+				<section>
+					<h3>L'été, jusqu'à quand ?</h3>
+					<img data-src="images/winteriscoming.jpg" />
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Machine Learning</h3>
+					( Apprentissage automatique)
+					<p>Ensemble de techniques permettant à des machines de
+						<strong>s’entraîner</strong> sur des bases d’exemples, d’en faire émerger des traits, de généraliser sur des exemples non
+						encore rencontrés et de
+						<strong>s'améliorer</strong> continuellement avec l’expérience.</p>
+				</section>
+				<section>
+					<h3>Un nouveau paradigme</h3>
+					<p class="fragment">
+						<img data-src="images/programming_paradigm.png" />
+					</p>
+					<p class="fragment">
+						<img data-src="images/training_paradigm.png" />
+					</p>
+				</section>
+				<section>
+					<a href="https://xkcd.com/1838/">
+						<img data-src="images/machine_learning_xkcd.png" />
+					</a>
+				</section>
+			</section>
+			<section>
+				<img data-src="images/machine_learning_tree.png" />
+			</section>
+			<section>
+				<section>
+					<h3>Apprentissage supervisé</h3>
+					<p>Les résultats à obtenir sont fournis avec les données d'entraînement.</p>
+					<p>Ces données sont dites
+						<strong>structurées</strong> (étiquetées).
+					</p>
+				</section>
+				<section>
+					<h3>Régression</h3>
+					<p>Le système prédit des valeurs
+						<strong>continues</strong>.
+					</p>
+					<img data-src="images/ml_regression.png"></img>
+				</section>
+				<section>
+					<h3>Classification</h3>
+					<p>Le système prédit des valeurs discrètes : il
+						<strong>catégorise</strong> les entrées.
+					</p>
+					<img data-src="images/ml_classification.png" />
+				</section>
+			</section>
+			<section>
+				<h3>Apprentissage non supervisé</h3>
+				<p>Le système doit découvrir par lui-même une éventuelle structure dans les données fournies.</p>
+				<img data-src="images/ml_unsupervised.png" />
+			</section>
+			<section>
+				<h3>Apprentissage par renforcement</h3>
+				<p>Les décisions du système lui procurent une
+					<strong>récompense</strong> qu'il cherche à maximiser.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/TmPfTpjtdgg?rel=0&amp;showinfo=0" frameborder="0" gesture="media"
+				 allow="encrypted-media" allowfullscreen></iframe>
+			</section>
+			<section>
+				<section>
+					<h3>Deep Learning</h3>
+					(Appprentissage profond)
+					<p>Ensemble de techniques d’apprentissage automatique dans lesquels de vastes réseaux de neurones artificiels exploitent
+						de grandes quantités de données.</p>
+					<p>A l'origine de la majorité des avancées récentes en IA.</p>
+				</section>
+				<section>
+					<h3>Vision par ordinateur</h3>
+					<a href="https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/">
+						<img data-src="images/computer_vision.png"></img>
+					</a>
+				</section>
+				<section>
+					<h3>Compréhension de la parole</h3>
+					<img data-src="images/apple_siri.jpg" />
+				</section>
+				<section>
+					<h3>Véhicules autonomes</h3>
+					<iframe data-src="https://player.vimeo.com/video/192261894?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0"
+					 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</section>
+				<section>
+					<h3>Algorithmes de recommandation</h3>
+					<img data-src="images/discover_weekly.png" />
+				</section>
+				<section>
+					<h3>Jeux complexes</h3>
+					<img data-src="images/alphago.png" />
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Les clés du succès</h3>
+					<ul>
+						<li>L'optimisation d'algorithmes connus depuis les années 1980</li>
+						<li>L'augmentation de la puissance de calcul des machines</li>
+						<li>L'explosion du volume de données disponibles</li>
+					</ul>
+				</section>
+				<section>
+					<h3>L'état de l'art en 1989</h3>
+					<img data-src="images/lecun_lenet.gif" />
+					<p>
+						<a href="</a>http://yann.lecun.com/exdb/lenet/">http://yann.lecun.com/exdb/lenet/</a>
+					</p>
+				</section>
+				<section>
+					<img data-src="images/infographic2-intel-past-present.gif" />
+				</section>
+				<section>
+					<img data-src="images/big_data_universe.png" />
+				</section>
+			</section>
+			<section>
+				<h2>Les réseaux de neurones</h2>
+			</section>
+			<section>
+				https://devblogs.nvidia.com/parallelforall/inference-next-step-gpu-accelerated-deep-learning/ https://royalsociety.org/topics-policy/projects/machine-learning/
+			</section>
+		</div>
+		<div>
+			<img src="images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</div>
+	</div>
+
+	<script src="../reveal.js/lib/js/head.min.js"></script>
+	<script src="../reveal.js/js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			// Display the page number of the current slide
+			slideNumber: true,
+			// Display the page number of the current slide
+			transition: "convex",
+			dependencies: [
+				{ src: '../reveal.js/plugin/markdown/marked.js' },
+				{ src: '../reveal.js/plugin/markdown/markdown.js' },
+				{ src: '../reveal.js/plugin/notes/notes.js', async: true },
+				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
