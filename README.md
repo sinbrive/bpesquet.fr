@@ -1,5 +1,5 @@
-# bpesquet.com
+# bpesquet.fr
 
-Personal webpage
+Page professionnelle.
 
-Libraries : [PureCSS](http://purecss.io/), [Font Awesome](http://fontawesome.io/)
+Librairies : [PureCSS](http://purecss.io/), [Font Awesome](http://fontawesome.io/)
