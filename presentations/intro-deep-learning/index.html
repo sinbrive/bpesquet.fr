@@ -26,7 +26,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-background="images/ml_background.jpg">
+			<section>
 				<h2>Introduction au Deep Learning</h2>
 				<p>
 					<a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a>
@@ -42,7 +42,9 @@
 				<h3>Sommaire</h3>
 				<ul>
 					<li>IA, Machine Learning et Deep Learning</li>
+					<li>Python et la Data Science</li>
 					<li>Les réseaux de neurones</li>
+					<li>Vers le Deep Learning</li>
 				</ul>
 			</section>
 			<section>
@@ -159,7 +161,7 @@
 					<p>A l'origine de la majorité des avancées récentes en IA.</p>
 				</section>
 				<section>
-					<h3>Vision par ordinateur</h3>
+					<h3>Reconnaissance visuelle</h3>
 					<a href="https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/">
 						<img data-src="images/computer_vision.png"></img>
 					</a>
@@ -209,14 +211,24 @@
 				<h2>Les réseaux de neurones</h2>
 			</section>
 			<section>
+				<h2>La notion de tenseur</h2>
+				<p>Un tenseur est un conteneur de nombres. Exemple : une matrice est un tenseur à 2 dimensions.</p>
+				<p>Les dimensions d'un tenseur sont appelées ses
+					<strong>axes</strong>. Le nombre d'axes est appelé le
+					<strong>rang</strong>.
+				</p>
+			</section>
+			<section>
 				https://devblogs.nvidia.com/parallelforall/inference-next-step-gpu-accelerated-deep-learning/ https://royalsociety.org/topics-policy/projects/machine-learning/
 			</section>
 		</div>
-		<div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
 			<img src="images/ENSC.jpg" style="position: absolute;
-						bottom: 10px;
-						left: 10px;" />
-		</div>
+								bottom: 10px;
+								left: 10px;" />
+		</a>
 	</div>
 
 	<script src="../reveal.js/lib/js/head.min.js"></script>
@@ -231,6 +243,8 @@
 			slideNumber: true,
 			// Display the page number of the current slide
 			transition: "convex",
+			// Parallax background image
+			parallaxBackgroundImage: 'images/draft.png',
 			dependencies: [
 				{ src: '../reveal.js/plugin/markdown/marked.js' },
 				{ src: '../reveal.js/plugin/markdown/markdown.js' },
