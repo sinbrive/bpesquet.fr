@@ -305,23 +305,104 @@
 				</section>
 			</section>
 			<section>
-				<h3>La renaissance</h3>
+				<h3>Des progrès décisifs</h3>
 				<ul>
 					<li>1974 : technique de la rétropropagation (P. Werbos)</li>
 					<li>1986 : apprentissage par rétropropagation (Rumelhart, Hinton, Williams)</li>
 					<li>1989 : preuve mathématique de la capacité des réseaux de neurones à approximer toute fonction mesurable (Hornik, Stinchcombe,
 						White)
 					</li>
-					<li>1989 : début des travaux sur les réseaux convolutifs (Y. LeCun, Y. Bengio)</li>
+					<li>1989 : début des travaux sur les réseaux convolutifs profonds (Y. LeCun, Y. Bengio)</li>
 				</ul>
 			</section>
 			<section>
-				<h3>L'ère moderne</h3>
+				<h3>L'avènement du Deep Learning</h3>
 				<ul>
 					<li>2012 : AlexNet (Krizhevsky, Sutskever, Hinton) remporte la compétition ImageNet</li>
 					<li>2016 : AlphaGo (DeepMind) bat le champion de Go Lee Sedol par 4 victoires à 1</li>
 					<li>2017 : AlphaZero atteint en 24h un niveau surhumain au Go et aux échecs</li>
 				</ul>
+			</section>
+			<section>
+				<section>
+					<h3>Format des données d'entrée</h3>
+					<ul>
+						<li>
+							<strong>Cas général</strong> : matrice de la forme
+							<em>(samples, features)</em>
+						</li>
+						<li>
+							<strong>Images</strong> : tenseur 4D de la forme
+							<em>(samples, height, width, color_channels)</em>
+						</li>
+						<li>
+							<strong>Vidéos</strong> : tenseur 5D de la forme
+							<em>(samples, frames, height, width, color_channels)</em>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exemple : prix immobiliers</h3>
+					<table>
+						<thead>
+							<th>Surface (m2)
+							</th>
+							<th>Nombre chambres
+							</th>
+							<th>Age (années)
+							</th>
+							<th>Code Postal
+							</th>
+							<th>Prix (k€)
+							</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>145</td>
+								<td>6</td>
+								<td>32</td>
+								<td>33600</td>
+								<td>380</td>
+							</tr>
+							<tr>
+								<td>85</td>
+								<td>3</td>
+								<td>45</td>
+								<td>33700</td>
+								<td>290</td>
+							</tr>
+							<tr>
+								<td>210</td>
+								<td>7</td>
+								<td>12</td>
+								<td>33400</td>
+								<td>740</td>
+							</tr>
+							<tr>
+								<td>...</td>
+								<td>...</td>
+								<td>...</td>
+								<td>...</td>
+								<td>...</td>
+							</tr>
+							<tr>
+								<td>110</td>
+								<td>4</td>
+								<td>22</td>
+								<td>33000</td>
+								<td>410</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<h3>Exemple : prix immobiliers</h3>
+					<img data-src="images/nn_data_matrix.png" />
+				</section>
+				<section>
+					<h3>Exemple : image RGB</h3>
+					<img data-src="images/nn_image_channels.png" />
+				</section>
 			</section>
 		</div>
 	</div>
