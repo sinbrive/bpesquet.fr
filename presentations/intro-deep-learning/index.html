@@ -44,7 +44,8 @@
 					<li>IA, Machine Learning et Deep Learning</li>
 					<li>Python et la Data Science</li>
 					<li>Les réseaux de neurones</li>
-					<li>Vers le Deep Learning</li>
+					<li>Premiers pas avec Keras</li>
+					<li>Paramétrage et optimisation d'un réseau</li>
 				</ul>
 			</section>
 			<section>
@@ -194,10 +195,10 @@
 					</ul>
 				</section>
 				<section>
-					<h3>L'état de l'art en 1989</h3>
+					<h3>L'état de l'art au début des années 1990</h3>
 					<img data-src="images/lecun_lenet.gif" />
 					<p>
-						<a href="</a>http://yann.lecun.com/exdb/lenet/">http://yann.lecun.com/exdb/lenet/</a>
+						<a href="http://yann.lecun.com/exdb/lenet/">http://yann.lecun.com/exdb/lenet/</a>
 					</p>
 				</section>
 				<section>
@@ -208,18 +209,119 @@
 				</section>
 			</section>
 			<section>
+				<h2>Python et la Data Science</h2>
+			</section>
+			<section>
+				<h3>Le langage Python</h3>
+				<p>Langage de programmation sous licence libre créé en 1989 par Guido van Rossum.</p>
+				<img data-src="images/Python_logo.png" />
+				<ul>
+					<li>Multi-paradigmes (procédural, fonctionnel, objet)</li>
+					<li>Typage dynamique</li>
+					<li>Gestion automatique de la mémoire</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Python, le standard pour la Data Science</h3>
+				<ul>
+					<li>Qualités du langage (logique, simplicité, souplesse)</li>
+					<li>Implication de la communauté scientifique et universitaire</li>
+					<li>Existence de nombreuses bibliothèques dédiées</li>
+				</ul>
+			</section>
+			<section>
+				<h3>En pratique</h3>
+				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/1%20-%20Python%20For%20Data%20Science.ipynb">Python For Data Science</a>
+			</section>
+			<section>
 				<h2>Les réseaux de neurones</h2>
 			</section>
 			<section>
-				<h2>La notion de tenseur</h2>
-				<p>Un tenseur est un conteneur de nombres. Exemple : une matrice est un tenseur à 2 dimensions.</p>
-				<p>Les dimensions d'un tenseur sont appelées ses
-					<strong>axes</strong>. Le nombre d'axes est appelé le
-					<strong>rang</strong>.
-				</p>
+				<section>
+					<h3>Les origines</h3>
+					<ul>
+						<li>1943 : premier modèle mathématique du neurone biologique (McCulloch et Pitts)</li>
+						<li>1949 : règle de Hebb</li>
+						<li>1958 : le perceptron (F. Rosenblatt)</li>
+						<li>1969 : limites des perceptrons (M. Minsky)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>L'inspiration biologique</h3>
+					<img data-src="images/neuron.png" />
+				</section>
+				<section>
+					<h3>Le neurone formel de McCulloch et Pitts</h3>
+					<a href="http://cs231n.github.io/neural-networks-1/">
+						<img data-src="images/neuron_model.jpeg" />
+					</a>
+				</section>
+				<section>
+					<h3>La règle de Hebb</h3>
+					<p>Postulat sur l'importance des synapses entre neurones pour l'apprentissage.</p>
+					<q>
+						Quand un axone d'une cellule A est assez proche pour exciter une cellule B de manière répétée et persistante, une croissance
+						ou des changements métaboliques prennent place dans l'une ou les deux cellules ce qui entraîne une augmentation de
+						l'efficacité de A comme cellule stimulant B.
+					</q>
+				</section>
+				<section>
+					<h3>Le perceptron de Franck Rosenblatt</h3>
+					<img data-src="images/Perceptron.jpg" />
+				</section>
+				<section>
+					<h3>Algorithme d'apprentissage du perceptron</h3>
+					<ol>
+						<li>Initialiser aléatoirement les poids des connexions</li>
+						<li>Pour chaque donnée de test :
+							<ol>
+								<li>Calculer la sortie du perceptron</li>
+								<li>Si la sortie calculée diffère de celle attendue :
+									<ul>
+										<li>Si 0 au lieu de 1, diminuer les poids ayant 1 comme valeur d'entrée</li>
+										<li>Si 1 au lieu de 0, augmenter les poids ayant 1 comme valeur d'entrée</li>
+									</ul>
+								</li>
+							</ol>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Multi Layer Perceptron (MLP)</h3>
+					<a href="http://cs231n.github.io/neural-networks-1/">
+						<img data-src="images/neural_net2.jpeg" />
+					</a>
+				</section>
+				<section>
+					<h3>La critique de Minsky</h3>
+					<ul>
+						<li>Un seul perceptron ne peut pas apprendre une fonction non séparable linéairement</li>
+					</ul>
+					<img data-src="images/xor.png" />
+					<ul>
+						<li>Aucun algorithme d'apprentissage ne fonctionne pour les couches cachées d'un MLP</li>
+					</ul>
+
+				</section>
 			</section>
 			<section>
-				https://devblogs.nvidia.com/parallelforall/inference-next-step-gpu-accelerated-deep-learning/ https://royalsociety.org/topics-policy/projects/machine-learning/
+				<h3>La renaissance</h3>
+				<ul>
+					<li>1974 : technique de la rétropropagation (P. Werbos)</li>
+					<li>1986 : apprentissage par rétropropagation (Rumelhart, Hinton, Williams)</li>
+					<li>1989 : preuve mathématique de la capacité des réseaux de neurones à approximer toute fonction mesurable (Hornik, Stinchcombe,
+						White)
+					</li>
+					<li>1989 : début des travaux sur les réseaux convolutifs (Y. LeCun, Y. Bengio)</li>
+				</ul>
+			</section>
+			<section>
+				<h3>L'ère moderne</h3>
+				<ul>
+					<li>2012 : AlexNet (Krizhevsky, Sutskever, Hinton) remporte la compétition ImageNet</li>
+					<li>2016 : AlphaGo (DeepMind) bat le champion de Go Lee Sedol par 4 victoires à 1</li>
+					<li>2017 : AlphaZero atteint en 24h un niveau surhumain au Go et aux échecs</li>
+				</ul>
 			</section>
 		</div>
 	</div>
