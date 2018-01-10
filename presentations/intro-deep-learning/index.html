@@ -443,6 +443,10 @@
 				<img data-src="images/neuron_output.png" />
 			</section>
 			<section>
+				<h3>Les fonctions d'activation</h3>
+				<img data-src="images/activation_functions.png" />
+			</section>
+			<section>
 				<section>
 					<h3>Vectorisation des calculs</h3>
 					<img data-src="images/nn_matrixes.png" />
@@ -458,6 +462,32 @@
 				<section>
 					<h3>Sortie de la couche 3</h3>
 					<img data-src="images/output_layer3.png" />
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>La fonction de coût (loss)</h3>
+					<ul>
+						<li>Mesure l'écart entre les résultats attendus et calculés</li>
+						<li>Dépend du type d'apprentissage</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exemples de fonctions</h3>
+					<ul>
+						<li>
+							<em>Binary crossentropy</em>
+							<br>\(\mathcal{L}(\theta)= -\frac{1}{m}\sum_{i=1}^m \left[y_i \log(y'_i) + (1-y_i) \log(1-y'_i)\right]\)
+						</li>
+						<li>
+							<em>Categorical crossentropy</em>
+							<br>\(\mathcal{L}(\theta)= -\frac{1}{m}\sum_{i=1}^m\sum_{j=1}^n y_{ij} \log(y'_{ij})\)
+						</li>
+						<li>
+							<em>Mean Squared Error</em>
+							<br>\(\mathcal{L}(\theta)= \frac{1}{m}\sum_{i=1}^m (y'_{i} - y_{i})^2\)
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section>
@@ -508,11 +538,16 @@ def __init__(self, input_size, hidden_size):
 			transition: "convex",
 			// Parallax background image
 			parallaxBackgroundImage: 'images/draft.png',
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  // See http://docs.mathjax.org/en/latest/config-files.html
+			},
 			dependencies: [
 				{ src: '../reveal.js/plugin/markdown/marked.js' },
 				{ src: '../reveal.js/plugin/markdown/markdown.js' },
 				{ src: '../reveal.js/plugin/notes/notes.js', async: true },
-				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+				{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: '../reveal.js/plugin/math/math.js', async: true }
 			]
 		});
 	</script>
