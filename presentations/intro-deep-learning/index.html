@@ -288,8 +288,8 @@
 				</section>
 				<section>
 					<h3>Multi Layer Perceptron (MLP)</h3>
-					<a href="http://cs231n.github.io/neural-networks-1/">
-						<img data-src="images/neural_net2.jpeg" />
+					<a href="http://neuralnetworksanddeeplearning.com/chap1.html">
+						<img data-src="images/neural_net2.png" />
 					</a>
 				</section>
 				<section>
@@ -305,15 +305,22 @@
 				</section>
 			</section>
 			<section>
-				<h3>Des progrès décisifs</h3>
-				<ul>
-					<li>1974 : technique de la rétropropagation (P. Werbos)</li>
-					<li>1986 : apprentissage par rétropropagation (Rumelhart, Hinton, Williams)</li>
-					<li>1989 : preuve mathématique de la capacité des réseaux de neurones à approximer toute fonction mesurable (Hornik, Stinchcombe,
-						White)
-					</li>
-					<li>1989 : début des travaux sur les réseaux convolutifs profonds (Y. LeCun, Y. Bengio)</li>
-				</ul>
+				<section>
+					<h3>Des progrès décisifs</h3>
+					<ul>
+						<li>1974 : technique de la rétropropagation (P. Werbos)</li>
+						<li>1986 : apprentissage par rétropropagation (Rumelhart, Hinton, Williams)</li>
+						<li>1989 : preuve mathématique de la capacité des réseaux de neurones à approximer toute fonction mesurable (Hornik, Stinchcombe,
+							White)
+						</li>
+						<li>1989 : début des travaux sur les réseaux convolutifs profonds (Y. LeCun, Y. Bengio)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Les prémisses de la reconnaissance visuelle</h3>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/FwFduRA_L6Q?showinfo=0" frameborder="0" gesture="media"
+					 allow="encrypted-media" allowfullscreen></iframe>
+				</section>
 			</section>
 			<section>
 				<h3>L'avènement du Deep Learning</h3>
@@ -322,6 +329,33 @@
 					<li>2016 : AlphaGo (DeepMind) bat le champion de Go Lee Sedol par 4 victoires à 1</li>
 					<li>2017 : AlphaZero atteint en 24h un niveau surhumain au Go et aux échecs</li>
 				</ul>
+			</section>
+			<section>
+				<h3>Apprentissage supervisé</h3>
+				<ul>
+					<li class="fragment">
+						<strong>Classification binaire</strong> (0 ou 1)
+						<br>Chat/non chat, spam/non spam, maligne/bénigne
+					</li>
+					<li class="fragment">
+						<strong>Classification multiclasses</strong>
+						<br>Chat/chien/autre animal, reconnaissance de chiffres, catégorisation de tweets
+					</li>
+					<li class="fragment">
+						<strong>Régression</strong>
+						<br>Prix d'un bien immobilier, prévision de températures, âge d'une personne
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Anatomie d'un réseau</h3>
+				<img data-src="images/nn_weights.png" />
+			</section>
+			<section>
+				<h3>Algorithme d'apprentissage</h3>
+				<a href="https://www.manning.com/books/deep-learning-with-python">
+					<img data-src="images/01fig09.jpg" />
+				</a>
 			</section>
 			<section>
 				<section>
@@ -403,6 +437,34 @@
 					<h3>Exemple : image RGB</h3>
 					<img data-src="images/nn_image_channels.png" />
 				</section>
+			</section>
+			<section>
+				<h3>Sortie pour un neurone</h3>
+				<img data-src="images/neuron_output.png" />
+			</section>
+			<section>
+				<h3>Exemple en Python</h3>
+				<pre><code data-trim>
+class NeuralNetwork(object):
+"""Neural network with one hidden layer"""
+
+def __init__(self, input_size, hidden_size):
+  # store the sizes of the 3 layers
+  self.input_size = input_size
+  self.hidden_size = hidden_size
+  self.output_size = 1
+
+  # weight matrix from input to hidden layer
+  self.W1 = np.random.randn(
+    self.input_size, self.hidden_size) / 
+      np.sqrt(self.input_size)
+  self.b1 = np.zeros((1, self.hidden_size))
+  # weight matrix from hidden to output layer
+  self.W2 = np.random.randn(
+    self.hidden_size, self.output_size) / 
+	  np.sqrt(self.hidden_size)
+  self.b2 = np.zeros((1, self.output_size))
+				</code></pre>
 			</section>
 		</div>
 	</div>
