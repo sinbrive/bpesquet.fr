@@ -352,10 +352,16 @@
 				<img data-src="images/nn_weights.png" />
 			</section>
 			<section>
-				<h3>Algorithme d'apprentissage</h3>
-				<a href="https://www.manning.com/books/deep-learning-with-python">
-					<img data-src="images/01fig09.jpg" />
-				</a>
+				<section>
+					<h3>Algorithme d'apprentissage</h3>
+					<a href="https://www.manning.com/books/deep-learning-with-python">
+						<img data-src="images/01fig09.jpg" />
+					</a>
+				</section>
+				<section>
+					<h3>Entrainement et inférence</h3>
+					<img data-src="images/training_inference1.png" />
+				</section>
 			</section>
 			<section>
 				<section>
@@ -469,6 +475,7 @@
 					<h3>La fonction de coût (loss)</h3>
 					<ul>
 						<li>Mesure l'écart entre les résultats attendus et calculés</li>
+						<li>Paramètres : les poids du réseau</li>
 						<li>Dépend du type d'apprentissage</li>
 					</ul>
 				</section>
@@ -491,28 +498,59 @@
 				</section>
 			</section>
 			<section>
-				<h3>Exemple en Python</h3>
-				<pre><code data-trim>
-class NeuralNetwork(object):
-"""Neural network with one hidden layer"""
-
-def __init__(self, input_size, hidden_size):
-  # store the sizes of the 3 layers
-  self.input_size = input_size
-  self.hidden_size = hidden_size
-  self.output_size = 1
-
-  # weight matrix from input to hidden layer
-  self.W1 = np.random.randn(
-    self.input_size, self.hidden_size) / 
-      np.sqrt(self.input_size)
-  self.b1 = np.zeros((1, self.hidden_size))
-  # weight matrix from hidden to output layer
-  self.W2 = np.random.randn(
-    self.hidden_size, self.output_size) / 
-	  np.sqrt(self.hidden_size)
-  self.b2 = np.zeros((1, self.output_size))
-				</code></pre>
+				<section>
+					<h3>Ajustement des poids du réseau</h3>
+					<p>Objectif : minimiser la fonction de coût</p>
+					<p>Principe : mettre à jour les poids par petites étapes dans la direction inverse du
+						<strong>gradient</strong> de la fonction de coût
+					</p>
+				</section>
+				<section>
+					<h3>La notion de gradient</h3>
+					<p>Variation d'une fonction par rapport à la variation de ses différents paramètres</p>
+					<p>Vecteur dont les composantes sont les dérivées partielles de la fonction</p>
+				</section>
+				<section>
+					<h3>Descente de gradient</h3>
+					<img data-src="images/gradient_descent_1D.png" />
+				</section>
+				<section>
+					<h3>Gradient 2D</h3>
+					<img data-src="images/tangent_space.png" />
+				</section>
+				<section>
+					<h3>Descente de gradient 2D</h3>
+					<img data-src="images/gradient_descent.gif" />
+				</section>
+			</section>
+			<section>
+				<h3>La rétropropagation</h3>
+				<p>Objectif : calculer le gradient de la fonction de coût par rapport à ses paramètres (les poids du réseau)</p>
+				<p>Principe : appliquer la règle des dérivations en chaîne ou
+					<strong>
+						<em>chain rule</em>
+					</strong> pour calculer les dérivées partielles de la fonction de coût
+				</p>
+				$$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}$$
+			</section>
+			<section>
+				<section>
+					<h3>Optimiser la descente de gradient</h3>
+					<p>
+						<strong>Learning rate</strong> \(\alpha\) : facteur d'ajustement des poids en fonction du gradient du coût</p>
+					$$\theta= \theta - \alpha \frac{\partial}{\partial \theta} \mathcal{L}(\theta)$$
+				</section>
+				<section>
+					<h3>Importance du learning rate</h3>
+					<img data-src="images/learning_rate.png" />
+				</section>
+				<section>
+					<h3>Les méthodes d'optimisation</h3>
+					SGD Mini-batch RMSprop Adam
+				</section>
+			</section>
+			<section>
+				<h3>L'accuracy</h3>
 			</section>
 		</div>
 	</div>
