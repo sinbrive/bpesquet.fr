@@ -484,15 +484,15 @@
 					<ul>
 						<li>
 							<em>Binary crossentropy</em>
-							<br>\(\mathcal{L}(\theta)= -\frac{1}{m}\sum_{i=1}^m \left[y_i \log(y'_i) + (1-y_i) \log(1-y'_i)\right]\)
+							<br>\(\mathcal{J}(\theta)= -\frac{1}{m}\sum_{i=1}^m \left[y_i \log(y'_i) + (1-y_i) \log(1-y'_i)\right]\)
 						</li>
 						<li>
 							<em>Categorical crossentropy</em>
-							<br>\(\mathcal{L}(\theta)= -\frac{1}{m}\sum_{i=1}^m\sum_{j=1}^n y_{ij} \log(y'_{ij})\)
+							<br>\(\mathcal{J}(\theta)= -\frac{1}{m}\sum_{i=1}^m\sum_{j=1}^n y_{ij} \log(y'_{ij})\)
 						</li>
 						<li>
 							<em>Mean Squared Error</em>
-							<br>\(\mathcal{L}(\theta)= \frac{1}{m}\sum_{i=1}^m (y'_{i} - y_{i})^2\)
+							<br>\(\mathcal{J}(\theta)= \frac{1}{m}\sum_{i=1}^m (y'_{i} - y_{i})^2\)
 						</li>
 					</ul>
 				</section>
@@ -531,26 +531,48 @@
 						<em>chain rule</em>
 					</strong> pour calculer les dérivées partielles de la fonction de coût
 				</p>
-				$$\frac{dy}{dx} = \frac{dy}{du} \frac{du}{dx}$$
+				$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$
 			</section>
 			<section>
 				<section>
-					<h3>Optimiser la descente de gradient</h3>
+					<h3>Optimisation de la descente de gradient</h3>
 					<p>
 						<strong>Learning rate</strong> \(\alpha\) : facteur d'ajustement des poids en fonction du gradient du coût</p>
-					$$\theta= \theta - \alpha \frac{\partial}{\partial \theta} \mathcal{L}(\theta)$$
+					$$\theta_{i+1} = \theta_i - \alpha \frac{\partial}{\partial \theta} \mathcal{J}(\theta_i)$$
 				</section>
 				<section>
 					<h3>Importance du learning rate</h3>
 					<img data-src="images/learning_rate.png" />
 				</section>
 				<section>
-					<h3>Les méthodes d'optimisation</h3>
-					SGD Mini-batch RMSprop Adam
+					<h3>Le problème des minima locaux</h3>
+					<img data-src="images/02fig13.jpg" />
+				</section>
+				<section>
+					<h3>Quelques méthodes d'optimisation</h3>
+					<ul>
+						<li>Stochastic Gradient Descent</li>
+						<li>Mini-batch Gradient Descent (entre 50 et 256 samples)</li>
+						<li>RMSprop</li>
+						<li>Adam</li>
+					</ul>
 				</section>
 			</section>
 			<section>
-				<h3>L'accuracy</h3>
+				<h3>Mesure de performance</h3>
+				<p>
+					<strong>Accuracy</strong>: % de réussite des prévisions sur un jeu de données
+				</p>
+			</section>
+			<section>
+				<h3>En pratique</h3>
+				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/2%20-%20Shallow%20Neural%20Networks%20With%20Python.ipynb">Shallow Neural Networks With Python</a>
+			</section>
+			<section>
+				<h2>Premiers pas avec Keras</h2>
+			</section>
+			<section>
+				<h3>Présentation de Keras</h3>
 			</section>
 		</div>
 	</div>
