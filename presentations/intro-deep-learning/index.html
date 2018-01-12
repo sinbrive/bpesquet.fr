@@ -553,7 +553,8 @@
 					<ul>
 						<li>Stochastic Gradient Descent</li>
 						<li>Mini-batch Gradient Descent (entre 50 et 256 samples)</li>
-						<li>RMSprop</li>
+						<li>Momentum</li>
+						<li>RMSProp</li>
 						<li>Adam</li>
 					</ul>
 				</section>
@@ -573,6 +574,87 @@
 			</section>
 			<section>
 				<h3>Présentation de Keras</h3>
+				<p>Librairie Python de création de réseaux de neurones conçue par François Chollet</p>
+				<img data-src="images/keras_logo.png" />
+				<p>Fournit une API de haut niveau au-dessus de TensorFlow, Theano ou CNTK</p>
+			</section>
+			<section>
+				<section>
+					<h3>Un premier exemple</h3>
+					<pre><code data-trim class="python">
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(4, activation='tanh'), input_shape=(3,))
+model.add(Dense(4, activation='tanh'))
+model.add(Dense(1, activation='sigmoid'))
+
+network.compile(optimizer='rmsprop',
+                loss='binary_crossentropy',
+                metrics=['accuracy'])
+history = model.fit(train_X, train_y, epochs=5, batch_size=64)
+
+loss, acc = model.evaluate(test_X, test_y, verbose=0)
+					</code></pre>
+				</section>
+				<section>
+					<h3>Définition du réseau</h3>
+					<pre><code data-trim class="python">
+# Sequential defines a linear stack of layers
+from keras.models import Sequential
+# Dense defines a fully connected layer
+from keras.layers import Dense
+
+model = Sequential() # Create a new network
+# Add a 4-neurons layer using tanh as activation function
+# Input shape corresponds to the input layer (no of features)
+model.add(Dense(4, activation='tanh'), input_shape=(3,))
+# Add a 4-neurons layer using tanh
+# Input shape is infered from previous layer
+model.add(Dense(4, activation='tanh'))
+# Add a 1-neuron output layer using sigmoid
+model.add(Dense(1, activation='sigmoid'))
+					</code></pre>
+				</section>
+				<section>
+					<h3>Réseau obtenu</h3>
+					<img data-src="images/neural_net2.jpeg" />
+				</section>
+				<section>
+					<h3>Compilation du réseau</h3>
+					<pre><code data-trim class="python">
+# Configuration of the training process
+# optimizer: gradient descent optimization method
+# loss: loss function
+# metrics: list of metrics monitored during training and testing
+network.compile(optimizer='rmsprop',
+                loss='binary_crossentropy',
+                metrics=['accuracy'])
+					</code></pre>
+				</section>
+				<section>
+					<h3>Apprentissage</h3>
+					<pre><code data-trim class="python">
+# Launch the training of the network on the data
+# epochs: number of epochs to train the model
+#  (An epoch is an iteration over the entire training dataset)
+# batch_size: number of samples used at each training iteration
+# The returned history object contains the monitored metrics
+history = model.fit(train_X, train_y, epochs=5, batch_size=64)
+					</code></pre>
+				</section>
+				<section>
+					<h3>Evaluation</h3>
+					<pre><code data-trim class="python">
+# Returns the loss value & metrics values for the network in test mode
+loss, acc = model.evaluate(test_X, test_y, verbose=0)
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<h3>En pratique</h3>
+				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/3%20-%20First%20Steps%20With%20Keras.ipynb">First Steps With Keras</a>
 			</section>
 		</div>
 	</div>
