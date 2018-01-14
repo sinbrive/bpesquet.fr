@@ -445,8 +445,18 @@
 				</section>
 			</section>
 			<section>
-				<h3>Sortie pour un neurone</h3>
-				<img data-src="images/neuron_output.png" />
+				<section>
+					<h3>Sortie pour un neurone</h3>
+					<img data-src="images/neuron_output.png" />
+				</section>
+				<section>
+					<h3>Initialisation des poids</h3>
+					<ul>
+						<li>Aléatoires</li>
+						<li>Non nuls</li>
+						<li>Valeurs faibles</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h3>Les fonctions d'activation</h3>
@@ -552,7 +562,7 @@
 					<h3>Quelques méthodes d'optimisation</h3>
 					<ul>
 						<li>Stochastic Gradient Descent</li>
-						<li>Mini-batch Gradient Descent (entre 50 et 256 samples)</li>
+						<li>Mini-batch Gradient Descent (entre 50 et 512 samples)</li>
 						<li>Momentum</li>
 						<li>RMSProp</li>
 						<li>Adam</li>
@@ -714,6 +724,119 @@ print(train_targets[0])
 			</section>
 			<section>
 				<h2>Les réseaux de neurones en pratique</h2>
+			</section>
+			<section>
+				<h3>Choix des hyperparamètres</h3>
+				<ul>
+					<li>Nombre de couches</li>
+					<li>Nombre de neurones sur chaque couche cachée</li>
+					<li>Fonctions d'activation</li>
+					<li>Learning rate</li>
+					<li>Taille des mini-batchs</li>
+					<li>...</li>
+				</ul>
+				Le processus de choix est
+				<strong>itératif</strong>
+			</section>
+			<section>
+				<section>
+					<h3>Entrainement, validation et test</h3>
+					Les données d'entrée sont fréquemment séparées en 2 ou 3 groupes :
+					<ul>
+						<li>Entrainement (entre 60 et 95% des données)</li>
+						<li>Validation : évaluation et tuning</li>
+						<li>Test : vérification des performances</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Exemples de découpages</h3>
+					<pre><code data-trim class="python">
+# Assuming x is a (1000, features) matrix
+
+# Randomize samples order
+np.random.shuffle(x) 
+
+training_x, val_x, test_x = x[:800, :], x[800:900, :], x[900:, :]
+# training_x is a (800, features) matrix
+# val_x and test_x both are (100, features) matrices
+					</code></pre>
+					<pre><code data-trim class="python">
+from sklearn.model_selection import train_test_split
+
+# Using sk-learn's predefined function train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<h3>Standardisation des entrées</h3>
+				Afin de faciliter l'apprentissage, les données d'entrée doivent :
+				<ul>
+					<li>Etre homogènes</li>
+					<li>Avoir de faibles valeurs (souvent entre 0 et 1)</li>
+				</ul>
+				<pre><code data-trim class="python">
+# Assuming x is a (samples, features) matrix
+x -= x.mean(axis=0)  # center data
+x /= x.std(axis=0)  # reduce data
+# x now has a mean of 0 and a standard deviation of 1
+				</code></pre>
+			</section>
+			<section>
+				<h3>Optimisation/généralisation</h3>
+				<img data-src="images/underfitting_overfitting.png" />
+			</section>
+			<section>
+				<h3>Underfitting (bias)</h3>
+				Indicateur : sous-performance sur les données d'entrainement
+				<p>
+					<ul>
+						<li>Augmenter la taille du réseau</li>
+						<li>Entrainer le réseau plus longtemps</li>
+					</ul>
+				</p>
+			</section>
+			<section>
+				<section>
+					<h3>Overfitting (variance)</h3>
+					Indicateur : écart entre les performances sur les données d'entrainement et de validation
+					<p>
+						<ul>
+							<li>Utiliser plus de données pour l'entrainement</li>
+							<li>Limiter la taille du réseau</li>
+							<li>Ajouter une régularisation</li>
+							<li>Introduire le dropout</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<img data-src="images/overfitting_example.png" />
+				</section>
+			</section>
+			<section>
+				<h3>Régularisation des poids</h3>
+				Principe : forcer les poids à prendre de faibles valeurs en ajoutant un
+				<strong>surcoût</strong> lié aux grandes valeurs :
+				<ul>
+					<li>
+						<strong>L1</strong> : surcoût proportionnel à la valeur absolue des poids</li>
+					<li>
+						<strong>L2</strong> : surcoût proportionnel au carré de la valeur absolue des poids</li>
+				</ul>
+				<pre><code data-trim class="python">
+# Add L2 regularization to a layer
+model.add(Dense(16, kernel_regularizer=regularizers.l2(0.001),
+                activation='relu', input_shape=(10000,)))
+				</code></pre>
+			</section>
+			<section>
+				<h3>Dropout</h3>
+				<p>Principe : supprimer aléatoirement certaines connexions (poids = 0) uniquement pendant l'apprentissage</p>
+				<pre><code data-trim class="python">
+# Add a layer with 50% dropout during training
+model.add(Dense(16, activation='relu', input_shape=(10000,)))
+model.add(Dropout(0.5))
+				</code></pre>
 			</section>
 		</div>
 	</div>
