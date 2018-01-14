@@ -222,11 +222,39 @@
 				</ul>
 			</section>
 			<section>
-				<h3>Python, le standard pour la Data Science</h3>
+				<section>
+					<h3>Python, le standard pour la Data Science</h3>
+					<ul>
+						<li>Qualités du langage (logique, simplicité, souplesse)</li>
+						<li>Implication de la communauté scientifique et universitaire</li>
+						<li>Existence de nombreuses bibliothèques dédiées</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Quelques outils essentiels</h3>
+					<ul>
+						<li>
+							<a href="http://www.numpy.org/">NumPy</a> : librairie de calcul mathématique
+						</li>
+						<li>
+							<a href="https://matplotlib.org/">Matplotlib</a> : création de graphiques
+						</li>
+						<li>
+							<a href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> : distribution scientifique incluant de nombreux packages
+						</li>
+						<li>
+							<a href="https://jupyter.org/">Jupyter Notebook</a> : application web pour créer et exécuter interactivement du code
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h3>La notion de tenseur</h3>
+				Un
+				<strong>tenseur</strong> est un ensemble de valeurs (très souvent numériques) stockées dans un tableau multidimensionnel
 				<ul>
-					<li>Qualités du langage (logique, simplicité, souplesse)</li>
-					<li>Implication de la communauté scientifique et universitaire</li>
-					<li>Existence de nombreuses bibliothèques dédiées</li>
+					<li>Vecteur = tenseur à une dimension</li>
+					<li>Matrice = tenseur à deux dimensions</li>
 				</ul>
 			</section>
 			<section>
@@ -838,6 +866,10 @@ model.add(Dense(16, activation='relu', input_shape=(10000,)))
 model.add(Dropout(0.5))
 				</code></pre>
 			</section>
+			<section>
+				<h3>En pratique</h3>
+				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/4%20-%20Neural%20Networks%20In%20Practice.ipynb">Neural Networks In Practice</a>
+			</section>
 		</div>
 	</div>
 	<div>
@@ -861,7 +893,7 @@ model.add(Dropout(0.5))
 			// Display the page number of the current slide
 			transition: "convex",
 			// Parallax background image
-			parallaxBackgroundImage: 'images/draft.png',
+			//parallaxBackgroundImage: 'images/draft.png'
 			math: {
 				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
 				config: 'TeX-MML-AM_HTMLorMML'  // See http://docs.mathjax.org/en/latest/config-files.html
