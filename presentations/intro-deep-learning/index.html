@@ -32,7 +32,7 @@
 					<a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a>
 				</p>
 				<p>
-					<a href="http://bpesquet.com">Baptiste Pesquet</a>
+					<a href="http://bpesquet.fr">Baptiste Pesquet</a>
 				</p>
 			</section>
 			<section>
@@ -43,9 +43,9 @@
 				<ul>
 					<li>IA, Machine Learning et Deep Learning</li>
 					<li>Python et la Data Science</li>
-					<li>Les réseaux de neurones</li>
+					<li>A la découverte des réseaux de neurones</li>
 					<li>Premiers pas avec Keras</li>
-					<li>Paramétrage et optimisation d'un réseau</li>
+					<li>Les réseaux de neurones en pratique</li>
 				</ul>
 			</section>
 			<section>
@@ -234,7 +234,7 @@
 				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/1%20-%20Python%20For%20Data%20Science.ipynb">Python For Data Science</a>
 			</section>
 			<section>
-				<h2>Les réseaux de neurones</h2>
+				<h2>A la découverte des réseaux de neurones</h2>
 			</section>
 			<section>
 				<section>
@@ -653,8 +653,67 @@ loss, acc = model.evaluate(test_X, test_y, verbose=0)
 				</section>
 			</section>
 			<section>
+				<h3>Le "Hello World" du Deep Learning : MNIST</h3>
+				<p>Jeu de 70 000 chiffres manuscrits stockés sous forme d'images 28x28 en niveau de gris (0 à 255)</p>
+				<img data-src="images/MNIST_digits.png" />
+			</section>
+			<section>
+				<h3>Réseau utilisé</h3>
+				<img data-src="images/mnist_nn.png" />
+			</section>
+			<section>
+				<h3>La fonction Softmax</h3>
+				$$\sigma(z)_j = \frac{e^{z_j}}{\sum_{k=1}^K {e^{z_k}}}$$
+				<p>Représente une distribution de probabilités sur K catégories</p>
+				<p>Fonction d'activation de la couche de sortie pour la classification multiclasses</p>
+			</section>
+			<section>
+				<section>
+					<h3>Préparation des entrées</h3>
+					<pre><code data-trim class="python">
+from keras.datasets import mnist
+from keras.utils import to_categorical
+			
+# Load MNIST digits dataset
+(train_images, train_targets), (test_images, test_targets) = mnist.load_data()
+
+# Reshape images data into a (number of samples, 28x28) matrix
+train_images = train_images_orig.reshape((60000, 28 * 28))
+test_images = test_images_orig.reshape((10000, 28 * 28))
+
+# Change pixel values from (0, 255) to (0, 1)
+train_images = train_images.astype('float32') / 255
+test_images = test_images.astype('float32') / 255
+
+# Convert targets from vectors to binary matrixes
+train_targets = to_categorical(train_targets_orig)
+test_targets = to_categorical(test_targets_orig)
+					</code></pre>
+				</section>
+				<section>
+					<img data-src="images/image2vector.jpeg" />
+				</section>
+				<section>
+					<h3>Préparation des résultats attendus</h3>
+					<p>Softmax renvoie un vecteur de probabilités</p>
+					<p>Les résultats attendus doivent être fournis sous forme de vecteurs</p>
+					<pre><code data-trim class="python">
+# Output: 5 
+print(train_targets[0])  
+
+train_targets = to_categorical(train_targets)
+
+# Output: [ 0.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+print(train_targets[0])  
+					</code></pre>
+				</section>
+			</section>
+			<section>
 				<h3>En pratique</h3>
 				<a href="https://github.com/bpesquet/intro-deep-learning/blob/master/3%20-%20First%20Steps%20With%20Keras.ipynb">First Steps With Keras</a>
+			</section>
+			<section>
+				<h2>Les réseaux de neurones en pratique</h2>
 			</section>
 		</div>
 	</div>
