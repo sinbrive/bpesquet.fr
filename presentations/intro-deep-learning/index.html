@@ -36,6 +36,17 @@
 				</p>
 			</section>
 			<section>
+				<p>Diaporama :
+					<a href="http://www.bpesquet.fr/presentations/intro-deep-learning/">http://www.bpesquet.fr/presentations/intro-deep-learning/</a>
+				</p>
+				<p>Exemples de code :
+					<a href="https://github.com/bpesquet/intro-deep-learning">https://github.com/bpesquet/intro-deep-learning</a>
+				</p>
+				<p>Activités :
+					<a href="https://github.com/ensc-ia/intro-deep-learning-activites">https://github.com/ensc-ia/intro-deep-learning-activites</a> (accès restreint)
+				</p>
+			</section>
+			<section>
 				<img data-src="images/deep_learning_meme_keras.png" />
 			</section>
 			<section>
@@ -213,7 +224,8 @@
 			</section>
 			<section>
 				<h3>Le langage Python</h3>
-				<p>Langage de programmation sous licence libre créé en 1989 par Guido van Rossum.</p>
+				<p>Langage de programmation sous licence libre créé en 1989 par
+					<a href="https://fr.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>.</p>
 				<img data-src="images/Python_logo.png" />
 				<ul>
 					<li>Multi-paradigmes (procédural, fonctionnel, objet)</li>
@@ -612,8 +624,12 @@
 			</section>
 			<section>
 				<h3>Présentation de Keras</h3>
-				<p>Librairie Python de création de réseaux de neurones conçue par François Chollet</p>
-				<img data-src="images/keras_logo.png" />
+				<p>Librairie Python de création de réseaux de neurones conçue par
+					<a href="https://twitter.com/fchollet">François Chollet</a>
+				</p>
+				<a href="https://keras.io/">
+					<img data-src="images/keras_logo.png" />
+				</a>
 				<p>Fournit une API de haut niveau au-dessus de TensorFlow, Theano ou CNTK</p>
 			</section>
 			<section>
@@ -734,11 +750,12 @@ test_targets = to_categorical(test_targets_orig)
 				<section>
 					<h3>Préparation des résultats attendus</h3>
 					<p>Softmax renvoie un vecteur de probabilités</p>
-					<p>Les résultats attendus doivent être fournis sous forme de vecteurs</p>
+					<p>Les résultats attendus doivent également être fournis sous forme de vecteurs</p>
 					<pre><code data-trim class="python">
 # Output: 5 
 print(train_targets[0])  
 
+# Convert targets from vectors to binary matrixes
 train_targets = to_categorical(train_targets)
 
 # Output: [ 0.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
@@ -763,8 +780,9 @@ print(train_targets[0])
 					<li>Taille des mini-batchs</li>
 					<li>...</li>
 				</ul>
-				Le processus de choix est
-				<strong>itératif</strong>
+				<p>Le processus de choix est
+					<strong>itératif</strong>
+				</p>
 			</section>
 			<section>
 				<section>
