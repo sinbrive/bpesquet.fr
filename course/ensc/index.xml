@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecole Nationale Supérieure de Cognitique on Baptiste Pesquet</title>
+    <link>https://bpesquet.fr/course/ensc/</link>
+    <description>Recent content in Ecole Nationale Supérieure de Cognitique on Baptiste Pesquet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 24 May 2018 16:07:40 +0200</lastBuildDate>
+    
+	<atom:link href="https://bpesquet.fr/course/ensc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Génie logiciel</title>
+      <link>https://bpesquet.fr/course/ensc/genie-logiciel/</link>
+      <pubDate>Wed, 23 May 2018 11:35:22 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/genie-logiciel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gestion de projet</title>
+      <link>https://bpesquet.fr/course/ensc/gestion-projet/</link>
+      <pubDate>Wed, 23 May 2018 09:31:07 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/gestion-projet/</guid>
+      <description> Compléments  The test pyramid Software testing anti-patterns    </description>
+    </item>
+    
+    <item>
+      <title>Développement web</title>
+      <link>https://bpesquet.fr/course/ensc/dev-web/</link>
+      <pubDate>Tue, 22 May 2018 22:54:22 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/dev-web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

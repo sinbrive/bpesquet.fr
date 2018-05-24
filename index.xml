@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baptiste Pesquet</title>
+    <link>https://bpesquet.fr/</link>
+    <description>Recent content on Baptiste Pesquet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 24 May 2018 19:50:25 +0200</lastBuildDate>
+    
+	<atom:link href="https://bpesquet.fr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Les bases de données (archive PDF)</title>
+      <link>https://bpesquet.fr/publication/sgbd/</link>
+      <pubDate>Thu, 24 May 2018 19:50:25 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/sgbd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Les réseaux (archive PDF)</title>
+      <link>https://bpesquet.fr/publication/reseaux/</link>
+      <pubDate>Thu, 24 May 2018 19:46:55 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/reseaux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Le langage SQL (archive PDF)</title>
+      <link>https://bpesquet.fr/publication/langage-sql/</link>
+      <pubDate>Thu, 24 May 2018 19:33:41 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/langage-sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artistes et spécifieurs, un jeu pour découvrir l&#39;agilité</title>
+      <link>https://bpesquet.fr/article/artistes-et-specifieurs/</link>
+      <pubDate>Thu, 24 May 2018 15:57:43 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/article/artistes-et-specifieurs/</guid>
+      <description>Dans le cadre du module de cours Gestion de projet, j&amp;rsquo;ai testé avec succès un atelier ludique et efficace pour s&amp;rsquo;initier aux valeurs de l&amp;rsquo;agilité : le jeu artistes et spécifieurs. Imaginé par Alistair Cockburn, l&amp;rsquo;un des signataires du manifeste agile, ce jeu est souvent utilisé par les coachs agiles en entreprise.
+Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&amp;rsquo;avantage de ne nécessiter presque aucun matériel. En 1h30 environ, il offre une première approche de certains principes agiles dans un cadre propice à la bonne humeur.</description>
+    </item>
+    
+    <item>
+      <title>Un nouveau site !</title>
+      <link>https://bpesquet.fr/article/un-nouveau-site/</link>
+      <pubDate>Thu, 24 May 2018 15:11:35 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/article/un-nouveau-site/</guid>
+      <description>Cela faisait un petit moment que l&amp;rsquo;idée d&amp;rsquo;enrichir mon site web me trottait en tête. Je voulais qu&amp;rsquo;il reflète mieux mes activités professionnelles et je souhaitais pouvoir :
+ Lister mes publications pédagogiques tout en les reliant aux cours que je dispense. Mettre à disposition de mes étudiants des compléments de cours en ligne. Commencer un blog pour décrire mes tâtonnements expérimentations pédagogiques. Ecrire en français avec la possiblité de traduire une partie du site en anglais.</description>
+    </item>
+    
+    <item>
+      <title>Ingénierie web, niveau 2</title>
+      <link>https://bpesquet.fr/course/polytech-lyon/isi2/</link>
+      <pubDate>Thu, 24 May 2018 14:57:00 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/polytech-lyon/isi2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ingénierie web, niveau 1</title>
+      <link>https://bpesquet.fr/course/polytech-lyon/isi1/</link>
+      <pubDate>Thu, 24 May 2018 14:53:07 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/polytech-lyon/isi1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SI6 - Développement web</title>
+      <link>https://bpesquet.fr/course/bts-sio/si6/</link>
+      <pubDate>Thu, 24 May 2018 14:44:04 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/bts-sio/si6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SLAM5 - Développement collaboratif</title>
+      <link>https://bpesquet.fr/course/bts-sio/slam5/</link>
+      <pubDate>Thu, 24 May 2018 14:36:55 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/bts-sio/slam5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SI1 - Support système</title>
+      <link>https://bpesquet.fr/course/bts-sio/si1/</link>
+      <pubDate>Thu, 24 May 2018 14:33:44 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/bts-sio/si1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Premiers pas avec le framework PHP Silex</title>
+      <link>https://bpesquet.fr/publication/premiers-pas-silex/</link>
+      <pubDate>Thu, 24 May 2018 14:28:19 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/premiers-pas-silex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evoluez vers une architecture PHP Professionnelle</title>
+      <link>https://bpesquet.fr/publication/evoluez-architecture-php-professionnelle/</link>
+      <pubDate>Thu, 24 May 2018 14:26:13 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/evoluez-architecture-php-professionnelle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evoluez vers une architecture MVC en PHP</title>
+      <link>https://bpesquet.fr/publication/evoluez-architecture-mvc-php/</link>
+      <pubDate>Thu, 24 May 2018 14:23:56 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/evoluez-architecture-mvc-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Premiers pas avec le framework Bootstrap</title>
+      <link>https://bpesquet.fr/publication/premiers-pas-bootstrap/</link>
+      <pubDate>Thu, 24 May 2018 14:22:07 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/premiers-pas-bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide du développeur PHP</title>
+      <link>https://bpesquet.fr/publication/guide-developpeur-php/</link>
+      <pubDate>Thu, 24 May 2018 14:19:52 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/guide-developpeur-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Créez des pages web interactives avec Javascript</title>
+      <link>https://bpesquet.fr/publication/creez-pages-web-interactives-javascript/</link>
+      <pubDate>Thu, 24 May 2018 14:17:39 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/creez-pages-web-interactives-javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction au développement mobile avec React Native</title>
+      <link>https://bpesquet.fr/presentation/intro-dev-mobile-react-native/</link>
+      <pubDate>Wed, 23 May 2018 23:34:24 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/presentation/intro-dev-mobile-react-native/</guid>
+      <description>Sommaire  L&amp;rsquo;écosystème mobile Le JavaScript moderne Premiers pas avec React Native  L&amp;rsquo;écosystème mobile  Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
+ Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
+    </item>
+    
+    <item>
+      <title>Programmation orientée objet en C#</title>
+      <link>https://bpesquet.fr/publication/poo-csharp/</link>
+      <pubDate>Wed, 23 May 2018 13:29:03 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/poo-csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Génie logiciel</title>
+      <link>https://bpesquet.fr/course/ensc/genie-logiciel/</link>
+      <pubDate>Wed, 23 May 2018 11:35:22 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/genie-logiciel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programmation évènementielle avec les WinForms</title>
+      <link>https://bpesquet.fr/publication/prog-evt-winforms/</link>
+      <pubDate>Wed, 23 May 2018 11:17:41 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/prog-evt-winforms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Génie logiciel</title>
+      <link>https://bpesquet.fr/publication/genie-logiciel/</link>
+      <pubDate>Wed, 23 May 2018 10:12:55 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/genie-logiciel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gestion de projet</title>
+      <link>https://bpesquet.fr/course/ensc/gestion-projet/</link>
+      <pubDate>Wed, 23 May 2018 09:31:07 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/gestion-projet/</guid>
+      <description> Compléments  The test pyramid Software testing anti-patterns    </description>
+    </item>
+    
+    <item>
+      <title>Apprenez à coder avec JavaScript</title>
+      <link>https://bpesquet.fr/publication/apprenez-coder-javascript/</link>
+      <pubDate>Tue, 22 May 2018 23:39:13 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/apprenez-coder-javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The JavaScript Way</title>
+      <link>https://bpesquet.fr/publication/the-javascript-way/</link>
+      <pubDate>Tue, 22 May 2018 23:26:21 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/publication/the-javascript-way/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Développement web</title>
+      <link>https://bpesquet.fr/course/ensc/dev-web/</link>
+      <pubDate>Tue, 22 May 2018 22:54:22 +0200</pubDate>
+      
+      <guid>https://bpesquet.fr/course/ensc/dev-web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
