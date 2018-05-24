@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on Baptiste Pesquet</title>
-    <link>https://bpesquet.fr/article/</link>
+    <link>http://www.bpesquet.fr/article/</link>
     <description>Recent content in Articles on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Thu, 24 May 2018 15:57:43 +0200</lastBuildDate>
     
-	<atom:link href="https://bpesquet.fr/article/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.bpesquet.fr/article/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Artistes et spécifieurs, un jeu pour découvrir l&#39;agilité</title>
-      <link>https://bpesquet.fr/article/artistes-et-specifieurs/</link>
+      <link>http://www.bpesquet.fr/article/artistes-et-specifieurs/</link>
       <pubDate>Thu, 24 May 2018 15:57:43 +0200</pubDate>
       
-      <guid>https://bpesquet.fr/article/artistes-et-specifieurs/</guid>
+      <guid>http://www.bpesquet.fr/article/artistes-et-specifieurs/</guid>
       <description>Dans le cadre du module de cours Gestion de projet, j&amp;rsquo;ai testé avec succès un atelier ludique et efficace pour s&amp;rsquo;initier aux valeurs de l&amp;rsquo;agilité : le jeu artistes et spécifieurs. Imaginé par Alistair Cockburn, l&amp;rsquo;un des signataires du manifeste agile, ce jeu est souvent utilisé par les coachs agiles en entreprise.
 Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&amp;rsquo;avantage de ne nécessiter presque aucun matériel. En 1h30 environ, il offre une première approche de certains principes agiles dans un cadre propice à la bonne humeur.</description>
     </item>
     
     <item>
       <title>Un nouveau site !</title>
-      <link>https://bpesquet.fr/article/un-nouveau-site/</link>
+      <link>http://www.bpesquet.fr/article/un-nouveau-site/</link>
       <pubDate>Thu, 24 May 2018 15:11:35 +0200</pubDate>
       
-      <guid>https://bpesquet.fr/article/un-nouveau-site/</guid>
+      <guid>http://www.bpesquet.fr/article/un-nouveau-site/</guid>
       <description>Cela faisait un petit moment que l&amp;rsquo;idée d&amp;rsquo;enrichir mon site web me trottait en tête. Je voulais qu&amp;rsquo;il reflète mieux mes activités professionnelles et je souhaitais pouvoir :
  Lister mes publications pédagogiques tout en les reliant aux cours que je dispense. Mettre à disposition de mes étudiants des compléments de cours en ligne. Commencer un blog pour décrire mes tâtonnements expérimentations pédagogiques. Ecrire en français avec la possiblité de traduire une partie du site en anglais.</description>
     </item>

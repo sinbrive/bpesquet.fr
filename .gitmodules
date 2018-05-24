@@ -1,0 +1,3 @@
+[submodule "public/en"]
+	path = public/en
+	url = https://github.com/bpesquet/bpesquet.com.git
