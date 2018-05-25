@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Intelligence artificielle</title>
+      <link>http://www.bpesquet.fr/course/ensc/ia/</link>
+      <pubDate>Fri, 25 May 2018 09:08:19 +0200</pubDate>
+      
+      <guid>http://www.bpesquet.fr/course/ensc/ia/</guid>
+      <description> Compléments  Introduction to A* Pearltrees sur l&amp;rsquo;IA  </description>
+    </item>
+    
+    <item>
+      <title>Programmation avancée</title>
+      <link>http://www.bpesquet.fr/course/ensc/prog-avancee/</link>
+      <pubDate>Thu, 24 May 2018 23:02:44 +0200</pubDate>
+      
+      <guid>http://www.bpesquet.fr/course/ensc/prog-avancee/</guid>
+      <description> Compléments  C# : comprendre les différences entre readonly et const  </description>
+    </item>
+    
+    <item>
       <title>Génie logiciel</title>
       <link>http://www.bpesquet.fr/course/ensc/genie-logiciel/</link>
       <pubDate>Wed, 23 May 2018 11:35:22 +0200</pubDate>

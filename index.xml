@@ -6,10 +6,37 @@
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 24 May 2018 19:50:25 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 May 2018 09:57:31 +0200</lastBuildDate>
     
 	<atom:link href="http://www.bpesquet.fr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Learning Workshop</title>
+      <link>http://www.bpesquet.fr/publication/deep-learning-workshop/</link>
+      <pubDate>Fri, 25 May 2018 09:57:31 +0200</pubDate>
+      
+      <guid>http://www.bpesquet.fr/publication/deep-learning-workshop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intelligence artificielle</title>
+      <link>http://www.bpesquet.fr/course/ensc/ia/</link>
+      <pubDate>Fri, 25 May 2018 09:08:19 +0200</pubDate>
+      
+      <guid>http://www.bpesquet.fr/course/ensc/ia/</guid>
+      <description> Compléments  Introduction to A* Pearltrees sur l&amp;rsquo;IA  </description>
+    </item>
+    
+    <item>
+      <title>Programmation avancée</title>
+      <link>http://www.bpesquet.fr/course/ensc/prog-avancee/</link>
+      <pubDate>Thu, 24 May 2018 23:02:44 +0200</pubDate>
+      
+      <guid>http://www.bpesquet.fr/course/ensc/prog-avancee/</guid>
+      <description> Compléments  C# : comprendre les différences entre readonly et const  </description>
+    </item>
     
     <item>
       <title>Les bases de données (archive PDF)</title>
