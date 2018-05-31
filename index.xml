@@ -143,7 +143,7 @@ Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&
     </item>
     
     <item>
-      <title>Evoluez vers une architecture PHP Professionnelle</title>
+      <title>Evoluez vers une architecture PHP professionnelle</title>
       <link>http://www.bpesquet.fr/publication/evoluez-architecture-php-professionnelle/</link>
       <pubDate>Thu, 24 May 2018 14:26:13 +0200</pubDate>
       
@@ -170,7 +170,7 @@ Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&
     </item>
     
     <item>
-      <title>Guide du développeur PHP</title>
+      <title>(Draft) Guide du développeur PHP</title>
       <link>http://www.bpesquet.fr/publication/guide-developpeur-php/</link>
       <pubDate>Thu, 24 May 2018 14:19:52 +0200</pubDate>
       
@@ -189,10 +189,10 @@ Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&
     
     <item>
       <title>Introduction au développement mobile avec React Native</title>
-      <link>http://www.bpesquet.fr/presentation/intro-dev-mobile-react-native/</link>
+      <link>http://www.bpesquet.fr/presentation/dev-mobile/intro-react-native/</link>
       <pubDate>Wed, 23 May 2018 23:34:24 +0200</pubDate>
       
-      <guid>http://www.bpesquet.fr/presentation/intro-dev-mobile-react-native/</guid>
+      <guid>http://www.bpesquet.fr/presentation/dev-mobile/intro-react-native/</guid>
       <description>Sommaire  L&amp;rsquo;écosystème mobile Le JavaScript moderne Premiers pas avec React Native  L&amp;rsquo;écosystème mobile  Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
  Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
     </item>
