@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Apprentissage automatique on Baptiste Pesquet</title>
-    <link>http://www.bpesquet.fr/presentation/ia/ml/</link>
+    <link>https://www.bpesquet.fr/presentation/ia/ml/</link>
     <description>Recent content in Apprentissage automatique on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Thu, 31 May 2018 10:43:30 +0200</lastBuildDate>
     
-	<atom:link href="http://www.bpesquet.fr/presentation/ia/ml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.bpesquet.fr/presentation/ia/ml/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

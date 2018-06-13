@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Présentations on Baptiste Pesquet</title>
-    <link>http://www.bpesquet.fr/presentation/</link>
+    <link>https://www.bpesquet.fr/presentation/</link>
     <description>Recent content in Présentations on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <lastBuildDate>Wed, 23 May 2018 23:52:59 +0200</lastBuildDate>
     
-	<atom:link href="http://www.bpesquet.fr/presentation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.bpesquet.fr/presentation/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
