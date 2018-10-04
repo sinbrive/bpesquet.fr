@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BTS SIO (archive) on Baptiste Pesquet</title>
-    <link>/course/bts-sio/</link>
+    <link>https://www.bpesquet.fr/course/bts-sio/</link>
     <description>Recent content in BTS SIO (archive) on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 04 Oct 2018 09:48:50 +0200</lastBuildDate>
     
-	<atom:link href="/course/bts-sio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.bpesquet.fr/course/bts-sio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SI6 - Développement web</title>
-      <link>/course/bts-sio/si6/</link>
+      <link>https://www.bpesquet.fr/course/bts-sio/si6/</link>
       <pubDate>Thu, 24 May 2018 14:44:04 +0200</pubDate>
       
-      <guid>/course/bts-sio/si6/</guid>
+      <guid>https://www.bpesquet.fr/course/bts-sio/si6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SLAM5 - Développement collaboratif</title>
-      <link>/course/bts-sio/slam5/</link>
+      <link>https://www.bpesquet.fr/course/bts-sio/slam5/</link>
       <pubDate>Thu, 24 May 2018 14:36:55 +0200</pubDate>
       
-      <guid>/course/bts-sio/slam5/</guid>
+      <guid>https://www.bpesquet.fr/course/bts-sio/slam5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SI1 - Support système</title>
-      <link>/course/bts-sio/si1/</link>
+      <link>https://www.bpesquet.fr/course/bts-sio/si1/</link>
       <pubDate>Thu, 24 May 2018 14:33:44 +0200</pubDate>
       
-      <guid>/course/bts-sio/si1/</guid>
+      <guid>https://www.bpesquet.fr/course/bts-sio/si1/</guid>
       <description></description>
     </item>
     
