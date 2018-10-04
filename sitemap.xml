@@ -3,291 +3,231 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/ia/ml/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/ia/ml/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/ia/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/ia/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/mobile/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/mobile/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/polytech-lyon/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/polytech-lyon/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/realite-virtuelle/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/realite-virtuelle/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/realite-virtuelle/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/realite-virtuelle/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/realite-virtuelle/intro-unity/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/realite-virtuelle/intro-unity/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/article/paiss-2018-debrief/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/article/paiss-2018-debrief/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/deep-learning-workshop/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/publication/deep-learning-workshop/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/publication/deep-learning-workshop/"
-                />
+    <loc>/publication/deep-learning-workshop/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/ia/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/ia/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/prog-avancee/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/prog-avancee/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/sgbd/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/sgbd/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/reseaux/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/reseaux/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/langage-sql/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/langage-sql/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/article/artistes-et-specifieurs/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/article/artistes-et-specifieurs/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/article/un-nouveau-site/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/article/un-nouveau-site/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/polytech-lyon/isi2/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/polytech-lyon/isi2/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/polytech-lyon/isi1/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/polytech-lyon/isi1/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/bts-sio/si6/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/bts-sio/si6/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/bts-sio/slam5/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/bts-sio/slam5/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/bts-sio/si1/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/bts-sio/si1/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/premiers-pas-silex/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/premiers-pas-silex/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/evoluez-architecture-php-professionnelle/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/evoluez-architecture-php-professionnelle/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/evoluez-architecture-mvc-php/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/evoluez-architecture-mvc-php/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/premiers-pas-bootstrap/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/premiers-pas-bootstrap/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/guide-developpeur-php/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/guide-developpeur-php/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/creez-pages-web-interactives-javascript/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/creez-pages-web-interactives-javascript/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/mobile/intro-react-native/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/slides/mobile/intro-react-native/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/poo-csharp/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/poo-csharp/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/genie-logiciel/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/genie-logiciel/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/prog-evt-winforms/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/prog-evt-winforms/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/genie-logiciel/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/genie-logiciel/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/gestion-projet/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/gestion-projet/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/apprenez-coder-javascript/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/apprenez-coder-javascript/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/publication/the-javascript-way/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/publication/the-javascript-way/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/publication/the-javascript-way/"
-                />
+    <loc>/publication/the-javascript-way/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/ensc/web/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/ensc/web/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/article/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/article/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/bts-sio/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/bts-sio/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/"
-                />
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/categories/"
-                />
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/slides/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/course/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/course/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bpesquet.fr/publication/</loc>
-    <lastmod>2018-09-12T13:59:00+02:00</lastmod>
+    <loc>/publication/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/publication/"
-                />
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/tags/</loc>
+    <loc>/slides/</loc>
+    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/tags/"
-                />
   </url>
   
 </urlset>
