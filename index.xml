@@ -5,10 +5,20 @@
     <link>https://www.bpesquet.fr/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Oct 2018 19:02:15 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 May 2018 22:15:13 +0200</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Panorama de l&#39;IA</title>
+      <link>https://www.bpesquet.fr/slides/ia/panorama/</link>
+      <pubDate>Wed, 30 May 2018 22:15:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/panorama/</guid>
+      <description>Sommaire  Qu&amp;rsquo;est-ce que l&amp;rsquo;IA ? Histoire de l&amp;rsquo;IA Principaux domaines d&amp;rsquo;étude Avancées récentes Les enjeux de l&amp;rsquo;IA Quel futur pour l&amp;rsquo;IA ?  Qu&amp;rsquo;est-ce que l&amp;rsquo;IA ? Tentative de définition  &amp;ldquo;L&amp;rsquo;IA consiste à parvenir à faire faire aux machines ce que l’homme fait aujourd’hui mieux qu’elles, notamment s’adapter, apprendre, communiquer et interagir d’une manière riche et variée avec leur environnement.&amp;rdquo; (FranceIA)
+ L&amp;rsquo;IA, interdisciplinaire par nature L&amp;rsquo;IA, une science impossible ?</description>
+    </item>
     
     <item>
       <title>Work With Me</title>
