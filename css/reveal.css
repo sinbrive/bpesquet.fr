@@ -8,3 +8,13 @@
     width: 640px;
     height: 385px;
 }
+
+/* Makes slide titles a little less big */
+.reveal h2 {
+    font-size: 1.3em;
+}
+
+/* Make citations take a little more screen space */
+.reveal blockquote {
+    width: 85%;
+}
