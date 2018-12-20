@@ -18,3 +18,8 @@
 .reveal blockquote {
     width: 85%;
 }
+
+/* Reduce font size for figure captions */
+.reveal figcaption p {
+    font-size: 0.4em;
+}
