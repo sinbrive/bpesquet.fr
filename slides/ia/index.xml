@@ -20,5 +20,14 @@
  L&amp;rsquo;IA, interdisciplinaire par nature    Schéma : D.</description>
     </item>
     
+    <item>
+      <title>Python et la Data Science</title>
+      <link>https://www.bpesquet.fr/slides/ia/python-data-science/</link>
+      <pubDate>Thu, 31 May 2018 21:59:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/python-data-science/</guid>
+      <description>Sommaire  Introduction à la Data Science Pourquoi Python ? Outils Python pour la Data Science  Installation simplifiée avec Anaconda Partage de code avec Jupyter Notebook Calcul mathématique avec NumPy Analyse de données avec Pandas Création de graphiques avec Matplotlib/Seaborn   Introduction à la Data Science Qu&amp;rsquo;est-ce que la Data Science ?  Objectif général : extraire de la connaissance à partir de données. Expression popularisée à partir de 1997 par certains statisticiens.</description>
+    </item>
+    
   </channel>
 </rss>
