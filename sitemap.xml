@@ -4,12 +4,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/slides/ia/panorama/</loc>
-    <lastmod>2018-12-20T23:12:19+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bpesquet.fr/slides/ia/ml/</loc>
-    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
+    <lastmod>2019-01-08T15:21:01+01:00</lastmod>
   </url>
   
   <url>
@@ -24,7 +19,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/slides/ia/python-data-science/</loc>
-    <lastmod>2018-12-21T13:39:31+01:00</lastmod>
+    <lastmod>2018-12-21T13:44:26+01:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +35,11 @@
   <url>
     <loc>https://www.bpesquet.fr/slides/realite-virtuelle/</loc>
     <lastmod>2018-10-04T09:48:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/slides/ia/fondamentaux-ml/</loc>
+    <lastmod>2019-01-08T15:21:01+01:00</lastmod>
   </url>
   
   <url>
@@ -220,7 +220,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/</loc>
-    <lastmod>2018-12-20T23:12:19+01:00</lastmod>
+    <lastmod>2019-01-08T15:21:01+01:00</lastmod>
     <priority>0</priority>
   </url>
   

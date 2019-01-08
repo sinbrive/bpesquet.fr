@@ -30,6 +30,16 @@
     </item>
     
     <item>
+      <title>Les fondamentaux du Machine Learning</title>
+      <link>https://www.bpesquet.fr/slides/ia/fondamentaux-ml/</link>
+      <pubDate>Thu, 31 May 2018 09:15:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/fondamentaux-ml/</guid>
+      <description>Sommaire  Introduction au Machine Learning Anatomie d&amp;rsquo;un système de ML supervisé Les étapes d&amp;rsquo;un projet de ML  Introduction au Machine Learning La première définition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
+ Des machines qui apprennent ? Le Machine Learning ou apprentissage automatique regroupe un ensemble de techniques (algorithmes) permettant à des machines de s’entraîner sur des bases d’exemples pour :</description>
+    </item>
+    
+    <item>
       <title>Mon premier Kahoot</title>
       <link>https://www.bpesquet.fr/article/mon-premier-kahoot/</link>
       <pubDate>Thu, 29 Nov 2018 23:26:45 +0100</pubDate>

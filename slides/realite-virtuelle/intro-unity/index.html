@@ -534,12 +534,17 @@ public class MainPlayer : MonoBehaviour {
 			slideNumber: true,
 			
 			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
 			dependencies: [
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
-				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
 			]
 		});
 	</script>

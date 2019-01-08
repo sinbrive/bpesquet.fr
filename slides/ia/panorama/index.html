@@ -100,6 +100,8 @@
 
 <blockquote>
 <p>&ldquo;Tout problème pour lequel il n&rsquo;existe pas de solution algorithmique connue relève a priori de l&rsquo;IA.&rdquo; (J.L. Laurière)</p>
+
+<p>&ldquo;<a href="https://en.wikipedia.org/wiki/AI_effect">AI is whatever hasn&rsquo;t been done yet.</a>&rdquo; (L. Tesler)</p>
 </blockquote>
 
 <p class='fragment '
@@ -157,7 +159,7 @@
 
 <section><h2 id="1956-conférence-de-dartmouth">1956 : conférence de Dartmouth</h2>
 
-<p>Parmi les participants : J. McCarthy (Stanford), M. Minsky et C. Shannon (MIT), H. Simon et A. Newell (Carnegie Mellon), N. Rochester (IBM).</p>
+<p>Parmi les participants : J. McCarthy et A. Samuel (Stanford), M. Minsky et C. Shannon (MIT), H. Simon et A. Newell (Carnegie Mellon), N. Rochester (IBM).</p>
 
 <p><img src="images/dartmouth_workshop.jpg" alt="Dartmouth workshop" /></p>
 
@@ -382,7 +384,7 @@ alors il y a 0.4 chances que l'organismes soit pseudomonas
         <p>
         
         <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"> 
-            Schéma simplifié du modèle AlexNet
+            Schéma simplifié du modèle AlexNet (2012)
         </a> 
         </p> 
     </figcaption>
@@ -591,12 +593,17 @@ alors il y a 0.4 chances que l'organismes soit pseudomonas
 			slideNumber: true,
 			
 			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
 			dependencies: [
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
 				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
-				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
 			]
 		});
 	</script>
