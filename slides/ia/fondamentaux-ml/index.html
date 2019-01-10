@@ -591,7 +591,7 @@ y' = \begin{bmatrix}
 </section>
 				<section>
 
-<section><h2 id="variantes-de-la-descente-de-gradient">Variantes de la descente de gradient</h2>
+<section><h2 id="types-de-descentes-de-gradient">Types de descentes de gradient</h2>
 
 <ul>
 <li><em>Batch Gradient Descent</em></li>
@@ -846,6 +846,27 @@ y' = \begin{bmatrix}
 <li><strong>Validation</strong> : pour affiner le modèle.</li>
 <li><strong>Test</strong> : pour vérifier les performances du modèle.</li>
 </ul>
+
+</section>
+				<section>
+
+<h2 id="exemples-de-partitions-des-données">Exemples de partitions des données</h2>
+
+<pre><code class="language-python"># Assuming x is a (1000, features_count) matrix
+
+# Randomize samples order
+np.random.shuffle(x)
+
+training_x, val_x, test_x = x[:800, :], x[800:900, :], x[900:, :]
+# training_x is a (800, features_count) matrix
+# val_x and test_x both are (100, features_count) matrices
+</code></pre>
+
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+
+# Using sk-learn's predefined function train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+</code></pre>
 
 </section>
 				<section>
