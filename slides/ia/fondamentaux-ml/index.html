@@ -278,7 +278,7 @@
 <ul>
 <li><strong>Etiquette</strong> (<em>label</em> ou <em>target</em>) : résultat qu&rsquo;on souhaite prédire, noté <code>$ y $</code>.</li>
 <li><strong>Caractéristique</strong> (<em>feature</em>) : propriété d&rsquo;une donnée, notée <code>$ x_i $</code>.</li>
-<li><strong>Exemple</strong> (<em>sample</em>) : instance de donnée particulière comprenant un ensemble de <code>$ n $</code> caractéristiques, notée <code>$ \textbf{x} = \left\{ x_1, x_2, \dotsc, x_n \right\} $</code>.</li>
+<li><strong>Exemple</strong> (<em>sample</em>) : instance de donnée particulière comprenant un ensemble de <code>$ n $</code> caractéristiques, notée <code>$ x = \left\{ x_1, x_2, \dotsc, x_n \right\} $</code>.</li>
 <li>Un exemple peut être étiqueté (associé au résultat attendu) ou non.</li>
 </ul>
 
@@ -295,7 +295,7 @@
        \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
        \ x^{(m)}_1 &amp; x^{(m)}_2 &amp; \cdots &amp; x^{(m)}_n
      \end{bmatrix}\;\;
-\textbf{y} = \begin{pmatrix}
+y = \begin{pmatrix}
        \ y^{(1)} \\
        \ y^{(2)} \\
        \ \vdots \\
@@ -399,7 +399,7 @@
 <li>Son résultat calculé est noté <code>$ y' $</code> ou <code>$ \hat{y} $</code>.</li>
 </ul>
 
-<p><code>$$\textbf{y'} = \begin{pmatrix}
+<p><code>$$y' = \begin{pmatrix}
        \ y'^{(1)} \\
        \ y'^{(2)} \\
        \ \vdots \\
@@ -463,13 +463,13 @@
 <li><code>$ y'^{(i)} $</code> est un vecteur de probabilités.</li>
 </ul>
 
-<p><code>$$\textbf{y} = \begin{bmatrix}
+<p><code>$$y = \begin{bmatrix}
        \ y^{(1)}_1 &amp; \cdots &amp; y^{(1)}_K \\
        \ y^{(2)}_1 &amp; \cdots &amp; y^{(2)}_K \\
        \ \vdots &amp; \ddots &amp; \vdots \\
        \ y^{(m)}_1 &amp; \cdots &amp; y^{(m)}_K
      \end{bmatrix}\;\;
-\textbf{y'} = \begin{bmatrix}
+y' = \begin{bmatrix}
        \ y'^{(1)}_1 &amp; \cdots &amp; y'^{(1)}_K \\
        \ y'^{(2)}_1 &amp; \cdots &amp; y'^{(2)}_K \\
        \ \vdots &amp; \ddots &amp; \vdots \\
@@ -653,7 +653,7 @@
 
 <section><h2 id="ajustement-des-paramètres-du-modèle">Ajustement des paramètres du modèle</h2>
 
-<p><strong><em>Learning rate</em></strong> <code>$ \eta $</code> : facteur d&rsquo;ajustement des paramètres en fonction du gradient de la fonction de perte.</p>
+<p>Taux d&rsquo;apprentissage ou <strong><em>learning rate</em></strong> <code>$ \eta $</code> : facteur d&rsquo;ajustement des paramètres en fonction du gradient de la fonction de perte.</p>
 
 <p><code>$$\theta_{next} = \theta - \eta\nabla_{\theta}\mathcal{L}(\theta)$$</code></p>
 
@@ -708,7 +708,7 @@
 <li>Quelles sont les données à disposition ?</li>
 <li>Le problème à résoudre est-il adapté au ML ?</li>
 <li>Quel est le type d&rsquo;apprentissage envisagé (supervisé/non supervisé, batch/online, etc) ?</li>
-<li>Comment mesurer la performance du modèle ?</li>
+<li>Comment évaluer la performance du modèle ?</li>
 </ul>
 
 </section>
