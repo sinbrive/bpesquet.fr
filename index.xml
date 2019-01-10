@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>Introduction à React Native</title>
+      <link>https://www.bpesquet.fr/slides/mobile/intro-react-native/</link>
+      <pubDate>Wed, 23 May 2018 23:34:24 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/mobile/intro-react-native/</guid>
+      <description>Sommaire  L&amp;rsquo;écosystème mobile Le JavaScript moderne Premiers pas avec React Native  L&amp;rsquo;écosystème mobile  Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
+ Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
+    </item>
+    
+    <item>
       <title>Python et la Data Science</title>
       <link>https://www.bpesquet.fr/slides/ia/python-data-science/</link>
       <pubDate>Thu, 31 May 2018 21:59:13 +0200</pubDate>
@@ -37,6 +47,15 @@
       <guid>https://www.bpesquet.fr/slides/ia/fondamentaux-ml/</guid>
       <description>Sommaire  Introduction au Machine Learning Anatomie d&amp;rsquo;un système de ML supervisé Les étapes d&amp;rsquo;un projet de ML  Introduction au Machine Learning La première définition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
  Des machines qui apprennent ? Le Machine Learning ou apprentissage automatique regroupe un ensemble de techniques (algorithmes) permettant à des machines de s’entraîner sur des bases d’exemples pour :</description>
+    </item>
+    
+    <item>
+      <title>Les réseaux de neurones artificiels</title>
+      <link>https://www.bpesquet.fr/slides/ia/reseaux-neurones/</link>
+      <pubDate>Thu, 31 May 2018 09:45:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/reseaux-neurones/</guid>
+      <description>Sommaire  A la découverte des réseaux de neurones Premiers pas avec Keras Tuning d&amp;rsquo;un réseau de neurones  A la découverte des réseaux de neurones Les origines  1943 : premier modèle mathématique du neurone biologique (McCulloch et Pitts) 1949 : règle de Hebb 1958 : le perceptron (F. Rosenblatt) 1969 : limites des perceptrons (M. Minsky)  L&amp;rsquo;inspiration biologique Le neurone formel de McCulloch et Pitts La règle de Hebb Postulat sur l&amp;rsquo;importance des synapses entre neurones pour l&amp;rsquo;apprentissage.</description>
     </item>
     
     <item>
@@ -264,16 +283,6 @@ Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&
       
       <guid>https://www.bpesquet.fr/publication/creez-pages-web-interactives-javascript/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Introduction à React Native</title>
-      <link>https://www.bpesquet.fr/slides/mobile/intro-react-native/</link>
-      <pubDate>Wed, 23 May 2018 23:34:24 +0200</pubDate>
-      
-      <guid>https://www.bpesquet.fr/slides/mobile/intro-react-native/</guid>
-      <description>Sommaire  L&amp;rsquo;écosystème mobile Le JavaScript moderne Premiers pas avec React Native  L&amp;rsquo;écosystème mobile  Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
- Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
     </item>
     
     <item>

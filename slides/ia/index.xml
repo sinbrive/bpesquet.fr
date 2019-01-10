@@ -39,5 +39,14 @@
  Des machines qui apprennent ? Le Machine Learning ou apprentissage automatique regroupe un ensemble de techniques (algorithmes) permettant à des machines de s’entraîner sur des bases d’exemples pour :</description>
     </item>
     
+    <item>
+      <title>Les réseaux de neurones artificiels</title>
+      <link>https://www.bpesquet.fr/slides/ia/reseaux-neurones/</link>
+      <pubDate>Thu, 31 May 2018 09:45:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/reseaux-neurones/</guid>
+      <description>Sommaire  A la découverte des réseaux de neurones Premiers pas avec Keras Tuning d&amp;rsquo;un réseau de neurones  A la découverte des réseaux de neurones Les origines  1943 : premier modèle mathématique du neurone biologique (McCulloch et Pitts) 1949 : règle de Hebb 1958 : le perceptron (F. Rosenblatt) 1969 : limites des perceptrons (M. Minsky)  L&amp;rsquo;inspiration biologique Le neurone formel de McCulloch et Pitts La règle de Hebb Postulat sur l&amp;rsquo;importance des synapses entre neurones pour l&amp;rsquo;apprentissage.</description>
+    </item>
+    
   </channel>
 </rss>
