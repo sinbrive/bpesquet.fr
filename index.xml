@@ -59,6 +59,17 @@
     </item>
     
     <item>
+      <title>Les réseaux de neurones à convolution (CNN)</title>
+      <link>https://www.bpesquet.fr/slides/ia/reseaux-convolutifs/</link>
+      <pubDate>Thu, 17 Jan 2019 00:02:17 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/ia/reseaux-convolutifs/</guid>
+      <description>Sommaire  Principe de fonctionnement Histoire des CNN Mise en oeuvre avec Keras  Principe de fonctionnement Justification Le monde visuel se caractérise par :
+ Une invariance par translation Des relations hiérarchiques de type tout/partie  Les modèles classiques sont incapables de détecter des patterns locaux dans une image.
+Architecture générale    Extrait du cours d&amp;#39;introduction au Machine Learning de Google    L&amp;rsquo;opération de convolution Application d&amp;rsquo;un filtre ou kernel à des données pour produire un résultat (feature map).</description>
+    </item>
+    
+    <item>
       <title>Mon premier Kahoot</title>
       <link>https://www.bpesquet.fr/article/mon-premier-kahoot/</link>
       <pubDate>Thu, 29 Nov 2018 23:26:45 +0100</pubDate>

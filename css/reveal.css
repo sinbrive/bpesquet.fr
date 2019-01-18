@@ -9,9 +9,9 @@
     height: 385px;
 }
 
-/* Makes slide titles a little less big */
+/* Makes slide titles smaller */
 .reveal h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 /* Make citations take a little more screen space */
