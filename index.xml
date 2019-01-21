@@ -31,6 +31,17 @@
     </item>
     
     <item>
+      <title>Création d&#39;interfaces utilisateur avec React Native</title>
+      <link>https://www.bpesquet.fr/slides/mobile/react-native-ui/</link>
+      <pubDate>Thu, 10 Jan 2019 22:45:23 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/slides/mobile/react-native-ui/</guid>
+      <description>Sommaire  Les composants Navigation entre vues  Les composants La notion de composant Les composants sont les blocs de base d&amp;rsquo;une application React (Native).
+Ils permettent de créer une UI sous forme déclarative par assemblage de composants.
+Propriétés d&amp;rsquo;un composant  Caractéristiques définies au moment de la création. Modifiables uniquement par le composant parent.  import React, { Component } from &#39;react&#39;; import { Text, View } from &#39;react-native&#39;; class Greeting extends Component { render() { return &amp;lt;Text&amp;gt;Hello {this.</description>
+    </item>
+    
+    <item>
       <title>Python et la Data Science</title>
       <link>https://www.bpesquet.fr/slides/ia/python-data-science/</link>
       <pubDate>Thu, 31 May 2018 21:59:13 +0200</pubDate>
