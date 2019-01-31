@@ -49,6 +49,7 @@
 <li>Les composants</li>
 <li>Navigation entre vues</li>
 <li>Gestion de l&rsquo;état</li>
+<li>Interaction avec Firebase</li>
 </ul>
 
 </section>
@@ -764,6 +765,236 @@ export default class MainView extends React.Component {
 <li>Complexe et <em>overkill</em> pour les projets &ldquo;normaux&rdquo;</li>
 <li><a href="https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367">&ldquo;You might not need Redux&rdquo;</a> (écrit par son créateur)</li>
 </ul>
+
+</section>
+				<section>
+
+<h2 id="interaction-avec-firebase">Interaction avec Firebase</h2>
+
+</section>
+				<section>
+
+<p><img src="images/firebase_logo.png" alt="Firebase logo" /></p>
+
+<ul>
+<li>Base de données NoSQL avec capacités temps réel</li>
+<li>Analytics, A/B testing, etc</li>
+<li>Gratuite pour les usages modérés</li>
+<li>Souvent utilisée comme back-end pour les applications mobiles</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="nosql-not-only-sql">NoSQL = Not Only SQL</h2>
+
+<ul>
+<li>Famille de SGBD non relationnels</li>
+<li>Structure hiérarchique ou champ/valeur</li>
+<li>Bien adapté à certains usages</li>
+</ul>
+
+<p><img src="images/nosql_db.gif" alt="NoSQL DB" /></p>
+
+</section>
+				<section>
+
+<h2 id="initialisation-de-la-connexion">Initialisation de la connexion</h2>
+
+<p><img src="images/firebase_web_config.png" alt="Firebase: access to web config" /></p>
+
+<pre><code class="language-js">import * as firebase from 'firebase';
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: &quot;&lt;YOUR-API-KEY&gt;&quot;,
+  authDomain: &quot;&lt;YOUR-AUTH-DOMAIN&gt;&quot;,
+  databaseURL: &quot;&lt;YOUR-DATABASE-URL&gt;&quot;,
+  storageBucket: &quot;&lt;YOUR-STORAGE-BUCKET&gt;&quot;
+};
+
+firebase.initializeApp(firebaseConfig);
+</code></pre>
+
+</section>
+				<section>
+
+<section><h2 id="structure-des-données">Structure des données</h2>
+
+<p>Les données sont stockées sous la forme d&rsquo;un unique arbre JSON.</p>
+
+<pre><code class="language-json">{
+  &quot;users&quot;: {
+    &quot;alovelace&quot;: {
+      &quot;name&quot;: &quot;Ada Lovelace&quot;,
+      &quot;contacts&quot;: { &quot;ghopper&quot;: true },
+    },
+    &quot;ghopper&quot;: { ... },
+    &quot;eclarke&quot;: { ... }
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="profondeur-de-l-arbre">Profondeur de l&rsquo;arbre</h2>
+
+<p>Arborescence trop profonde =&gt; itérations complexes et coûteuses</p>
+
+<pre><code class="language-json">{
+  // This is a poorly nested data architecture, because iterating the children
+  // of the &quot;chats&quot; node to get a list of conversation titles requires
+  // potentially downloading hundreds of megabytes of messages
+  &quot;chats&quot;: {
+    &quot;one&quot;: {
+      &quot;title&quot;: &quot;Historical Tech Pioneers&quot;,
+      &quot;messages&quot;: {
+        &quot;m1&quot;: { &quot;sender&quot;: &quot;ghopper&quot;, &quot;message&quot;: &quot;Relay malfunction found. Cause: moth.&quot; },
+        &quot;m2&quot;: { ... },
+        // a very long list of messages
+      }
+    },
+    &quot;two&quot;: { ... }
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="meilleure-pratique-dénormalisation">Meilleure pratique : dénormalisation</h2>
+
+<pre><code class="language-json">{
+  // Chats contains only meta info about each conversation
+  // stored under the chats's unique ID
+  &quot;chats&quot;: {
+    &quot;one&quot;: {
+      &quot;title&quot;: &quot;Historical Tech Pioneers&quot;,
+      &quot;lastMessage&quot;: &quot;ghopper: Relay malfunction found. Cause: moth.&quot;,
+      &quot;timestamp&quot;: 1459361875666
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  },
+
+  // Conversation members are easily accessible
+  // and stored by chat conversation ID
+  &quot;members&quot;: {
+    // we'll talk about indices like this below
+    &quot;one&quot;: {
+      &quot;ghopper&quot;: true,
+      &quot;alovelace&quot;: true,
+      &quot;eclarke&quot;: true
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  },
+
+  // Messages are separate from data we may want to iterate quickly
+  // but still easily paginated and queried, and organized by chat
+  // conversation ID
+  &quot;messages&quot;: {
+    &quot;one&quot;: {
+      &quot;m1&quot;: {
+        &quot;name&quot;: &quot;eclarke&quot;,
+        &quot;message&quot;: &quot;The relay seems to be malfunctioning.&quot;,
+        &quot;timestamp&quot;: 1459361875337
+      },
+      &quot;m2&quot;: { ... },
+      &quot;m3&quot;: { ... }
+    },
+    &quot;two&quot;: { ... },
+    &quot;three&quot;: { ... }
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="création-d-index">Création d&rsquo;index</h2>
+
+<p>Facilite les requêtes sur une partie limitée des données</p>
+
+<pre><code class="language-json">// An index to track Ada's memberships
+{
+  &quot;users&quot;: {
+    &quot;alovelace&quot;: {
+      &quot;name&quot;: &quot;Ada Lovelace&quot;,
+      // Index Ada's groups in her profile
+      &quot;groups&quot;: {
+         // the value here doesn't matter, just that the key exists
+         &quot;techpioneers&quot;: true,
+         &quot;womentechmakers&quot;: true
+      }
+    },
+    ...
+  },
+  &quot;groups&quot;: {
+    &quot;techpioneers&quot;: {
+      &quot;name&quot;: &quot;Historical Tech Pioneers&quot;,
+      &quot;members&quot;: {
+        &quot;alovelace&quot;: true,
+        &quot;ghopper&quot;: true,
+        &quot;eclarke&quot;: true
+      }
+    },
+    ...
+  }
+}
+</code></pre>
+</section>
+
+</section>
+				<section>
+
+<h2 id="lecture-et-écriture-de-données">Lecture et écriture de données</h2>
+
+<pre><code class="language-js">const ref = firebase.database().ref('path/into/hierarchy');
+const obj = { someAttribute: true };
+
+// Append a new child into hierarchy
+// newRef.key contains the unique autogenerated key
+const newRef = ref.push(obj);
+
+// Overwrites the path
+ref.set(obj);
+
+// Updates only the specified attributes
+ref.update(obj);
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="abonnement-aux-changements-distants">Abonnement aux changements distants</h2>
+
+<p><a href="https://firebase.google.com/docs/database/web/lists-of-data">https://firebase.google.com/docs/database/web/lists-of-data</a></p>
+
+<pre><code class="language-js">ref.on(&quot;value&quot;, data =&gt; {
+  // data.key contains the autogenerated key
+  // data.val() contains the data fields
+});
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="annexe-eslint">Annexe : ESLint</h2>
+
+<p>Installation</p>
+
+<pre><code class="language-bash"># Install required packages globally
+npm i -g eslint eslint-config-prettier eslint-plugin-react eslint-plugin-react-native babel-eslint
+</code></pre>
+
+<p>Paramétrage de VS Code</p>
+
+<pre><code class="language-json">&quot;javascript.implicitProjectConfig.experimentalDecorators&quot;: true
+</code></pre>
+
+<p><a href="https://gist.github.com/bpesquet/b8307abc334f37e41055d309ddd22947#file-eslintrc-json-expo">Fichier de configuration pour Expo</a></p>
 </section>
 				</div>
 	</div>

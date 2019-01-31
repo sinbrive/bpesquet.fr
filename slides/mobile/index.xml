@@ -26,7 +26,7 @@
       <pubDate>Thu, 10 Jan 2019 22:45:23 +0100</pubDate>
       
       <guid>https://www.bpesquet.fr/slides/mobile/app-react-native/</guid>
-      <description>Sommaire  Les composants Navigation entre vues Gestion de l&amp;rsquo;état  Les composants La notion de composant Les composants sont les blocs de base d&amp;rsquo;une application React (Native).
+      <description>Sommaire  Les composants Navigation entre vues Gestion de l&amp;rsquo;état Interaction avec Firebase  Les composants La notion de composant Les composants sont les blocs de base d&amp;rsquo;une application React (Native).
 Ils permettent de créer une UI sous forme déclarative par assemblage de composants.
 Propriétés d&amp;rsquo;un composant  Caractéristiques définies au moment de la création. Modifiables uniquement par le composant parent.  import React, { Component } from &#39;react&#39;; import { Text, View } from &#39;react-native&#39;; class Greeting extends Component { render() { return &amp;lt;Text&amp;gt;Hello {this.</description>
     </item>
