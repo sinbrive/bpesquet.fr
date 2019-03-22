@@ -81,6 +81,33 @@ Architecture générale    Extrait du cours d&amp;#39;introduction au Machine Le
     </item>
     
     <item>
+      <title>Apprenez à coder avec JavaScript (mise à jour vers ES2015)</title>
+      <link>https://www.bpesquet.fr/publication/apprenez-coder-javascript-es2015/</link>
+      <pubDate>Fri, 22 Mar 2019 11:13:05 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/publication/apprenez-coder-javascript-es2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Katas</title>
+      <link>https://www.bpesquet.fr/publication/machine-learning-katas/</link>
+      <pubDate>Fri, 22 Mar 2019 11:02:15 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/publication/machine-learning-katas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Handbook</title>
+      <link>https://www.bpesquet.fr/publication/machine-learning-handbook/</link>
+      <pubDate>Fri, 22 Mar 2019 11:00:45 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/publication/machine-learning-handbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mon premier Kahoot</title>
       <link>https://www.bpesquet.fr/article/mon-premier-kahoot/</link>
       <pubDate>Thu, 29 Nov 2018 23:26:45 +0100</pubDate>
@@ -129,15 +156,6 @@ Academic partnerships Academic partnerships will involve one or more of my stude
       <description>La session 2018 de la summer school de l&amp;rsquo;INRIA consacrée à l&amp;rsquo;IA, nommée PAISS, s&amp;rsquo;est déroulée à Grenoble du 2 au 6 juillet 2018. Voici un petit compte-rendu de ce qui s&amp;rsquo;y est dit et fait.
 Le P de PAISS correspond à l&amp;rsquo;institut PRAIRIE, le centre français d&amp;rsquo;excellence en IA dont la création a été annoncée lors du sommet AI for Humanity en mars 2018.
 Quelques chiffres L&amp;rsquo;école d&amp;rsquo;été 2018 a rassemblé environ 200 participants sélectionnés parmi plus de 700 candidatures.</description>
-    </item>
-    
-    <item>
-      <title>Deep Learning Workshop</title>
-      <link>https://www.bpesquet.fr/publication/deep-learning-workshop/</link>
-      <pubDate>Fri, 25 May 2018 09:57:31 +0200</pubDate>
-      
-      <guid>https://www.bpesquet.fr/publication/deep-learning-workshop/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -376,7 +394,7 @@ Par rapport à d&amp;rsquo;autres ateliers similiaires comme lego4scrum, il a l&
       <pubDate>Tue, 22 May 2018 22:54:22 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/course/ensc/web/</guid>
-      <description> Compléments  Demystifying CORS  </description>
+      <description> Compléments  Les différences entre les fonctions PHP array_key_exists(), empty() et isset() expliquées précisément. CORS démystifié.  </description>
     </item>
     
   </channel>

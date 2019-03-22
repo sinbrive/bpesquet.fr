@@ -5,17 +5,35 @@
     <link>https://www.bpesquet.fr/publication/</link>
     <description>Recent content in Publications on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 25 May 2018 09:57:31 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 22 Mar 2019 11:13:05 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Deep Learning Workshop</title>
-      <link>https://www.bpesquet.fr/publication/deep-learning-workshop/</link>
-      <pubDate>Fri, 25 May 2018 09:57:31 +0200</pubDate>
+      <title>Apprenez à coder avec JavaScript (mise à jour vers ES2015)</title>
+      <link>https://www.bpesquet.fr/publication/apprenez-coder-javascript-es2015/</link>
+      <pubDate>Fri, 22 Mar 2019 11:13:05 +0100</pubDate>
       
-      <guid>https://www.bpesquet.fr/publication/deep-learning-workshop/</guid>
+      <guid>https://www.bpesquet.fr/publication/apprenez-coder-javascript-es2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Katas</title>
+      <link>https://www.bpesquet.fr/publication/machine-learning-katas/</link>
+      <pubDate>Fri, 22 Mar 2019 11:02:15 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/publication/machine-learning-katas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Handbook</title>
+      <link>https://www.bpesquet.fr/publication/machine-learning-handbook/</link>
+      <pubDate>Fri, 22 Mar 2019 11:00:45 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/publication/machine-learning-handbook/</guid>
       <description></description>
     </item>
     

@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/slides/mobile/app-react-native/</loc>
-    <lastmod>2019-01-29T00:27:08+01:00</lastmod>
+    <lastmod>2019-01-31T01:16:38+01:00</lastmod>
   </url>
   
   <url>
@@ -63,6 +63,21 @@
   </url>
   
   <url>
+    <loc>https://www.bpesquet.fr/publication/apprenez-coder-javascript-es2015/</loc>
+    <lastmod>2019-03-22T11:13:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/publication/machine-learning-katas/</loc>
+    <lastmod>2019-03-22T11:02:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/publication/machine-learning-handbook/</loc>
+    <lastmod>2019-03-22T11:00:45+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bpesquet.fr/article/mon-premier-kahoot/</loc>
     <lastmod>2018-12-06T10:07:33+01:00</lastmod>
   </url>
@@ -84,11 +99,6 @@
   
   <url>
     <loc>https://www.bpesquet.fr/article/paiss-2018-debrief/</loc>
-    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.bpesquet.fr/publication/deep-learning-workshop/</loc>
     <lastmod>2018-10-04T09:48:50+02:00</lastmod>
   </url>
   
@@ -219,7 +229,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/course/ensc/web/</loc>
-    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
+    <lastmod>2019-02-03T12:49:15+01:00</lastmod>
   </url>
   
   <url>
@@ -257,7 +267,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/publication/</loc>
-    <lastmod>2018-10-04T09:48:50+02:00</lastmod>
+    <lastmod>2019-03-22T11:13:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
