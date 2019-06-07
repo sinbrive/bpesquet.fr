@@ -176,7 +176,9 @@ Quelques chiffres L&amp;rsquo;école d&amp;rsquo;été 2018 a rassemblé environ
       <pubDate>Thu, 24 May 2018 23:02:44 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/course/ensc/prog-avancee/</guid>
-      <description> Compléments  C# : comprendre les différences entre readonly et const  </description>
+      <description> Compléments  C# : comprendre les différences entre readonly et const
+ Should array length be stored into a local variable in C#?
+  </description>
     </item>
     
     <item>
