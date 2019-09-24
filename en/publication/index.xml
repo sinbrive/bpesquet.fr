@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications in English on Baptiste Pesquet</title>
+    <link>https://www.bpesquet.fr/en/publication/</link>
+    <description>Recent content in Publications in English on Baptiste Pesquet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Mar 2019 11:02:15 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.bpesquet.fr/en/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Machine Learning Katas</title>
+      <link>https://www.bpesquet.fr/en/publication/machine-learning-katas/</link>
+      <pubDate>Fri, 22 Mar 2019 11:02:15 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/machine-learning-katas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Handbook</title>
+      <link>https://www.bpesquet.fr/en/publication/machine-learning-handbook/</link>
+      <pubDate>Fri, 22 Mar 2019 11:00:45 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/machine-learning-handbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The JavaScript Way</title>
+      <link>https://www.bpesquet.fr/en/publication/the-javascript-way/</link>
+      <pubDate>Tue, 22 May 2018 23:26:21 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/the-javascript-way/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

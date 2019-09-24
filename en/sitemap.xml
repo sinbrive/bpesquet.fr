@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/slides/ai/</loc>
+    <lastmod>2019-09-24T09:15:13+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/slides/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/slides/ai/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</loc>
+    <lastmod>2018-05-31T09:15:13+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/slides/ai/fondamentaux-ml/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</loc>
+    <lastmod>2019-09-24T09:15:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/</loc>
+    <lastmod>2019-09-24T09:15:13+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/publication/machine-learning-katas/</loc>
+    <lastmod>2019-03-22T11:02:15+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/publication/</loc>
+    <lastmod>2019-03-22T11:02:15+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/publication/machine-learning-handbook/</loc>
+    <lastmod>2019-03-22T11:00:45+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/page/</loc>
+    <lastmod>2018-10-04T19:02:15+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/page/work-with-me/</loc>
+    <lastmod>2018-10-04T19:02:15+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/publication/the-javascript-way/</loc>
+    <lastmod>2018-05-22T23:26:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/slides/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/slides/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/slides/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/tags/"
+                />
+  </url>
+  
+</urlset>

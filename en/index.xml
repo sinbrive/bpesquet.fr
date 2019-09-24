@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baptiste Pesquet</title>
+    <link>https://www.bpesquet.fr/en/</link>
+    <description>Recent content on Baptiste Pesquet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 24 Sep 2019 09:15:13 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Machine Learning Fundamentals</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</link>
+      <pubDate>Thu, 31 May 2018 09:15:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</guid>
+      <description> (Writing in progress) </description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Algorithms</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</link>
+      <pubDate>Tue, 24 Sep 2019 09:15:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</guid>
+      <description> (Writing in progress) </description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Katas</title>
+      <link>https://www.bpesquet.fr/en/publication/machine-learning-katas/</link>
+      <pubDate>Fri, 22 Mar 2019 11:02:15 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/machine-learning-katas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning Handbook</title>
+      <link>https://www.bpesquet.fr/en/publication/machine-learning-handbook/</link>
+      <pubDate>Fri, 22 Mar 2019 11:00:45 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/machine-learning-handbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Work With Me</title>
+      <link>https://www.bpesquet.fr/en/page/work-with-me/</link>
+      <pubDate>Thu, 04 Oct 2018 19:02:15 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/page/work-with-me/</guid>
+      <description>Real-world projects are great opportunities to apply one&amp;rsquo;s skills and learn something valuable along the way. For this reason, I like to collaborate with external partners whenever possible. These collaborations can take two forms.
+Academic partnerships Academic partnerships will involve one or more of my students. They can either be internships (from one to six months) or group projects (from a few weeks to a whole year!). In these partnerships, I usually play the role of a supervisor.</description>
+    </item>
+    
+    <item>
+      <title>The JavaScript Way</title>
+      <link>https://www.bpesquet.fr/en/publication/the-javascript-way/</link>
+      <pubDate>Tue, 22 May 2018 23:26:21 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/publication/the-javascript-way/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

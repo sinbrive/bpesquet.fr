@@ -88,6 +88,10 @@ a:not(#calltoaction):hover {
   border-top: var(--border-width) solid var(--accent);
 }
 
+#dropdown-menu-language {
+  min-width: 10px;
+}
+
 footer {
   border-bottom: var(--border-width) solid var(--accent);
 }
