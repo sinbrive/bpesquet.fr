@@ -16,7 +16,9 @@
       <pubDate>Thu, 31 May 2018 09:15:13 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</guid>
-      <description> (Writing in progress) </description>
+      <description>Sommaire  Introduction to Machine Learning Anatomy of a supervised ML system Steps of an ML project  Introduction to Machine Learning A first definition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
+ Learning machines? Machine Learning is a set of techniques for giving machines the ability to learn from data, in order to:
+ Identify or classify elements Detect tendencies Make predictions  As more data is fed into the system, results get better: performance improves with experience.</description>
     </item>
     
     <item>
