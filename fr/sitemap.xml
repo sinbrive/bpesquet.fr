@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.bpesquet.fr/fr/slides/ai/panorama/</loc>
-    <lastmod>2019-09-24T22:39:50+02:00</lastmod>
+    <loc>https://www.bpesquet.fr/fr/slides/ai/overview/</loc>
+    <lastmod>2019-09-30T00:49:00+02:00</lastmod>
   </url>
   
   <url>
@@ -40,6 +40,16 @@
   <url>
     <loc>https://www.bpesquet.fr/fr/slides/ai/python-data-science/</loc>
     <lastmod>2019-09-24T16:33:53+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/slides/ai/python-data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/slides/ai/python-data-science/"
+                />
   </url>
   
   <url>
@@ -89,7 +99,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/</loc>
-    <lastmod>2019-09-24T22:39:50+02:00</lastmod>
+    <lastmod>2019-09-30T00:49:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

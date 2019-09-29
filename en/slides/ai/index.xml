@@ -10,12 +10,21 @@
     
     
     <item>
+      <title>Python for Data Science</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/python-data-science/</link>
+      <pubDate>Sat, 28 Sep 2019 21:59:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/python-data-science/</guid>
+      <description>Sommaire  Introduction to Data Science Why Python? Python tools for data science  Simplified installation with Anaconda Code and result sharing with Jupyter Notebook Numerical computing with NumPy Data analysis with Pandas Plotting with Matplotlib and Seaborn   Introduction to Data Science What is Data Science?  Main objective: extract insight from data. Expression born in 1997 in the statistician community. &amp;ldquo;A Data Scientist is a statistician that lives in San Francisco&amp;rdquo;.</description>
+    </item>
+    
+    <item>
       <title>Machine Learning Fundamentals</title>
       <link>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</link>
       <pubDate>Thu, 31 May 2018 09:15:13 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/ml-fundamentals/</guid>
-      <description>Sommaire  Introduction to Machine Learning Anatomy of a supervised ML system Steps of an ML project  Introduction to Machine Learning A first definition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
+      <description>Summary  Introduction to Machine Learning Anatomy of a supervised ML system Steps of an ML project  Introduction to Machine Learning A first definition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
  Learning machines? Machine Learning is a set of techniques for giving machines the ability to learn from data, in order to:
  Identify or classify elements Detect tendencies Make predictions  As more data is fed into the system, results get better: performance improves with experience.</description>
     </item>
@@ -26,7 +35,7 @@
       <pubDate>Tue, 24 Sep 2019 09:15:13 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</guid>
-      <description> (Writing in progress) </description>
+      <description> Summary  Supervised learning  K-Nearest Neighbors &amp;hellip;   K-Nearest Neighbors </description>
     </item>
     
   </channel>

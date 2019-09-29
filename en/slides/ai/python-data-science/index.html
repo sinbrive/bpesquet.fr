@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Python for Data Science</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>Python for Data Science</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-handbook"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="sommaire">Sommaire</h2>
+
+<ul>
+<li>Introduction to Data Science</li>
+<li>Why Python?</li>
+<li>Python tools for data science
+
+<ul>
+<li>Simplified installation with Anaconda</li>
+<li>Code and result sharing with Jupyter Notebook</li>
+<li>Numerical computing with NumPy</li>
+<li>Data analysis with Pandas</li>
+<li>Plotting with Matplotlib and Seaborn</li>
+</ul></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="introduction-to-data-science">Introduction to Data Science</h2>
+
+</section>
+				<section>
+
+<h2 id="what-is-data-science">What is Data Science?</h2>
+
+<ul>
+<li>Main objective: extract insight from data.</li>
+<li>Expression born in 1997 in the statistician community.</li>
+<li>&ldquo;A Data Scientist is a statistician that lives in San Francisco&rdquo;.</li>
+<li>2012 : &ldquo;Sexiest job of the 21st century&rdquo; (Harvard Business Review).</li>
+<li><a href="https://en.wikipedia.org/wiki/Data_science#Relationship_to_statistics">Controversy</a> on the expression&rsquo;s real usefulness.</li>
+</ul>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="data-science-fields">Data Science fields</h2>
+
+<figure>
+    <img src="images/DataScienceDisciplines.png"/> <figcaption>
+            <p>
+                    <a href="https://en.wikipedia.org/wiki/Data_science">Source: Wikipedia</a></p>
+        </figcaption>
+</figure>
+
+</section>
+				<section>
+
+<figure>
+    <img src="images/Data_Science_VD_conway.png"/> <figcaption>
+            <p>
+                    <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">Data Science Venn Diagram by D. Conway (2013)</a></p>
+        </figcaption>
+</figure>
+
+</section>
+				<section>
+
+<figure>
+    <img src="images/DS_VD_Kolassa.png"/> <figcaption>
+            <p>
+                    <a href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">Data Scientist Venn Diagram by S. Kolassa (2015)</a></p>
+        </figcaption>
+</figure>
+
+</section>
+
+</section>
+				<section>
+
+<h2 id="why-python">Why Python?</h2>
+
+</section>
+				<section>
+
+<h2 id="the-python-language">The Python language</h2>
+
+<p>Programming language created in 1989 by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> and developed under a open source license.</p>
+
+<p><img src="images/Python_logo.png" alt="Python logo" /></p>
+
+<ul>
+<li>Multi-paradigms (procedural, fonctional, object-oriented)</li>
+<li>Dynamic types</li>
+<li>Automatic memory management</li>
+<li>&hellip;</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="the-python-syntax">The Python syntax</h2>
+
+<pre><code class="language-python">def hello(name):
+    print(&quot;Hello &quot;, name)
+
+friends = [&quot;Lou&quot;, &quot;David&quot;, &quot;Iggy&quot;]
+
+for friend in friends:
+    hello(friend)
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="demo-time">Demo time</h2>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-handbook/blob/master/tools/Python.ipynb">Python Cheatsheet</a></p>
+
+</section>
+				<section>
+
+<h2 id="python-a-standard-for-data-science">Python, a standard for Data Science</h2>
+
+<ul><li class="fragment"> Language qualities (ease of use, simplicity, versatility).</li><li class="fragment">Involvement of the scientific and academical communities.</li><li class="fragment">Ecosystem of dedicated open source libraries.</li></ul>
+
+</section>
+				<section>
+
+<h2 id="python-tools-for-data-science">Python tools for Data Science</h2>
+
+</section>
+				<section>
+
+<h2 id="anaconda-https-www-anaconda-com-distribution"><a href="https://www.anaconda.com/distribution/">Anaconda</a></h2>
+
+<p>Scientific distribution including Python and many (1500+) specialized packages.</p>
+
+<p><img src="images/anaconda_distro.png" alt="Anaconda content" /></p>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+
+<p><a href="https://jupyter.org/"><img src="images/ipython.png" alt="IPython" /></a></p>
+
+<ul>
+<li>Web interface for using <a href="https://ipython.org/">IPython</a> in a browser.</li>
+<li>Centralizes text, (interactive) code and images in a single notebook (file with <em>.ipynb</em> extension).</li>
+<li>New standard for sharing research results.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="google-colaboratory">Google Colaboratory</h2>
+
+<p>Cloud environment for executing Jupyter notebooks through CPU, GPU or TPU.</p>
+
+<p><a href="https://colab.research.google.com"><img src="images/Google-Colaboratory.png" alt="Google Colaboratory" /></a></p>
+
+</section>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<p><a href="http://www.numpy.org/"><img src="images/numpy.png" alt="NumPy logo" /></a></p>
+
+<ul>
+<li>Python library for numerical computing</li>
+
+<li><p>Efficiently handles multidimensional arrays</p>
+
+<pre><code class="language-python">import numpy as np
+
+x = np.array([1, 4, 2, 5, 3])
+print(x[:2])  # [1 4]
+print(x[2:])  # [2 5 3]
+print(np.sort(x))  # [1, 2, 3, 4, 5]
+</code></pre></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="numpy-and-tensors">NumPy and tensors</h2>
+
+<p>In the context of Data Science, a <strong>tensor</strong> is a set of values stored in a multidimensional array.</p>
+
+<ul>
+<li>Vector = 1D tensor</li>
+<li>Matrix = 2D tensor</li>
+</ul>
+
+</section>
+
+</section>
+				<section>
+
+<h2 id="demo-time-1">Demo time</h2>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-handbook/blob/master/tools/NumPy.ipynb">Tensor Management with NumPy</a></p>
+
+</section>
+				<section>
+
+<p><a href="https://pandas.pydata.org/"><img src="images/pandas_logo.png" alt="Pandas logo" /></a></p>
+
+<p>Python library for data analysis which gracefully handles heterogeneous data</p>
+
+<pre><code class="language-python">import pandas as pd
+
+pop = pd.Series({'CAL':38332521, 'TEX':26448193, 'NY':19651127})
+area = pd.Series({'CAL':423967, 'TEX':695662, 'NY':141297})
+states = pd.DataFrame({'population':pop, 'area':area})
+</code></pre>
+
+<p><img src="images/pandas_result.png" alt="Code result" /></p>
+
+</section>
+				<section>
+
+<h2 id="demo-time-2">Demo time</h2>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-handbook/blob/master/tools/Pandas.ipynb">Data Analysis with Pandas</a></p>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<p><a href="https://matplotlib.org/"><img src="images/matplotlib_logo.png" alt="Matplotlib logo" /></a></p>
+
+<p>Python library for 2D plotting</p>
+
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 10, 100)
+plt.plot(x, np.cos(x))
+</code></pre>
+
+<p><img src="images/mpl_result.png" alt="Code result" /></p>
+
+</section>
+				<section>
+
+<h2 id="seaborn-https-seaborn-pydata-org"><a href="https://seaborn.pydata.org/">Seaborn</a></h2>
+
+<ul>
+<li>Python library for data visualization</li>
+
+<li><p>Improves presentation of matplotib-generated graphics</p>
+
+<pre><code class="language-python">import seaborn as sns
+sns.set()
+</code></pre></li>
+</ul>
+
+<p><img src="images/seaborn_result.png" alt="Code result" /></p>
+
+</section>
+
+</section>
+				<section>
+
+<h2 id="demo-time-3">Demo time</h2>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-handbook/blob/master/tools/Matplotlib.ipynb">Plotting with Matplotlib and Seaborn</a></p>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
