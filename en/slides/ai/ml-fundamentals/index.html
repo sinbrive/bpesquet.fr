@@ -387,6 +387,13 @@ y = \begin{pmatrix}
 </section>
 				<section>
 
+<h2 id="digit-representation">Digit representation</h2>
+
+<p><img src="images/digit_representation.gif" alt="Digit representation" /></p>
+
+</section>
+				<section>
+
 <p><img src="images/image2vector.jpeg" alt="Image to vector" /></p>
 
 </section>
@@ -398,7 +405,7 @@ y = \begin{pmatrix}
 
 <ul>
 <li>Defines the relationship between features and labels.</li>
-<li>Made of <strong>parameters</strong>, named the <code>$ \theta $</code> vector.</li>
+<li>Made of <strong>parameters</strong>, named the <code>$ \theta $</code> (or sometimes <code>$ \omega $</code>) vector.</li>
 <li>Its calculated result is named <code>$ y' $</code> or <code>$ \hat{y} $</code>.</li>
 </ul>
 
@@ -430,7 +437,7 @@ y = \begin{pmatrix}
 <ul>
 <li>Quantifies the difference between expected results (<em>ground truth</em>) and actual results calculated by the model.</li>
 <li>For a given dataset, the loss is only a function of the model&rsquo;s parameters.</li>
-<li>The loss function is named <code>$ \mathcal{L}(\theta) $</code>.</li>
+<li>The loss function is named <code>$ \mathcal{L}(\theta) $</code> or sometimes <code>$ \mathcal{J}(\theta) $</code></li>
 <li>Different loss functions exists. The choice depends on the learning type.</li>
 </ul>
 
@@ -705,11 +712,11 @@ y' = \begin{pmatrix}
 </section>
 				<section>
 
-<h2 id="properties-of-ml-suited-problems">Properties of ML-suited problems</h2>
+<h2 id="properties-of-ml-friendly-problems">Properties of ML-friendly problems</h2>
 
 <ul>
 <li>Difficulty to express the actions as rules.</li>
-<li>Data too complex for traditional analitycal methods:
+<li>Data too complex for traditional analytical methods:
 
 <ul>
 <li>High number of features.</li>
@@ -731,6 +738,22 @@ y' = \begin{pmatrix}
 <h2 id="performance-metrics-for-classification">Performance metrics for classification</h2>
 
 <p>During inference, the model output (probabilities) is thresholded into discrete values.</p>
+
+<p>Thresholds are problem-dependent.</p>
+
+</section>
+				<section>
+
+<h2 id="decision-boundary">Decision boundary</h2>
+
+<p>Graphical representation of the frontier between classes.</p>
+
+<p><img src="images/multiclass_decision_boundary.png" alt="Multiclass decision boundary" /></p>
+
+</section>
+				<section>
+
+<h2 id="accuracy">Accuracy</h2>
 
 <p>The standard metric for classification is <strong>accuracy</strong>.</p>
 
@@ -768,6 +791,13 @@ y' = \begin{pmatrix}
 </figure>
 
 </section>
+				<section>
+
+<h2 id="multiclass-confusion-matrix">Multiclass confusion matrix</h2>
+
+<p><img src="images/confusion_matrix_multiclass.png" alt="Multiclass confusion matrix" /></p>
+
+</section>
 
 </section>
 				<section>
@@ -789,7 +819,7 @@ y' = \begin{pmatrix}
 <h2 id="precision-and-recall">Precision and recall</h2>
 
 <ul>
-<li><strong>Précision</strong>: proportion of positive identifications that were actually correct.</li>
+<li><strong>Precision</strong>: proportion of positive identifications that were actually correct.</li>
 <li><strong>Recall</strong>: proportion of actual positives that were identified correctly.</li>
 </ul>
 
@@ -824,6 +854,8 @@ Recall = \frac{1}{1 + 8} = 11\%$$</code></p>
 </ul>
 
 </section>
+
+</section>
 				<section>
 
 <h2 id="f1-score">F1 score</h2>
@@ -836,8 +868,6 @@ Recall = \frac{1}{1 + 8} = 11\%$$</code></p>
 <p><code>$$F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}$$</code></p>
 
 <p>Good metric in case of class imbalance, when precision and recall are both important.</p>
-
-</section>
 
 </section>
 				<section>
@@ -856,6 +886,11 @@ Recall = \frac{1}{1 + 8} = 11\%$$</code></p>
 </section>
 				<section>
 
+<p><img src="images/roc_curves.png" alt="Ideal ROC curve" /></p>
+
+</section>
+				<section>
+
 <h2 id="typical-roc-curve">Typical ROC curve</h2>
 
 <p><a href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc"><img src="images/roc_curve.png" alt="ROC curve" /></a></p>
@@ -865,7 +900,10 @@ Recall = \frac{1}{1 + 8} = 11\%$$</code></p>
 
 <h2 id="auc">AUC</h2>
 
-<p>AOC stands for &ldquo;Area Under the ROC Curve&rdquo;.</p>
+<ul>
+<li>AOC stands for &ldquo;Area Under the ROC Curve&rdquo;.</li>
+<li>Classifier&rsquo;s performance at all thresholds.</li>
+</ul>
 
 <p><a href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc"><img src="images/auc.png" alt="AUC" /></a></p>
 
@@ -969,7 +1007,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 </section>
 				<section>
 
-<h2 id="data-normalization">Data normalization</h2>
+<h2 id="data-standardization">Data standardization</h2>
 
 <p>In order to facilite training, data has to:</p>
 
@@ -1100,21 +1138,6 @@ x /= x.std(axis=0)  # reduce data
 <li>It can be deployed on a dedicated server accessible through an API, or used directly on a device.</li>
 <li>A deployed model is often a part of a more important system.</li>
 </ul>
-
-</section>
-				<section>
-
-<h2 id="todo">TODO</h2>
-
-<ul>
-<li>Details on ROC and AUC
-
-<ul>
-<li><a href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc">https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc</a></li>
-<li><a href="https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5">https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5</a></li>
-<li><a href="https://fr.wikipedia.org/wiki/Courbe_ROC">https://fr.wikipedia.org/wiki/Courbe_ROC</a></li>
-</ul></li>
-</ul>
 </section>
 				</div>
 	</div>
@@ -1135,7 +1158,7 @@ x /= x.std(axis=0)  # reduce data
 		
 		Reveal.initialize({
 			
-			history: false,
+			history: true,
 			
 			slideNumber: true,
 			
