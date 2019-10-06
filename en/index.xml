@@ -31,12 +31,12 @@
     </item>
     
     <item>
-      <title>Machine Learning Algorithms</title>
-      <link>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</link>
+      <title>ML Algorithms: K-Nearest Neighbors</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/k-nearest-neighbors/</link>
       <pubDate>Tue, 24 Sep 2019 09:15:13 +0200</pubDate>
       
-      <guid>https://www.bpesquet.fr/en/slides/ai/ml-algorithms/</guid>
-      <description> (Writing in progress) </description>
+      <guid>https://www.bpesquet.fr/en/slides/ai/k-nearest-neighbors/</guid>
+      <description>Summary  K-NN in a nutshell K-NN for classification K-NN for regression  K-NN in a nutshell  Instance-based (no model construction). No training phase, computations happen during predictions. $ \neq $ K-Means algorithm. Very simple yet often efficient. Can be used for classification or regression.  K-NN for classification A new point is assigned to the class which has the most representatives within the k nearest neighbors of the point.</description>
     </item>
     
     <item>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Algorithms: K-Nearest Neighbors</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Algorithms: K-Nearest Neighbors</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>K-NN in a nutshell</li>
+<li>K-NN for classification</li>
+<li>K-NN for regression</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="k-nn-in-a-nutshell">K-NN in a nutshell</h2>
+
+<ul>
+<li>Instance-based (no model construction).</li>
+<li>No training phase, computations happen during predictions.</li>
+<li><code>$ \neq $</code> K-Means algorithm.</li>
+<li>Very simple yet often efficient.</li>
+<li>Can be used for classification or regression.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="k-nn-for-classification">K-NN for classification</h2>
+
+<p>A new point is assigned to the class which has the most representatives within the <code>k</code> nearest neighbors of the point.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"><img src="images/knn.png" alt="K-NN example" /></a></p>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="the-k-parameter">The <code>k</code> parameter</h2>
+
+<ul>
+<li>Positive integer, chosen by the user. Typically small.</li>
+<li>a larger <code>k</code> suppresses the effects of noise, but makes the classification boundaries less distinct.</li>
+<li><code>$k=5$</code> is a frequent choice.</li>
+<li><code>$k=1$</code> =&gt; <em>nearest neighbor</em> algorithm.</li>
+</ul>
+
+</section>
+				<section>
+
+<p><a href="https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/"><img src="images/knn_k.png" alt="K parameter importance" /></a>
+</section>
+
+</section>
+				<section>
+
+<h2 id="distance-metrics">Distance metrics</h2>
+
+<ul>
+<li>Common choice: <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidian distance</a>.</li>
+<li>Alternatives: <a href="https://en.wikipedia.org/wiki/Hamming_distance">Hamming distance</a>, <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan distance</a>, custom distance metric (problem-dependent).</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="neighbors-selection">Neighbors selection</h2>
+
+<ul>
+<li>Brute force: compute distance between all training samples.
+
+<ul>
+<li>Efficient with few samples.</li>
+</ul></li>
+<li>Other methods try to reduce the required number of distance calculations.
+
+<ul>
+<li>Basic idea: if <code>A</code> is very distant from <code>B</code> and <code>B</code> is very close to <code>C</code>, we can infer that <code>A</code> and <code>C</code> are very distant.</li>
+</ul></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="neighborhood-class-computation">Neighborhood class computation</h2>
+
+<ul>
+<li>Basic form: uniform weights (simple majority vote). Suboptimal when dataset is skewed (imbalanced).</li>
+<li>Distance weights: closer neighbors weight more than farther ones.</li>
+</ul>
+
+<p><a href="https://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html"><img src="images/knn_weights.png" alt="Weights importance in K-NN" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="pseudocode-brute-force-uniform-weights">Pseudocode (brute force, uniform weights)</h2>
+
+<pre><code class="language-pseudocode">Set k
+For each training sample
+  Compute distance between sample and new point
+Keep the k samples with smallest distance
+Find the most frequent class between the k samples
+Assign this class to the new point
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="k-nn-for-regression">K-NN for regression</h2>
+
+<p>The target is predicted by local interpolation of the targets associated of the <code>k</code> nearest neighbors.</p>
+
+<p><a href="https://scikit-learn.org/stable/auto_examples/neighbors/plot_regression.html"><img src="images/knn_regression.png" alt="K-NN for regression" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="k-nn-shortcomings">K-NN shortcomings</h2>
+
+<ul>
+<li>Good results for small datasets with few features.</li>
+<li>Distances computation can become intractable with many samples, or samples with many features.</li>
+<li>Categorical features make the distances computation difficult.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="links-for-further-reading">Links for further reading</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</a></li>
+<li><a href="https://scikit-learn.org/stable/modules/neighbors.html">https://scikit-learn.org/stable/modules/neighbors.html</a></li>
+<li><a href="https://erikbern.com/2018/02/15/new-benchmarks-for-approximate-nearest-neighbors.html">https://erikbern.com/2018/02/15/new-benchmarks-for-approximate-nearest-neighbors.html</a></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="demo-time">Demo time!</h2>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-katas/blob/master/notebooks/demos/KNN_PlanarData.ipynb">Classify Planar Data with K-NN</a></p>
+
+<p><a href="http://nbviewer.jupyter.org/github/bpesquet/machine-learning-katas/blob/master/notebooks/demos/KNN_Fruits.ipynb">Classify Fruits with K-NN</a></p>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
