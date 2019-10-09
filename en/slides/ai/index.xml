@@ -38,5 +38,16 @@
       <description>Summary  K-NN in a nutshell K-NN for classification K-NN for regression  K-NN in a nutshell  Instance-based (no model construction). No training phase, computations happen during predictions. $ \neq $ K-Means algorithm. Very simple yet often efficient. Can be used for classification or regression.  K-NN for classification A new point is assigned to the class which has the most representatives within the k nearest neighbors of the point.</description>
     </item>
     
+    <item>
+      <title>ML Algorithms: Linear Regression</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/linear-regression/</link>
+      <pubDate>Wed, 09 Oct 2019 08:37:33 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/linear-regression/</guid>
+      <description>Summary  Introduction Analytical Approach: Normal Equation Iterative Approach: Gradient Descent Polynomial Regression Regularization  Introduction Search for a linear relationship between inputs and the output we try to predict.
+
+Problem formulation  Features $ x_i $: properties of a data sample. Parameters $ \theta_i $: coefficients of the linear model. Hypothesis $ \mathcal{h}_\theta $: model output, function of input.  $x^{(i)} = \left\{ x^{(i)}_0, x^{(i)}_1, \dotsc, x^{(i)}_n \right\} \in \mathbf{R}^{n+1} $, with $ x^{(i)}_0 = 0$</description>
+    </item>
+    
   </channel>
 </rss>

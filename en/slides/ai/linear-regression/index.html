@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Algorithms: Linear Regression</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Algorithms: Linear Regression</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>Introduction</li>
+<li>Analytical Approach: Normal Equation</li>
+<li>Iterative Approach: Gradient Descent</li>
+<li>Polynomial Regression</li>
+<li>Regularization</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Search for a linear relationship between inputs and the output we try to predict.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Linear_regression"><img src="images/linear_regression.png" alt="Linear Regression example" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="problem-formulation">Problem formulation</h2>
+
+<ul>
+<li>Features <code>$ x_i $</code>: properties of a data sample.</li>
+<li>Parameters <code>$ \theta_i $</code>: coefficients of the linear model.</li>
+<li>Hypothesis <code>$ \mathcal{h}_\theta $</code>: model output, function of input.</li>
+</ul>
+
+<p><code>$x^{(i)} = \left\{ x^{(i)}_0, x^{(i)}_1, \dotsc, x^{(i)}_n \right\} \in \mathbf{R}^{n+1} $</code>, with <code>$ x^{(i)}_0 = 0$</code></p>
+
+<p><code>$$\theta = \left\{ \theta_0, \theta_1, \dotsc, \theta_n \right\} \in \mathbf{R}^{n+1}$$</code></p>
+
+<p><code>$$y'^{(i)} = \mathcal{h}_\theta(x^{(i)}) = \theta_0 + \theta_1x^{(i)}_1 + \dotsc + \theta_nx^{(i)}_n$$</code></p>
+
+</section>
+				<section>
+
+<h2 id="analytical-approach">Analytical approach</h2>
+
+<ul>
+<li>Technique for computing the regression coefficients <code>$\theta_i$</code> analytically (by calculus).</li>
+<li>One-step learning algorithm (no iterations).</li>
+<li>Also called <em>Ordinary Least Squares</em>.</li>
+</ul>
+
+</section>
+				<section>
+
+<p><code>$$x^{(i)} = \begin{pmatrix}
+       \ x^{(i)}_0 \\
+       \ x^{(i)}_1 \\
+       \ \vdots \\
+       \ x^{(i)}_n
+     \end{pmatrix}\;\;\;
+\theta = \begin{pmatrix}
+       \ \theta_0 \\
+       \ \theta_1 \\
+       \ \vdots \\
+       \ \theta_n
+     \end{pmatrix}\;\;\;
+\mathcal{h}_\theta(x^{(i)}) = \theta^T\cdot x^{(i)}$$</code></p>
+
+<p><code>$$X = \begin{pmatrix}
+       \ x^{(0)T} \\
+       \ x^{(1)T} \\
+       \ \vdots \\
+       \ x^{(m)T} \\
+     \end{pmatrix} =
+\begin{pmatrix}
+       \ x^{(1)}_0 &amp; x^{(1)}_1 &amp; \cdots &amp; x^{(1)}_n \\
+       \ x^{(2)}_0 &amp; x^{(2)}_1 &amp; \cdots &amp; x^{(2)}_n \\
+       \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+       \ x^{(m)}_0 &amp; x^{(m)}_1 &amp; \cdots &amp; x^{(m)}_n
+     \end{pmatrix}\;\;\;
+y = \begin{pmatrix}
+       \ y^{(1)} \\
+       \ y^{(2)} \\
+       \ \vdots \\
+       \ y^{(m)}
+     \end{pmatrix}$$</code></p>
+
+</section>
+				<section>
+
+<h2 id="normal-equation">Normal equation</h2>
+
+<p>Loss function: MSE</p>
+
+<p><code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m (y'^{(i)} - y^{(i)})^2 = \frac{1}{m}\sum_{i=1}^m (\theta^T\cdot x^{(i)} - y^{(i)})^2$</code></p>
+
+<p>Find <code>$\hat{\theta}$</code> so that <code>$\frac{\mathcal{L}(\theta)}{d\theta} = 0$</code> in order to minimize loss</p>
+
+<p>Solution: <code>$\hat{\theta} = (X^T \cdot X)^{-1} \cdot X^T \cdot y$</code></p>
+
+<p><a href="https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression/">(Math proof)</a></p>
+
+</section>
+				<section>
+
+<h2 id="pros-cons-of-analytical-approach">Pros/cons of analytical approach</h2>
+
+<p>Pros:</p>
+
+<ul>
+<li>Computed in one step.</li>
+<li>Exact solution.</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>Computation of <code>$(X^T \cdot X)^{-1}$</code> is slow when the number of features is large (<code>$n &gt; 10^4$</code>).</li>
+<li>Problem if <code>$X^T \cdot X$</code> is not inversible.</li>
+</ul>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="iterative-approach-gradient-descent">Iterative approach: gradient descent</h2>
+
+<ul>
+<li>Same objective: find <code>$\hat{\theta}$</code> that minimizes loss.</li>
+<li>General idea:
+
+<ul>
+<li>Start with random values for the <code>$\theta$</code> vector.</li>
+<li>Update <code>$\theta$</code> in small steps towards the loss minimum.</li>
+</ul></li>
+<li>To know in which direction update <code>$\theta$</code>, we compute the <strong>gradient</strong> of the loss function wrt <code>$\theta$</code> and go into the opposite direction.</li>
+</ul>
+
+</section>
+				<section>
+
+<p><a href="https://alykhantejani.github.io/a-brief-introduction-to-gradient-descent/"><img src="images/gradient_descent_line_graph.gif" alt="Gradient descent line graph" /></a>
+</section>
+
+</section>
+				<section>
+
+<h2 id="computation-of-gradients">Computation of gradients</h2>
+
+<p><code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m (\theta^T\cdot x^{(i)} - y^{(i)})^2$</code></p>
+
+<p><code>$\frac{\partial}{\partial \theta_j} \mathcal{L}(\theta) = \frac{2}{m}\sum_{i=1}^m (\theta^T\cdot x^{(i)} - y^{(i)})x^{(i)}_j$</code></p>
+
+<p><code>$$\nabla_{\theta}\mathcal{L}(\theta) = \begin{pmatrix}
+       \ \frac{\partial}{\partial \theta_1} \mathcal{L}(\theta) \\
+       \ \frac{\partial}{\partial \theta_2} \mathcal{L}(\theta) \\
+       \ \vdots \\
+       \ \frac{\partial}{\partial \theta_n} \mathcal{L}(\theta)
+     \end{pmatrix} =
+\frac{2}{m}X^T\cdot (X\cdot \theta - y)$$</code></p>
+
+</section>
+				<section>
+
+<h2 id="parameters-update">Parameters update</h2>
+
+<p>The <strong><em>learning rate</em></strong> <code>$ \eta $</code> governs the amplitude of updates.</p>
+
+<p><code>$$\theta_{next} = \theta - \eta\nabla_{\theta}\mathcal{L}(\theta)$$</code></p>
+
+<p><a href="https://www.jeremyjordan.me/nn-learning-rate/"><img src="images/learning_rate.png" alt="Importance of learning rate" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="types-of-gradient-descent">Types of gradient descent</h2>
+
+<ul>
+<li><em>Batch</em>: use the whole dataset to compute gradients.
+
+<ul>
+<li>Safe bu potentially slow.</li>
+</ul></li>
+<li><em>Stochastic</em>: use only one sample.
+
+<ul>
+<li>Fast but potentially erratic.</li>
+</ul></li>
+<li><em>Mini-Batch</em>: use a small set of samples (10-1000).
+
+<ul>
+<li>Good compromise.</li>
+</ul></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="pros-cons-of-iterative-approach">Pros/cons of iterative approach</h2>
+
+<p>Pros:</p>
+
+<ul>
+<li>Works well with a large number of features.</li>
+<li>MSE loss convex =&gt; guarantee of a global minimum.</li>
+</ul>
+
+<p>Cons:</p>
+
+<ul>
+<li>Convergence depends on learning rate and GD type.</li>
+<li>Dependant on feature scaling.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="polynomial-regression">Polynomial Regression</h2>
+
+<ul>
+<li>How can a linear model fit non-linear data?</li>
+<li>Solution: add powers of each feature as new features.</li>
+<li>The hypothesis function is still linear.</li>
+</ul>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/polynomial_regression.png" alt="Polynomial degree examples" /></a></p>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="regularization">Regularization</h2>
+
+<ul>
+<li><p>Solution against overfitting: constraining model parameters.</p></li>
+
+<li><p>Ridge regression (using L2 norm): <code>$\mathcal{L}(\theta) = MSE(\theta) + \frac{\lambda}{2}\sum_{i=1}^n \theta_i^2$</code></p></li>
+
+<li><p>Lasso regression (using L1 norm): <code>$\mathcal{L}(\theta) = MSE(\theta) + \lambda\sum_{i=1}^n |\theta_i|$</code></p></li>
+
+<li><p><code>$\lambda$</code> is called the regularization rate.</p></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="effects-of-regularization-rate">Effects of regularization rate</h2>
+
+<p>(Called <code>$\alpha$</code> here)</p>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/ridge_regression.png" alt="Ridge regression example" /></a></p>
+
+</section>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
