@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/en/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 09 Oct 2019 08:37:33 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2019 17:27:01 +0200</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -48,6 +48,19 @@
       <description>Summary  Introduction Analytical Approach: Normal Equation Iterative Approach: Gradient Descent Polynomial Regression Regularization  Introduction Search for a linear relationship between inputs and the output we try to predict.
 
 Problem formulation  Features $ x_i $: properties of a data sample. Parameters $ \theta_i $: coefficients of the linear model. Hypothesis $ \mathcal{h}_\theta $: model output, function of input.  $x^{(i)} = \left\{ x^{(i)}_0, x^{(i)}_1, \dotsc, x^{(i)}_n \right\} \in \mathbf{R}^{n+1} $, with $ x^{(i)}_0 = 0$</description>
+    </item>
+    
+    <item>
+      <title>ML Algorithms: Logistic Regression</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/logistic-regression/</link>
+      <pubDate>Sun, 13 Oct 2019 17:27:01 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/logistic-regression/</guid>
+      <description>Summary  Logistic Regression In A Nutshell Binary Classification Multiclass Classification  Logistic Regression in a nutshell  Supervised learning algorithm. Used for classification problems. Linear model + function to transform its output into probabilities. Probabilities are thresholded to predict classes.  Binary classification Uses the logistic (sigmoid) function
+The logistic function Output in $[0,1]$
+
+Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m \left[y^{(i)} \log(y&#39;^{(i)}) + (1-y^{(i)}) \log(1-y&#39;^{(i)})\right]$$
+(Always convex)</description>
     </item>
     
     <item>

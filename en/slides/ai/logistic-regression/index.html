@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Algorithms: Logistic Regression</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Algorithms: Logistic Regression</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>Logistic Regression In A Nutshell</li>
+<li>Binary Classification</li>
+<li>Multiclass Classification</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="logistic-regression-in-a-nutshell">Logistic Regression in a nutshell</h2>
+
+<ul>
+<li>Supervised learning algorithm.</li>
+<li>Used for classification problems.</li>
+<li>Linear model + function to transform its output into probabilities.</li>
+<li>Probabilities are thresholded to predict classes.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="binary-classification">Binary classification</h2>
+
+<p>Uses the logistic (sigmoid) function</p>
+
+<p><img src="images/classification.png" alt="Classification" /></p>
+
+</section>
+				<section>
+
+<h2 id="the-logistic-function">The logistic function</h2>
+
+<p>Output in <code>$[0,1]$</code></p>
+
+<p><a href="https://towardsdatascience.com/derivative-of-the-sigmoid-function-536880cf918e"><img src="images/sigmoid.png" alt="Sigmoid function" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="loss-function">Loss function</h2>
+
+<p><em>Binary Crossentropy</em>: <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m \left[y^{(i)} \log(y'^{(i)}) + (1-y^{(i)}) \log(1-y'^{(i)})\right]$$</code></p>
+
+<p>(Always convex)</p>
+
+</section>
+				<section>
+
+<h2 id="training">Training</h2>
+
+<ul>
+<li>No equivalent of the Normal Equation.</li>
+<li>Training via Gradient Descent (Batch, SGD or Mini-Batch SGD).</li>
+</ul>
+
+<p><code>$$ \sigma'(x) = \sigma(x)(1-\sigma(x))$$</code></p>
+
+<p><code>$$\frac{\partial}{\partial \theta_j} \mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m (\sigma(\theta^T\cdot x^{(i)}) - y^{(i)})x^{(i)}_j$$</code></p>
+
+</section>
+				<section>
+
+<h2 id="multiclass-classification">Multiclass Classification</h2>
+
+<ul>
+<li>Logistic regression for multiclass classification.</li>
+<li>Also called <strong>Multinomial Logistic Regression</strong> or <strong>Softmax Regression</strong>.</li>
+<li>The model computes a score <code>$s_k(x)$</code> for each class <code>$k$</code>, then estimates the probability of each class by applying the softmax function.</li>
+<li>Each class has its dedicated parameter vector <code>$\theta^{(k)}$</code>.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="the-softmax-function">The softmax function</h2>
+
+<p><code>$$\sigma(z)_j = \frac{e^{z_j}}{\sum_{k=1}^K {e^{z_k}}}$$</code></p>
+
+<ul>
+<li>Probability distribution for <code>$K$</code> classes.</li>
+<li>Output is a probability vector.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="loss-function-1">Loss function</h2>
+
+<p><em>Categorical Crossentropy</em>: <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K y^{(i)}_k \log(y'^{(i)}_k)$$</code></p>
+
+<ul>
+<li>Ground truth for a sample <code>$y^{(i)}$</code> must be a binary vector.</li>
+<li>Same as <em>Binary Crossentropy</em> when <code>$ K = 2 $</code>.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="training-1">Training</h2>
+
+<p>Via Gradient Descent for each of the <code>$\theta^{(k)}$</code> parameter vectors.</p>
+
+<p><code>$$\nabla_{\theta^{(k)}}\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m(y'^{(i)}_k - y^{(i)}_k)x^{(i)}$$</code></p>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: true,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>

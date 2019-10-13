@@ -447,9 +447,9 @@ y = \begin{pmatrix}
 <h2 id="loss-functions-for-regression">Loss functions for regression</h2>
 
 <ul>
-<li><em>Mean Absolute Error</em> (MAE, aka <em>L1 loss</em>) : <code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m |y'^{(i)} - y^{(i)}|$</code></li>
-<li><em>Mean Squared Error</em> (MSE, aka <em>L2 loss</em>) : <code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m (y'^{(i)} - y^{(i)})^2$</code></li>
-<li><em>Root Mean Squared Error</em> (RMSE) : <code>$\mathcal{L}(\theta) = \sqrt{\frac{1}{m}\sum_{i=1}^m (y'^{(i)} - y^{(i)})^2}$</code></li>
+<li><em>Mean Absolute Error</em> (MAE, aka <em>L1 loss</em>): <code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m |y'^{(i)} - y^{(i)}|$</code></li>
+<li><em>Mean Squared Error</em> (MSE, aka <em>L2 loss</em>): <code>$\mathcal{L}(\theta) = \frac{1}{m}\sum_{i=1}^m (y'^{(i)} - y^{(i)})^2$</code></li>
+<li><em>Root Mean Squared Error</em> (RMSE): <code>$\mathcal{L}(\theta) = \sqrt{\frac{1}{m}\sum_{i=1}^m (y'^{(i)} - y^{(i)})^2}$</code></li>
 </ul>
 
 </section>
@@ -462,7 +462,7 @@ y = \begin{pmatrix}
 <li>The calculated result <code>$ y'^{(i)} $</code> is a probability (real value between 0 and 1).</li>
 </ul>
 
-<p><em>Binary Crossentropy</em> : <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m \left[y^{(i)} \log(y'^{(i)}) + (1-y^{(i)}) \log(1-y'^{(i)})\right]$$</code></p>
+<p><em>Binary Crossentropy</em>: <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m \left[y^{(i)} \log(y'^{(i)}) + (1-y^{(i)}) \log(1-y'^{(i)})\right]$$</code></p>
 
 </section>
 				<section>
@@ -493,7 +493,7 @@ y' = \begin{pmatrix}
 
 <h2 id="loss-function-for-multiclass-classification">Loss function for multiclass classification</h2>
 
-<p><em>Categorical Crossentropy</em> : <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K y^{(i)}_k \log(y'^{(i)}_k)$$</code></p>
+<p><em>Categorical Crossentropy</em>: <code>$$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m\sum_{k=1}^K y^{(i)}_k \log(y'^{(i)}_k)$$</code></p>
 
 <p>(Same as <em>Binary Crossentropy</em> when <code>$ K = 2 $</code>)</p>
 
@@ -1158,7 +1158,7 @@ x /= x.std(axis=0)  # reduce data
 		
 		Reveal.initialize({
 			
-			history: false,
+			history: true,
 			
 			slideNumber: true,
 			
