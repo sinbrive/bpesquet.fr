@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Tools: Keras</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Tools: Keras</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="introducing-keras">Introducing Keras</h2>
+
+<p>Python library for creating neural networks created by <a href="https://twitter.com/fchollet">François Chollet</a>.</p>
+
+<p><a href="https://keras.io"><img src="images/keras_logo.png" alt="Keras logo" /></a></p>
+
+<p>High-level, user-friendly API above a ML/DL backend library.</p>
+
+</section>
+				<section>
+
+<h2 id="keras-vs-tf-keras">Keras Vs tf.keras</h2>
+
+<ul>
+<li>Originally, Keras was multi-backend: TensorFlow 1.x, Theano, CNTK&hellip;</li>
+<li>Since TF 2.0, <em>tf.keras</em> is the official high-level API of TensorFlow.</li>
+<li>The <a href="https://github.com/keras-team/keras/releases/tag/2.3.0">2.3.0 release</a> (Sept. 2019) will be the last major release of multi-backend Keras.</li>
+<li>TF users should switch to <em>tf.keras</em>.</li>
+</ul>
+
+<p><a href="https://colab.research.google.com/drive/1UCJt8EYjlzCs1H1d1X0iDGYJsHKwu-NO">TF 2.0 + Keras Overview</a></p>
+
+</section>
+				<section>
+
+<h2 id="the-keras-api-by-example">The Keras API by example</h2>
+
+<p>Expected network architecture:</p>
+
+<p><img src="images/neural_net2.jpeg" alt="A simple neural network" /></p>
+
+</section>
+				<section>
+
+<h2 id="network-definition">Network definition</h2>
+
+<pre><code class="language-python"># Sequential defines a linear stack of layers
+from tensorflow.keras.models import Sequential
+# Dense defines a fully connected layer
+from tensorflow.keras.layers import Dense
+
+model = Sequential() # Create a new network
+# Add a 4-neurons layer using tanh as activation function
+# Input shape corresponds to the input layer (no of features)
+model.add(Dense(4, activation='tanh'), input_shape=(3,))
+# Add a 4-neurons layer using tanh
+# Input shape is infered from previous layer
+model.add(Dense(4, activation='tanh'))
+# Add a 1-neuron output layer using sigmoid
+model.add(Dense(1, activation='sigmoid'))
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="network-compilation">Network compilation</h2>
+
+<pre><code class="language-python"># Configuration of the training process
+# optimizer: gradient descent optimization method
+# loss: loss function
+# metrics: list of metrics monitored during training and testing
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="training-and-evaluation">Training and evaluation</h2>
+
+<pre><code class="language-python"># Launch the training of the network on the data
+# epochs: number of epochs to train the model
+#  (An epoch is an iteration over the entire training dataset)
+# batch_size: number of samples used at each training iteration
+# The returned history object contains the monitored metrics
+history = model.fit(x_train, y_train, epochs=5, batch_size=64)
+
+# Compute the loss value &amp; metrics for the network on test data
+loss, acc = model.evaluate(x_test, y_test, verbose=0)
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="mnist-the-hello-world-of-deep-learning">MNIST, the &ldquo;Hello World&rdquo; of deep learning</h2>
+
+<p>Dataset of 70,000 handwritten digits, stored as 28x28 grayscale images.</p>
+
+<p><img src="images/MNIST_digits.png" alt="MNIST digits" /></p>
+
+</section>
+				<section>
+
+<h2 id="network-architecture-for-mnist">Network architecture for MNIST</h2>
+
+<p><a href="http://neuralnetworksanddeeplearning.com/chap1.html"><img src="images/mnist_nn.png" alt="Extract from the book Neural Networks and Deep Learning by M. Nielsen" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="network-creation">Network creation</h2>
+
+<pre><code class="language-python"># Create a (784, 15, 10) model
+model = Sequential()
+
+# Use ReLU for hidden layer
+model.add(Dense(15, activation='relu', input_shape=(28 * 28,)))
+
+# Use softmax for output layer
+model.add(Dense(10, activation='softmax'))
+
+model.compile('rmsprop', 'categorical_crossentropy', metrics=['accuracy'])
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="one-hot-encoding">One-hot encoding</h2>
+
+<p>Produces a matrix of binary vectors from a vector of categorical (int) values.</p>
+
+<pre><code class="language-python">from tensorflow.keras.utils import to_categorical
+
+x = np.array([1, 2, 0, 2, 1])
+print(x.shape) # (5,)
+
+# One-hot encoding
+x = to_categorical(x)
+
+print(x.shape) # (5, 3): 5 elements and 3 possible values for each one
+print(x[0]) # [0. 1. 0.], corresponding to 1
+print(x[1]) # [0. 0. 1.], corresponding to 2
+print(x[2]) # [1. 0. 0.], corresponding to 0
+print(x[3]) # [0. 0. 1.], corresponding to 2
+print(x[4]) # [0. 1. 0.], corresponding to 1
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="data-loading-and-preprocessing">Data loading and preprocessing</h2>
+
+<pre><code class="language-python"># Load the Keras MNIST digits dataset
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+
+# Reshape images data into a (number of samples, 28x28) matrix
+x_train = train_images.reshape((60000, 28 * 28))
+x_test = test_images.reshape((10000, 28 * 28))
+
+# Change pixel values from (0, 255) to (0, 1)
+x_train = x_train.astype('float32') / 255
+x_test = x_test.astype('float32') / 255
+
+# One-hot encoding of expected results
+y_train = to_categorical(train_labels)
+y_test = to_categorical(test_labels)
+</code></pre>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: true,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>

@@ -83,8 +83,18 @@
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/fr/slides/ai/reseaux-neurones/</loc>
-    <lastmod>2019-09-24T16:33:53+02:00</lastmod>
+    <loc>https://www.bpesquet.fr/fr/slides/ai/neural-networks/</loc>
+    <lastmod>2018-05-31T09:45:13+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/slides/ai/neural-networks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/slides/ai/neural-networks/"
+                />
   </url>
   
   <url>

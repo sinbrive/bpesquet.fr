@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/en/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 13 Oct 2019 17:27:01 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2019 09:16:40 +0200</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -61,6 +61,27 @@ The logistic function Output in $[0,1]$
 
 Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1}^m \left[y^{(i)} \log(y&#39;^{(i)}) + (1-y^{(i)}) \log(1-y&#39;^{(i)})\right]$$
 (Always convex)</description>
+    </item>
+    
+    <item>
+      <title>ML Algorithms: Neural Networks</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/neural-networks/</link>
+      <pubDate>Thu, 31 May 2018 09:45:13 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/neural-networks/</guid>
+      <description>Summary  Introducing Neural Networks Neural Network Tuning  Introducing Neural Networks The origins  1943 : first mathematical model of a biological neuron (McCulloch &amp;amp; Pitts) 1949 : Hebb&amp;rsquo;s rule 1958 : The perceptron (F. Rosenblatt) 1969 : Limits of perceptrons (M. Minsky)  A biological inspiration McCulloch &amp;amp; Pitts&amp;rsquo; formal neuron Hebb&amp;rsquo;s rule Attempt to explain synaptic plasticity, the adaptation of brain neurons during the learning process.</description>
+    </item>
+    
+    <item>
+      <title>ML Tools: Keras</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/keras/</link>
+      <pubDate>Mon, 14 Oct 2019 09:16:40 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/keras/</guid>
+      <description>Introducing Keras Python library for creating neural networks created by François Chollet.
+
+High-level, user-friendly API above a ML/DL backend library.
+Keras Vs tf.keras  Originally, Keras was multi-backend: TensorFlow 1.x, Theano, CNTK&amp;hellip; Since TF 2.0, tf.keras is the official high-level API of TensorFlow. The 2.3.0 release (Sept. 2019) will be the last major release of multi-backend Keras. TF users should switch to tf.keras.  TF 2.0 + Keras Overview</description>
     </item>
     
     <item>
