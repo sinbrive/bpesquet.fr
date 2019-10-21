@@ -72,6 +72,16 @@ Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1
     </item>
     
     <item>
+      <title>ML Algorithms: Ensemble Methods</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/ensemble-methods/</link>
+      <pubDate>Mon, 21 Oct 2019 08:56:51 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/ensemble-methods/</guid>
+      <description>Summary  Decision Trees Ensemble Learning Random Forests Boosting Algorithms  Decision Trees Decision Trees in a nutshell  Supervised method, used for classification or regression. Build a tree-like structure based on a series of questions on the data.  
+Example: Iris dataset Tree nodes  Leaf or non-leaf. Gini: measure of the node impurity. Samples: number of samples the node applies to. Value: number of samples of each class the node applies to.</description>
+    </item>
+    
+    <item>
       <title>ML Tools: Keras</title>
       <link>https://www.bpesquet.fr/en/slides/ai/keras/</link>
       <pubDate>Mon, 14 Oct 2019 09:16:40 +0200</pubDate>

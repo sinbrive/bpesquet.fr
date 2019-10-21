@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/en/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Oct 2019 09:16:40 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 08:56:51 +0200</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -70,6 +70,16 @@ Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1
       
       <guid>https://www.bpesquet.fr/en/slides/ai/neural-networks/</guid>
       <description>Summary  Introducing Neural Networks Neural Network Tuning  Introducing Neural Networks The origins  1943 : first mathematical model of a biological neuron (McCulloch &amp;amp; Pitts) 1949 : Hebb&amp;rsquo;s rule 1958 : The perceptron (F. Rosenblatt) 1969 : Limits of perceptrons (M. Minsky)  A biological inspiration McCulloch &amp;amp; Pitts&amp;rsquo; formal neuron Hebb&amp;rsquo;s rule Attempt to explain synaptic plasticity, the adaptation of brain neurons during the learning process.</description>
+    </item>
+    
+    <item>
+      <title>ML Algorithms: Ensemble Methods</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/ensemble-methods/</link>
+      <pubDate>Mon, 21 Oct 2019 08:56:51 +0200</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/ensemble-methods/</guid>
+      <description>Summary  Decision Trees Ensemble Learning Random Forests Boosting Algorithms  Decision Trees Decision Trees in a nutshell  Supervised method, used for classification or regression. Build a tree-like structure based on a series of questions on the data.  
+Example: Iris dataset Tree nodes  Leaf or non-leaf. Gini: measure of the node impurity. Samples: number of samples the node applies to. Value: number of samples of each class the node applies to.</description>
     </item>
     
     <item>

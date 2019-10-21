@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Algorithms: Ensemble Methods</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Algorithms: Ensemble Methods</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>Decision Trees</li>
+<li>Ensemble Learning</li>
+<li>Random Forests</li>
+<li>Boosting Algorithms</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="decision-trees">Decision Trees</h2>
+
+</section>
+				<section>
+
+<h2 id="decision-trees-in-a-nutshell">Decision Trees in a nutshell</h2>
+
+<ul>
+<li>Supervised method, used for classification or regression.</li>
+<li>Build a tree-like structure based on a series of questions on the data.</li>
+</ul>
+
+<p><a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.08-random-forests.html"><img src="images/dt_pdsh.png" alt="Decision Tree Example" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="example-iris-dataset">Example: Iris dataset</h2>
+
+<p><img src="images/dt_iris.png" alt="Decision Tree for Iris dataset" /></p>
+
+</section>
+				<section>
+
+<h2 id="tree-nodes">Tree nodes</h2>
+
+<ul>
+<li>Leaf or non-leaf.</li>
+<li><strong>Gini</strong>: measure of the node <em>impurity</em>.</li>
+<li><strong>Samples</strong>: number of samples the node applies to.</li>
+<li><strong>Value</strong>: number of samples of each class the node applies to.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="the-gini-score">The Gini score</h2>
+
+<ul>
+<li><code>$G_i = 1- \sum_{k=1}^K {p_{i, k}}^2$</code></li>
+<li><code>$p_{i, k}$</code>: ratio of class <code>k</code> instances in the <code>$i^{th}$</code> node.</li>
+<li><code>$Gini = 0$</code>: all samples belong to the same class (&ldquo;pure&rdquo; node).</li>
+<li>Other possible measure: entropy (level of disorder).</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="decision-tree-boundary">Decision tree boundary</h2>
+
+<p><img src="images/dt_boundary.png" alt="Decision tree boundary for Iris dataset" /></p>
+
+</section>
+				<section>
+
+<h2 id="training-a-decision-tree">Training a decision tree</h2>
+
+<ul>
+<li>CART algorithm: at each step, find the feature and threshold that produce the purest subsets (weighted by their size).</li>
+<li>Said differently: look for the highest Gini gain.</li>
+<li><a href="https://victorzhou.com/blog/intro-to-random-forests/">More details on training</a>.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="decision-trees-for-regression">Decision trees for regression</h2>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/dt_regression.png" alt="Regression Tree" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="advantages-of-decision-trees">Advantages of decision trees</h2>
+
+<ul>
+<li>Versatile</li>
+<li>Very fast inference</li>
+<li>Intuitive and interpretable (<em>white box</em>)</li>
+<li>No feature scaling required</li>
+</ul>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="decision-trees-shortcomings">Decision trees shortcomings</h2>
+
+<ul>
+<li>#1 problem: overfitting.</li>
+<li>Regularization through hyperparameters:
+
+<ul>
+<li>Maximum depth of the tree (<em>pruning</em>).</li>
+<li>Minimum number of samples needed to split a node.</li>
+<li>Minimum number of samples for any leaf node.</li>
+</ul></li>
+<li>Sensibility to small variations in the training data.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="example-regularization-with-min-sample-leafs">Example: regularization with min sample leafs</h2>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/dt_regul.png" alt="Decision tree regularization" /></a>
+</section>
+
+</section>
+				<section>
+
+<h2 id="ensemble-learning">Ensemble learning</h2>
+
+</section>
+				<section>
+
+<h2 id="general-idea">General idea</h2>
+
+<ul>
+<li>Combining several predictors will lead to better results.</li>
+<li>A group of predictors is called an <em>ensemble</em>.</li>
+<li>Works best when predictors are diverse.</li>
+<li>Less interpretable and harder to tune than an individual predictor.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="hard-voting-classifiers">Hard voting classifiers</h2>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/hard_voting_classifier.png" alt="Hard voting classifier" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="soft-voting-classifiers">Soft voting classifiers</h2>
+
+<ul>
+<li>Use class probabilities rather than class predictions.</li>
+<li>Often yields better results than hard voting (highly confident predictions have more weight).</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="bagging-and-pasting">Bagging and pasting</h2>
+
+<ul>
+<li>Each predictor is fed with different random subsets of the training data.</li>
+<li>Bagging (<em>Bootstrap Aggregating</em>) aka sampling with replacement: training instances can be repeated in the subsets.
+
+<ul>
+<li>[1, 2, 3, 4, 5, 6] =&gt; [1, 2, 2, 3, 6, 6] for a particular predictor.</li>
+</ul></li>
+<li>Pasting: they cannot.</li>
+<li>Out-of-bag samples can be used as a validation set.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="random-forests">Random forests</h2>
+
+</section>
+				<section>
+
+<h2 id="random-forests-in-a-nutshell">Random forests in a nutshell</h2>
+
+<ul>
+<li>Ensemble of Decision Trees, often trained via bagging.</li>
+<li>Used for classification or regression.</li>
+</ul>
+
+<p><img src="images/random-forest.jpg" alt="Random forest meme" /></p>
+
+</section>
+				<section>
+
+<h2 id="random-forest-principle">Random forest principle</h2>
+
+<p>At each node, only a random subset of the features is considered for splitting.</p>
+
+<p><a href="https://towardsdatascience.com/understanding-random-forest-58381e0602d2"><img src="images/random_forest.jpeg" alt="Random forest analogy" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="boosting-algorithms">Boosting algorithms</h2>
+
+</section>
+				<section>
+
+<h2 id="general-idea-1">General idea</h2>
+
+<ul>
+<li>Train predictors of the ensemble sequentially, each one trying to correct its predecessor.</li>
+<li>Combine several weak learners into a strong learner.</li>
+<li>Computations cannot be parallelized.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="adaboost">AdaBoost</h2>
+
+<p>Misclassified instances are given more weight in the subsequent model.</p>
+
+</section>
+				<section>
+
+<section data-shortcode-section>
+<h2 id="gradient-boosting">Gradient Boosting</h2>
+
+<ul>
+<li>Each predictor is trained on the residual error of its predecessor (<code>$y - y'$</code>).</li>
+<li>The ensemble prediction is the sum of each individual prediction.</li>
+</ul>
+
+</section>
+				<section>
+
+<p><a href="https://github.com/ageron/handson-ml2"><img src="images/gradient_boosting.png" alt="Gradient boosting example" /></a>
+</section>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
