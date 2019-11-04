@@ -66,7 +66,7 @@
 <ul>
 <li>ML/DL library supported by Facebook.</li>
 <li>Based on previous work, notably <a href="http://torch.ch/">Torch</a> and <a href="https://chainer.org/">Chainer</a>.</li>
-<li>v1.0 in December 2018.</li>
+<li>Initial release in October 2016. v1.0 in December 2018.</li>
 <li>Quickly became very popular among DL researchers.</li>
 </ul>
 
@@ -108,7 +108,7 @@ b = b.to(device)
 <ul>
 <li>Many ML algorithms need to compute <strong>gradients</strong>.</li>
 <li>AD (also named autodiff) is a family of techniques for efficiently computing derivatives of numeric functions.</li>
-<li>PyTorch implements <strong>reverse mode AD</strong>.</li>
+<li>AD can differentiate closed-form math expressions, but also algorithms using branching, loops or recursion.</li>
 </ul>
 
 </section>
@@ -131,8 +131,8 @@ b = b.to(device)
 <ul>
 <li>Automatic manipulation of expressions for obtaining derivative expressions.</li>
 <li>Used in modern mathematical software (Mathematica, Maple&hellip;).</li>
-<li>Can lead to <em>expression swell</em> (exponentially large
-symbolic expressions).</li>
+<li>Can lead to <em>expression swell</em>: exponentially large
+symbolic expressions.</li>
 </ul>
 
 <p><img src="images/symbolic_differentiation.png" alt="Symbolic Differentiation" /></p>
@@ -145,9 +145,19 @@ symbolic expressions).</li>
 <ul>
 <li>AD combines numerical and symbolic differentiations.</li>
 <li>General idea: apply symbolic differentiation at the elementary operation level and keep intermediate numerical results.</li>
-<li>AD exists in two modes: forward and reverse.</li>
-<li>Both rely on the <em>chain rule</em>.</li>
+<li>AD exists in two modes: forward and reverse. Both rely on the <strong>chain rule</strong>.</li>
 </ul>
+
+<p><img src="images/chain_rule.png" alt="Chain rule" /></p>
+
+</section>
+				<section>
+
+<h2 id="computational-graph">Computational graph</h2>
+
+<p><code>$$f(x1,x2) = ln(x1) + x1x2 - sin(x2)$$</code></p>
+
+<p><img src="images/computational_graph.png" alt="Computational graph" /></p>
 
 </section>
 				<section>
@@ -156,23 +166,35 @@ symbolic expressions).</li>
 
 <ul>
 <li>Computes gradients wrt one parameter along with the function output.</li>
+<li>Relies on <a href="https://en.wikipedia.org/wiki/Automatic_differentiation#Automatic_differentiation_using_dual_numbers">dual numbers</a>.</li>
 <li>Efficient when output dimension &gt;&gt; number of parameters.</li>
 </ul>
 
 </section>
 				<section>
 
+<section data-shortcode-section>
 <h2 id="reverse-mode-autodiff">Reverse mode autodiff</h2>
 
 <ul>
-<li>Computes function output, then gradients wrt the output for all parameters.</li>
+<li>Computes function output, then do a backward pass to compute gradients wrt all parameters for the output.</li>
 <li>Efficient when number of parameters &gt;&gt; output dimension.</li>
 </ul>
 
 </section>
 				<section>
 
+<h2 id="the-forward-pass">The forward pass</h2>
+
+<p><img src="images/autodiff_forward_pass.png" alt="The forward pass" />
+</section>
+
+</section>
+				<section>
+
 <h2 id="autodiff-with-pytorch">Autodiff with PyTorch</h2>
+
+<p>PyTorch (like TensorFlow) implements <strong>reverse mode AD</strong>.</p>
 
 <pre><code class="language-python"># By default, user-created tensors do not track operations on them
 x1 = torch.tensor([2.0], requires_grad=True)
@@ -197,7 +219,7 @@ print(x2.grad) # dy/dx2
 <p>&ldquo;People are now building a new kind of software by assembling networks of parameterized functional blocks and by training them from examples using some form of gradient-based optimization…. It’s really very much like a regular program, except it’s parameterized, automatically differentiated, and trainable/optimizable&rdquo; (Y. LeCun).</p>
 </blockquote>
 
-<p><a href="https://medium.com/@karpathy/software-2-0-a64152b37c35">Saftware 2.0 (?)</a></p>
+<p>Could it be <a href="https://medium.com/@karpathy/software-2-0-a64152b37c35">Saftware 2.0</a>?</p>
 
 </section>
 				<section>
@@ -311,7 +333,7 @@ for t in range(2000):
 		
 		Reveal.initialize({
 			
-			history: true,
+			history: false,
 			
 			slideNumber: true,
 			

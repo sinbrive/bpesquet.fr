@@ -99,9 +99,9 @@ Keras Vs tf.keras  Originally, Keras was multi-backend: TensorFlow 1.x, Theano, 
       <pubDate>Sun, 03 Nov 2019 20:11:05 +0100</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/pytorch/</guid>
-      <description>Summary  PyTorch Essentials Automatic Differentiation In PyTorch Training Models With PyTorch  PyTorch Essentials PyTorch in a nutshell  ML/DL library supported by Facebook. Based on previous work, notably Torch and Chainer. v1.0 in December 2018. Quickly became very popular among DL researchers.  
+      <description>Summary  PyTorch Essentials Automatic Differentiation In PyTorch Training Models With PyTorch  PyTorch Essentials PyTorch in a nutshell  ML/DL library supported by Facebook. Based on previous work, notably Torch and Chainer. Initial release in October 2016. v1.0 in December 2018. Quickly became very popular among DL researchers.  
 PyTorch tensors  NumPy-like API for manipulating tensors. Tensors can be located on GPU for faster computations.
-import torch a = torch.tensor([5.5, 3]) b = torch.</description>
+import torch a = torch.</description>
     </item>
     
   </channel>
