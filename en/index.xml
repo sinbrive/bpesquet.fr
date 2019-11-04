@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/en/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 21 Oct 2019 08:56:51 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2019 20:11:05 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -92,6 +92,17 @@ Example: Iris dataset Tree nodes  Leaf or non-leaf. Gini: measure of the node im
 
 High-level, user-friendly API above a ML/DL backend library.
 Keras Vs tf.keras  Originally, Keras was multi-backend: TensorFlow 1.x, Theano, CNTK&amp;hellip; Since TF 2.0, tf.keras is the official high-level API of TensorFlow. The 2.3.0 release (Sept. 2019) will be the last major release of multi-backend Keras. TF users should switch to tf.keras.  TF 2.0 + Keras Overview</description>
+    </item>
+    
+    <item>
+      <title>ML Tools: PyTorch</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/pytorch/</link>
+      <pubDate>Sun, 03 Nov 2019 20:11:05 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/pytorch/</guid>
+      <description>Summary  PyTorch Essentials Automatic Differentiation In PyTorch Training Models With PyTorch  PyTorch Essentials PyTorch in a nutshell  ML/DL library supported by Facebook. Based on previous work, notably Torch and Chainer. v1.0 in December 2018. Quickly became very popular among DL researchers.  
+PyTorch tensors  NumPy-like API for manipulating tensors. Tensors can be located on GPU for faster computations.
+import torch a = torch.tensor([5.5, 3]) b = torch.</description>
     </item>
     
     <item>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>ML Tools: PyTorch</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>ML Tools: PyTorch</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>PyTorch Essentials</li>
+<li>Automatic Differentiation In PyTorch</li>
+<li>Training Models With PyTorch</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="pytorch-essentials">PyTorch Essentials</h2>
+
+</section>
+				<section>
+
+<h2 id="pytorch-in-a-nutshell">PyTorch in a nutshell</h2>
+
+<ul>
+<li>ML/DL library supported by Facebook.</li>
+<li>Based on previous work, notably <a href="http://torch.ch/">Torch</a> and <a href="https://chainer.org/">Chainer</a>.</li>
+<li>v1.0 in December 2018.</li>
+<li>Quickly became very popular among DL researchers.</li>
+</ul>
+
+<p><a href="https://pytorch.org"><img src="images/pytorch-logo-dark.png" alt="PyTorch logo" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="pytorch-tensors">PyTorch tensors</h2>
+
+<ul>
+<li>NumPy-like API for manipulating tensors.</li>
+
+<li><p>Tensors can be located on GPU for faster computations.</p>
+
+<pre><code class="language-python">import torch
+
+a = torch.tensor([5.5, 3])
+b = torch.rand(5, 3)
+
+b.reshape(3, 5) # Shape: (3, 5)
+b.view(5, -1)   # Shape: (5, 3)
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+b = b.to(device)
+</code></pre></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="automatic-differentiation-in-pytorch">Automatic Differentiation In PyTorch</h2>
+
+</section>
+				<section>
+
+<h2 id="introduction-to-automatic-differentiation">Introduction to Automatic Differentiation</h2>
+
+<ul>
+<li>Many ML algorithms need to compute <strong>gradients</strong>.</li>
+<li>AD (also named autodiff) is a family of techniques for efficiently computing derivatives of numeric functions.</li>
+<li>PyTorch implements <strong>reverse mode AD</strong>.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="numerical-differentiation">Numerical Differentiation</h2>
+
+<ul>
+<li>Finite difference approximation of derivatives.</li>
+<li>Generally unstable and limited to a small set of functions.</li>
+</ul>
+
+<p><img src="images/numerical_differentiation.png" alt="Numerical Differentiation" /></p>
+
+</section>
+				<section>
+
+<h2 id="symbolic-differentiation">Symbolic Differentiation</h2>
+
+<ul>
+<li>Automatic manipulation of expressions for obtaining derivative expressions.</li>
+<li>Used in modern mathematical software (Mathematica, Maple&hellip;).</li>
+<li>Can lead to <em>expression swell</em> (exponentially large
+symbolic expressions).</li>
+</ul>
+
+<p><img src="images/symbolic_differentiation.png" alt="Symbolic Differentiation" /></p>
+
+</section>
+				<section>
+
+<h2 id="autodiff-and-its-main-modes">Autodiff and its main modes</h2>
+
+<ul>
+<li>AD combines numerical and symbolic differentiations.</li>
+<li>General idea: apply symbolic differentiation at the elementary operation level and keep intermediate numerical results.</li>
+<li>AD exists in two modes: forward and reverse.</li>
+<li>Both rely on the <em>chain rule</em>.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="forward-mode-autodiff">Forward mode autodiff</h2>
+
+<ul>
+<li>Computes gradients wrt one parameter along with the function output.</li>
+<li>Efficient when output dimension &gt;&gt; number of parameters.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="reverse-mode-autodiff">Reverse mode autodiff</h2>
+
+<ul>
+<li>Computes function output, then gradients wrt the output for all parameters.</li>
+<li>Efficient when number of parameters &gt;&gt; output dimension.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="autodiff-with-pytorch">Autodiff with PyTorch</h2>
+
+<pre><code class="language-python"># By default, user-created tensors do not track operations on them
+x1 = torch.tensor([2.0], requires_grad=True)
+x2 = torch.tensor([5.0], requires_grad=True)
+
+# Compute some operations on x1 and x2
+y = torch.log(x1) + x1*x2 - torch.sin(x2)
+
+# Let the magic happen
+y.backward()
+
+print(x1.grad) # dy/dx1
+print(x2.grad) # dy/dx2
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="differentiable-programming">Differentiable Programming</h2>
+
+<blockquote>
+<p>&ldquo;People are now building a new kind of software by assembling networks of parameterized functional blocks and by training them from examples using some form of gradient-based optimization…. It’s really very much like a regular program, except it’s parameterized, automatically differentiated, and trainable/optimizable&rdquo; (Y. LeCun).</p>
+</blockquote>
+
+<p><a href="https://medium.com/@karpathy/software-2-0-a64152b37c35">Saftware 2.0 (?)</a></p>
+
+</section>
+				<section>
+
+<h2 id="training-models-with-pytorch">Training Models With PyTorch</h2>
+
+</section>
+				<section>
+
+<h2 id="keras-like-api">Keras-like API</h2>
+
+<pre><code class="language-python">import torch.nn as nn
+
+# Define a (2, 3, 2) neural network with one hidden layer
+model = nn.Sequential(
+    nn.Linear(2, 3),
+    nn.Tanh(),
+    nn.Linear(3, 2)
+)
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="training-loop">Training loop</h2>
+
+<pre><code class="language-python">learning_rate = 1.0
+for t in range(2000):
+    # Compute model prediction
+    y_pred = model(x_train)
+    # Compute loss
+    loss = loss_fn(y_pred, y_train)
+    # Zero the gradients before running the backward pass
+    model.zero_grad()
+    # Compute gradient of the loss wrt all the parameters
+    loss.backward()
+    # Update the weights using gradient descent
+    with torch.no_grad():
+        for param in model.parameters():
+            param -= learning_rate * param.grad
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="functional-api">Functional API</h2>
+
+<pre><code class="language-python">import torch.nn as nn
+import torch.nn.functional as F
+
+# Define a Convolutional Neural Network
+class Net(nn.Module):
+    def __init__(self):
+        super(Net, self).__init__()
+        self.conv1 = nn.Conv2d(3, 6, 5)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(6, 16, 5)
+        self.fc1 = nn.Linear(16 * 5 * 5, 120)
+        self.fc2 = nn.Linear(120, 84)
+        self.fc3 = nn.Linear(84, 10)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 16 * 5 * 5)
+        x = F.relu(self.fc1(x))
+        x = F.relu(self.fc2(x))
+        x = self.fc3(x)
+        return x
+
+net = Net()
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="training-loop-1">Training loop</h2>
+
+<pre><code class="language-python">import torch.optim as optim
+
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+for t in range(2000):
+    # Compute model prediction
+    outputs = net(inputs)
+    # Compute loss
+    loss = criterion(outputs, labels)
+    # Compute gradients of the loss wrt all parameters
+    loss.backward()
+    # Perform one step of gradient descent
+    optimizer.step()
+</code></pre>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: true,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
