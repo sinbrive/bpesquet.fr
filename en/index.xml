@@ -31,7 +31,7 @@
     </item>
     
     <item>
-      <title>ML Algorithms: K-Nearest Neighbors</title>
+      <title>K-Nearest Neighbors</title>
       <link>https://www.bpesquet.fr/en/slides/ai/k-nearest-neighbors/</link>
       <pubDate>Tue, 24 Sep 2019 09:15:13 +0200</pubDate>
       
@@ -40,7 +40,7 @@
     </item>
     
     <item>
-      <title>ML Algorithms: Linear Regression</title>
+      <title>Linear Regression</title>
       <link>https://www.bpesquet.fr/en/slides/ai/linear-regression/</link>
       <pubDate>Wed, 09 Oct 2019 08:37:33 +0200</pubDate>
       
@@ -51,7 +51,7 @@ Problem formulation  Features $ x_i $: properties of a data sample. Parameters $
     </item>
     
     <item>
-      <title>ML Algorithms: Logistic Regression</title>
+      <title>Logistic Regression</title>
       <link>https://www.bpesquet.fr/en/slides/ai/logistic-regression/</link>
       <pubDate>Sun, 13 Oct 2019 17:27:01 +0200</pubDate>
       
@@ -64,7 +64,7 @@ Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1
     </item>
     
     <item>
-      <title>ML Algorithms: Neural Networks</title>
+      <title>Neural Networks</title>
       <link>https://www.bpesquet.fr/en/slides/ai/neural-networks/</link>
       <pubDate>Thu, 31 May 2018 09:45:13 +0200</pubDate>
       
@@ -73,7 +73,7 @@ Loss function Binary Crossentropy: $$\mathcal{L}(\theta) = -\frac{1}{m}\sum_{i=1
     </item>
     
     <item>
-      <title>ML Algorithms: Ensemble Methods</title>
+      <title>Ensemble Methods</title>
       <link>https://www.bpesquet.fr/en/slides/ai/ensemble-methods/</link>
       <pubDate>Mon, 21 Oct 2019 08:56:51 +0200</pubDate>
       
@@ -83,26 +83,38 @@ Example: Iris dataset Tree nodes  Leaf or non-leaf. Gini: measure of the node im
     </item>
     
     <item>
-      <title>ML Tools: Keras</title>
+      <title>Convolutional Neural Networks</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/convolutional-neural-networks/</link>
+      <pubDate>Thu, 17 Jan 2019 00:02:17 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/convolutional-neural-networks/</guid>
+      <description>Summary  CNN Architecture CNN History  CNN Architecture Justification The visual world has the following properties:
+ Translation invariance. Spacial hierarchy: complex and abstract concepts are composed from simple elements.  Classical models are not designed to detect local patterns in images.
+General Design 
+The convolution operation Apply a filter or kernel to data. Result is called a feature map.
+
+Convolution parameters  Filter dimensions: 2D for images.</description>
+    </item>
+    
+    <item>
+      <title>Keras</title>
       <link>https://www.bpesquet.fr/en/slides/ai/keras/</link>
       <pubDate>Mon, 14 Oct 2019 09:16:40 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/keras/</guid>
-      <description>Introducing Keras Python library for creating neural networks created by François Chollet.
+      <description>Summary  Introduction to Keras Dense Neural Networks Neural Network Tuning Convolutional Neural Networks  Introduction to Keras Keras in a nutshell Python library for creating neural networks created by François Chollet.
 
 High-level, user-friendly API above a ML/DL backend library.
-Keras Vs tf.keras  Originally, Keras was multi-backend: TensorFlow 1.x, Theano, CNTK&amp;hellip; Since TF 2.0, tf.keras is the official high-level API of TensorFlow. The 2.3.0 release (Sept. 2019) will be the last major release of multi-backend Keras. TF users should switch to tf.keras.  TF 2.0 + Keras Overview</description>
+Keras Vs tf.keras  Originally, Keras was multi-backend: TensorFlow 1.x, Theano, CNTK&amp;hellip; Since TF 2.0, tf.keras is the official high-level API of TensorFlow. The 2.3.0 release (Sept. 2019) will be the last major release of multi-backend Keras.</description>
     </item>
     
     <item>
-      <title>ML Tools: PyTorch</title>
+      <title>PyTorch</title>
       <link>https://www.bpesquet.fr/en/slides/ai/pytorch/</link>
       <pubDate>Sun, 03 Nov 2019 20:11:05 +0100</pubDate>
       
       <guid>https://www.bpesquet.fr/en/slides/ai/pytorch/</guid>
-      <description>Summary  PyTorch Essentials Automatic Differentiation In PyTorch Training Models With PyTorch  PyTorch Essentials PyTorch in a nutshell  ML/DL library supported by Facebook. Based on previous work, notably Torch and Chainer. Initial release in October 2016. v1.0 in December 2018. Quickly became very popular among DL researchers.  
-PyTorch tensors  NumPy-like API for manipulating tensors. Tensors can be located on GPU for faster computations.
-import torch a = torch.</description>
+      <description>Summary  Introduction To PyTorch Automatic Differentiation Dense Neural Networks Convolutional Neural Networks  Introduction To PyTorch PyTorch in a nutshell  ML/DL platform supported by Facebook. Core components:  A tensor manipulation library similar to NumPy. An autodiff engine for computing gradients. A neural network API.  Based on previous work, notably Torch and Chainer. Initial release in Oct. 2016, v1.0 in Dec. 2018. Quickly became popular among DL researchers.</description>
     </item>
     
     <item>

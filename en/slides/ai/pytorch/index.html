@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>ML Tools: PyTorch</title>
+	<title>PyTorch</title>
 
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
@@ -30,7 +30,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-    <h1>ML Tools: PyTorch</h1>
+    <h1>PyTorch</h1>
 
     <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
 
@@ -48,15 +48,16 @@
 <h2 id="summary">Summary</h2>
 
 <ul>
-<li>PyTorch Essentials</li>
-<li>Automatic Differentiation In PyTorch</li>
-<li>Training Models With PyTorch</li>
+<li>Introduction To PyTorch</li>
+<li>Automatic Differentiation</li>
+<li>Dense Neural Networks</li>
+<li>Convolutional Neural Networks</li>
 </ul>
 
 </section>
 				<section>
 
-<h2 id="pytorch-essentials">PyTorch Essentials</h2>
+<h2 id="introduction-to-pytorch">Introduction To PyTorch</h2>
 
 </section>
 				<section>
@@ -64,10 +65,17 @@
 <h2 id="pytorch-in-a-nutshell">PyTorch in a nutshell</h2>
 
 <ul>
-<li>ML/DL library supported by Facebook.</li>
+<li>ML/DL platform supported by Facebook.</li>
+<li>Core components:
+
+<ul>
+<li>A tensor manipulation library similar to NumPy.</li>
+<li>An autodiff engine for computing gradients.</li>
+<li>A neural network API.</li>
+</ul></li>
 <li>Based on previous work, notably <a href="http://torch.ch/">Torch</a> and <a href="https://chainer.org/">Chainer</a>.</li>
-<li>Initial release in October 2016. v1.0 in December 2018.</li>
-<li>Quickly became very popular among DL researchers.</li>
+<li>Initial release in Oct. 2016, v1.0 in Dec. 2018.</li>
+<li>Quickly became popular among DL researchers.</li>
 </ul>
 
 <p><a href="https://pytorch.org"><img src="images/pytorch-logo-dark.png" alt="PyTorch logo" /></a></p>
@@ -98,7 +106,7 @@ b = b.to(device)
 </section>
 				<section>
 
-<h2 id="automatic-differentiation-in-pytorch">Automatic Differentiation In PyTorch</h2>
+<h2 id="automatic-differentiation">Automatic Differentiation</h2>
 
 </section>
 				<section>
@@ -224,12 +232,12 @@ print(x2.grad) # dy/dx2
 </section>
 				<section>
 
-<h2 id="training-models-with-pytorch">Training Models With PyTorch</h2>
+<h2 id="dense-neural-networks">Dense neural networks</h2>
 
 </section>
 				<section>
 
-<h2 id="keras-like-api">Keras-like API</h2>
+<h2 id="model-definition">Model definition</h2>
 
 <pre><code class="language-python">import torch.nn as nn
 
@@ -265,7 +273,12 @@ for t in range(2000):
 </section>
 				<section>
 
-<h2 id="functional-api">Functional API</h2>
+<h2 id="convolutional-neural-networks">Convolutional neural networks</h2>
+
+</section>
+				<section>
+
+<h2 id="model-definition-1">Model definition</h2>
 
 <pre><code class="language-python">import torch.nn as nn
 import torch.nn.functional as F

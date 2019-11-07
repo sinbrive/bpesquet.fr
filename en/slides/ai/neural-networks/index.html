@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>ML Algorithms: Neural Networks</title>
+	<title>Neural Networks</title>
 
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
@@ -30,7 +30,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-    <h1>ML Algorithms: Neural Networks</h1>
+    <h1>Neural Networks</h1>
 
     <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
 
@@ -368,22 +368,12 @@
 
 <p><code>$ \lambda $</code> is called <strong>regularization rate</strong>.</p>
 
-<pre><code class="language-python"># Add L2 regularization to a layer
-model.add(Dense(16, kernel_regularizer=regularizers.l2(0.001),
-                activation='relu', input_shape=(10000,)))
-</code></pre>
-
 </section>
 				<section>
 
 <h2 id="dropout">Dropout</h2>
 
 <p>During training, some weights are randomly set to 0. The network must adapt and become more generic.</p>
-
-<pre><code class="language-python"># Add a layer with 50% dropout during training
-model.add(Dense(16, activation='relu', input_shape=(10000,)))
-model.add(Dropout(0.5))
-</code></pre>
 
 <p><img src="images/dropout.png" alt="Dropout" /></p>
 

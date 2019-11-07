@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>ML Tools: Keras</title>
+	<title>Keras</title>
 
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
@@ -30,7 +30,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-    <h1>ML Tools: Keras</h1>
+    <h1>Keras</h1>
 
     <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
 
@@ -45,7 +45,24 @@
 
 			<section>
 
-<h2 id="introducing-keras">Introducing Keras</h2>
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>Introduction to Keras</li>
+<li>Dense Neural Networks</li>
+<li>Neural Network Tuning</li>
+<li>Convolutional Neural Networks</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="introduction-to-keras">Introduction to Keras</h2>
+
+</section>
+				<section>
+
+<h2 id="keras-in-a-nutshell">Keras in a nutshell</h2>
 
 <p>Python library for creating neural networks created by <a href="https://twitter.com/fchollet">François Chollet</a>.</p>
 
@@ -66,6 +83,11 @@
 </ul>
 
 <p><a href="https://colab.research.google.com/drive/1UCJt8EYjlzCs1H1d1X0iDGYJsHKwu-NO">TF 2.0 + Keras Overview</a></p>
+
+</section>
+				<section>
+
+<h2 id="dense-neural-networks">Dense Neural Networks</h2>
 
 </section>
 				<section>
@@ -202,6 +224,126 @@ x_test = x_test.astype('float32') / 255
 # One-hot encoding of expected results
 y_train = to_categorical(train_labels)
 y_test = to_categorical(test_labels)
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="neural-network-tuning">Neural network tuning</h2>
+
+</section>
+				<section>
+
+<h2 id="regularization">Regularization</h2>
+
+<p>Limit weights values by adding a penalty to the loss function.</p>
+
+<pre><code class="language-python"># Add L2 regularization to a layer
+model.add(Dense(16, kernel_regularizer=regularizers.l2(0.001),
+                activation='relu', input_shape=(10000,)))
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="dropout">Dropout</h2>
+
+<p>During training, some weights are randomly set to 0. The network must adapt and become more generic.</p>
+
+<pre><code class="language-python"># Add a layer with 50% dropout during training
+model.add(Dense(16, activation='relu', input_shape=(10000,)))
+model.add(Dropout(0.5))
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="convolutional-neural-networks">Convolutional Neural Networks</h2>
+
+</section>
+				<section>
+
+<h2 id="conv2d-layer">Conv2D layer</h2>
+
+<p>Spatial convolution over images.</p>
+
+<ul>
+<li>Input: 4D tensor (<code>batch_size, rows, cols, channels</code>)</li>
+
+<li><p>Output: 4D tensor (<code>batch_size, new_rows, new_cols, filters</code>)</p>
+
+<pre><code class="language-python"># Add a Conv2D layer to a model
+# 64: number of filters
+# (3, 3): size of the convolution kernel (2D convolution window)
+# See https://keras.io/layers/convolutional/ for API details
+model.add(Conv2D(64, (3, 3), activation='relu'))
+</code></pre></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="maxpooling2d-layer">MaxPooling2D layer</h2>
+
+<p>Max pooling for spatial data.</p>
+
+<ul>
+<li>Input: 4D tensor (<code>batch_size, rows, cols, channels</code>)</li>
+
+<li><p>Ouput: 4D tensor (<code>batch_size, pooled_rows, pooled_cols, channels</code>)</p>
+
+<pre><code class="language-python"># Add a MaxPooling2D layer to a model
+# (2, 2): factors by which to downscale (vertical, horizontal)
+# See https://keras.io/layers/convolutional/ for API details
+model.add(MaxPooling2D((2, 2)))
+</code></pre></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="flatten-layer">Flatten layer</h2>
+
+<p>Flattens a tensor into a matrix. Often used before a Dense layer.</p>
+
+<ul>
+<li>Input: tensor with dimension &gt;= 2</li>
+
+<li><p>Output: 2D tensor</p>
+
+<pre><code class="language-python"># Output shape: (None, 3, 3, 64)
+model.add(Conv2D(64, (3, 3), activation='relu'))
+
+# Add a Flatten layer to a model
+# Output shape: (None, 576)
+model.add(Flatten())
+
+# Output shape: (None, 64)
+model.add(Dense(64, activation='relu'))
+</code></pre></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="imagedatagenerator-class">ImageDataGenerator class</h2>
+
+<p>Generate tensor batches with optional data augmentation in real time.</p>
+
+<pre><code class="language-python">train_datagen = ImageDataGenerator(
+        rescale=1./255,
+        shear_range=0.2,
+        zoom_range=0.2,
+        horizontal_flip=True)
+train_generator = train_datagen.flow_from_directory(
+        'data/train',
+        target_size=(150, 150),
+        batch_size=32,
+        class_mode='binary')
+model.fit_generator(
+        train_generator,
+        steps_per_epoch=2000,
+        epochs=50)
 </code></pre>
 </section>
 				</div>
