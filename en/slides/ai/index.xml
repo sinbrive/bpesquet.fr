@@ -88,7 +88,7 @@ Example: Iris dataset Tree nodes  Leaf or non-leaf. Gini: measure of the node im
       
       <guid>https://www.bpesquet.fr/en/slides/ai/convolutional-neural-networks/</guid>
       <description>Summary  CNN Architecture CNN History  CNN Architecture Justification The visual world has the following properties:
- Translation invariance. Spacial hierarchy: complex and abstract concepts are composed from simple elements.  Classical models are not designed to detect local patterns in images.
+ Translation invariance. Spatial hierarchy: complex and abstract concepts are composed from simple elements.  Classical models are not designed to detect local patterns in images.
 General Design 
 The convolution operation Apply a filter or kernel to data. Result is called a feature map.
 
