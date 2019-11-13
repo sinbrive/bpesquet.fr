@@ -96,6 +96,15 @@ Convolution parameters  Filter dimensions: 2D for images.</description>
     </item>
     
     <item>
+      <title>Generative Deep Learning</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/generative-deep-learning/</link>
+      <pubDate>Mon, 11 Nov 2019 22:13:47 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/generative-deep-learning/</guid>
+      <description>Summary  Neural Style Transfer Generative Adversarial Networks (GAN)  Neural Style Transfer Neural Style Transfer in a nutshell  Reproduce an image with a new artistic style provided by another image. Blend a content image and a style reference image in a stylized output image. First described in A Neural Algorithm of Artistic Style by Gatys et al (2015). Many refinements and variations since.  Example (Prisma app)</description>
+    </item>
+    
+    <item>
       <title>Keras</title>
       <link>https://www.bpesquet.fr/en/slides/ai/keras/</link>
       <pubDate>Mon, 14 Oct 2019 09:16:40 +0200</pubDate>

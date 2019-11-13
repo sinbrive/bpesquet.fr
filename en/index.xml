@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/en/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Nov 2019 20:11:05 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 22:13:47 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/en/index.xml" rel="self" type="application/rss+xml" />
     
@@ -94,6 +94,15 @@ General Design
 The convolution operation Apply a filter or kernel to data. Result is called a feature map.
 
 Convolution parameters  Filter dimensions: 2D for images.</description>
+    </item>
+    
+    <item>
+      <title>Generative Deep Learning</title>
+      <link>https://www.bpesquet.fr/en/slides/ai/generative-deep-learning/</link>
+      <pubDate>Mon, 11 Nov 2019 22:13:47 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/en/slides/ai/generative-deep-learning/</guid>
+      <description>Summary  Neural Style Transfer Generative Adversarial Networks (GAN)  Neural Style Transfer Neural Style Transfer in a nutshell  Reproduce an image with a new artistic style provided by another image. Blend a content image and a style reference image in a stylized output image. First described in A Neural Algorithm of Artistic Style by Gatys et al (2015). Many refinements and variations since.  Example (Prisma app)</description>
     </item>
     
     <item>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Generative Deep Learning</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>Generative Deep Learning</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    <a href="https://github.com/bpesquet/machine-learning-katas"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    
+    
+</section>
+
+			<section>
+
+<h2 id="summary">Summary</h2>
+
+<ul>
+<li>Neural Style Transfer</li>
+<li>Generative Adversarial Networks (GAN)</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="neural-style-transfer">Neural Style Transfer</h2>
+
+</section>
+				<section>
+
+<h2 id="neural-style-transfer-in-a-nutshell">Neural Style Transfer in a nutshell</h2>
+
+<ul>
+<li>Reproduce an image with a new artistic style provided by another image.</li>
+<li>Blend a <em>content</em> image and a <em>style reference</em> image in a stylized output image.</li>
+<li>First described in <a href="https://arxiv.org/abs/1508.06576">A Neural Algorithm of Artistic Style</a> by Gatys et al (2015). Many refinements and variations since.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="example-prisma-app">Example (Prisma app)</h2>
+
+<p><a href="https://harishnarayanan.org/writing/artistic-style-transfer/"><img src="images/style_transfer_prisma.png" alt="Prisma style transfer example" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="underlying-idea">Underlying idea</h2>
+
+<p>As always: loss minimization.</p>
+
+<p><img src="images/content-loss.png" alt="Content loss" />
+<img src="images/style-loss.png" alt="Style loss" />
+<img src="images/total-loss.png" alt="Total loss" /></p>
+
+</section>
+				<section>
+
+<h2 id="the-content-loss">The content loss</h2>
+
+<ul>
+<li>Content = high-level structure of an image.</li>
+<li>Can be captured by the upper layer of a convolutional neural network.</li>
+<li>Content loss for a layer = distance between the feature maps of the content and generated images.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="the-style-loss">The style loss</h2>
+
+<ul>
+<li>Style = low-level features of an image (textures, colors, visual patterns).</li>
+<li>Can be captured by using correlations across the different feature maps (filter responses) of a convnet.</li>
+<li>Feature correlations are computed via a Gram matrix (outer product of the feature maps for a given layer).</li>
+<li>Style loss for a layer = distance between the Gram matrices of the feature maps for the style and generated images.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="the-total-variation-loss">The total variation loss</h2>
+
+<ul>
+<li>Sum of the absolute differences for neighboring pixel-values in an image. Measures how much noise is in the image.</li>
+<li>Encourage spatial continuity in the generated image (denoising).</li>
+<li>Act as a regularization loss.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="gradient-descent">Gradient descent</h2>
+
+<ul>
+<li>Objective: minimize the total loss.</li>
+<li>Optimizer: <a href="http://aria42.com/blog/2014/12/understanding-lbfgs">L-BFGS</a> (original choice made by Gatys et al.) or Adam.</li>
+</ul>
+
+<p><img src="images/style_transfer_animated.gif" alt="Animation of style transfer" /></p>
+
+</section>
+				<section>
+
+<h2 id="generative-adversarial-networks-gan">Generative Adversarial Networks (GAN)</h2>
+
+</section>
+				<section>
+
+<h2 id="gan-in-a-nutshell">GAN in a nutshell</h2>
+
+<ul>
+<li>Simultaneously train two models:
+
+<ul>
+<li>One tries to generate realistic data.</li>
+<li>The other tries to discriminate between real and generated data.</li>
+</ul></li>
+<li>Each model is trained to best the other.</li>
+<li>First described in <a href="https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf">Generative Adversarial Nets
+</a> by Goodfellow et al. (2014).</li>
+<li><a href="https://arxiv.org/abs/1701.00160">NIPS 2016 Tutorial</a></li>
+</ul>
+
+</section>
+				<section>
+
+<p><a href="https://www.tensorflow.org/tutorials/generative/dcgan"><img src="images/gan1.png" alt="GAN overview" /></a></p>
+
+</section>
+				<section>
+
+<p><a href="https://www.tensorflow.org/tutorials/generative/dcgan"><img src="images/gan2.png" alt="GAN process" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="training-process">Training process</h2>
+
+<ul>
+<li>The generato creates images from random noise.</li>
+<li>Generated images are mixed with real ones.</li>
+<li>The discriminator is trained with this mixed images.</li>
+<li>The generator&rsquo;s paramaters are updated in a direction that makes the discriminator more likely to classify generated data as &ldquo;real&rdquo;.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="specificities-and-gotchas">Specificities and gotchas</h2>
+
+<ul>
+<li>A GAN is a dynamic system that evolves at each training step.</li>
+<li>Interestingly, the generator never sees images froms the training set directly: all its informations come from the discriminator.</li>
+<li>Training can be tricky: noisy generated data, vanishing gradients, domination of one side&hellip;</li>
+<li>GAN convergence theory is an active area of research.</li>
+<li><a href="https://distill.pub/2019/gan-open-problems/">GAN Open Questions</a></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="gan-progress-on-face-generation">GAN progress on face generation</h2>
+
+<p><a href="https://twitter.com/goodfellow_ian/status/1084973596236144640"><img src="images/gan_2014_2018.jpg" alt="GAN progress from 2014 to 2018" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="the-gan-landscape">The GAN landscape</h2>
+
+<p><a href="https://blog.floydhub.com/gans-story-so-far/"><img src="images/gan_flavours.png" alt="GAN flavours" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="some-gan-flavours">Some GAN flavours</h2>
+
+<ul>
+<li><a href="https://arxiv.org/abs/1511.06434">DCGAN</a> (2016): use deep convolutional networks for generator and discriminator.</li>
+<li><a href="https://arxiv.org/abs/1703.10593v6">CycleGAN</a> (2017): image-to-image translation in the absence of any paired training examples.</li>
+<li><a href="https://arxiv.org/abs/1812.04948">StyleGAN</a> (2019): fine control of output images.</li>
+<li><a href="https://blog.floydhub.com/gans-story-so-far/">GAN - The Story So Far</a></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="gan-use-cases-not-just-images">GAN use cases: not just images!</h2>
+
+<ul>
+<li>Writing a novel &ldquo;in the style of an author&rdquo;.</li>
+<li><a href="https://arxiv.org/abs/1805.07848">Generating music</a> (<a href="https://www.youtube.com/watch?v=vdxCqNWTpUs">samples</a>).</li>
+<li>Generating realistic passwords for hackers.</li>
+<li>Generating videos (<a href="https://www.youtube.com/watch?time_continue=3&amp;v=ab64TWzWn40&amp;feature=emb_logo">example</a>).</li>
+<li><a href="https://arxiv.org/abs/1910.01603">Generating video game levels</a>.</li>
+<li>&hellip;</li>
+</ul>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
