@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.bpesquet.fr/en/slides/ai/deconstructing-ai/</loc>
+    <lastmod>2019-12-09T10:47:12+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bpesquet.fr/en/slides/ai/</loc>
     <lastmod>2019-09-24T16:33:53+02:00</lastmod>
     <xhtml:link
@@ -99,7 +104,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/en/slides/ai/generative-deep-learning/</loc>
-    <lastmod>2019-11-14T00:51:55+01:00</lastmod>
+    <lastmod>2019-11-21T10:21:18+01:00</lastmod>
   </url>
   
   <url>
@@ -114,7 +119,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/en/</loc>
-    <lastmod>2019-11-14T00:51:55+01:00</lastmod>
+    <lastmod>2019-12-09T10:47:12+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
