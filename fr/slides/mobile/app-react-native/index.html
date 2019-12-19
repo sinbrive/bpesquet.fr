@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Création d&#39;applications mobiles avec React Native</title>
+	<title>(WIP) Création d&#39;applications mobiles avec React Native</title>
 
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
 	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
@@ -30,13 +30,11 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-    <h1>Création d&#39;applications mobiles avec React Native</h1>
+    <h1>(WIP) Création d&#39;applications mobiles avec React Native</h1>
 
     <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
 
     <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
-
-    <p><a href="">https://www.bpesquet.fr</a></p>
 
     
     
@@ -48,7 +46,7 @@
 <h2 id="sommaire">Sommaire</h2>
 
 <ul>
-<li>Les composants</li>
+<li>TODO</li>
 <li>Navigation entre vues</li>
 <li>Gestion de l&rsquo;état</li>
 <li>Interaction avec Firebase</li>
@@ -57,145 +55,7 @@
 </section>
 				<section>
 
-<h2 id="les-composants">Les composants</h2>
-
-</section>
-				<section>
-
-<section data-shortcode-section>
-<h2 id="la-notion-de-composant">La notion de composant</h2>
-
-<p>Les <strong>composants</strong> sont les blocs de base d&rsquo;une application React (Native).</p>
-
-<p>Ils permettent de créer une UI sous forme <strong>déclarative</strong> par assemblage de composants.</p>
-
-</section>
-				<section>
-
-<h2 id="propriétés-d-un-composant">Propriétés d&rsquo;un composant</h2>
-
-<ul>
-<li>Caractéristiques définies au moment de la création.</li>
-
-<li><p>Modifiables uniquement par le composant parent.</p>
-
-<pre><code class="language-jsx">import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-
-class Greeting extends Component {
-render() {
-return &lt;Text&gt;Hello {this.props.name}!&lt;/Text&gt;;
-}
-}
-
-export default class LotsOfGreetings extends Component {
-render() {
-return (
-  &lt;View style={{ alignItems: &quot;center&quot; }}&gt;
-    &lt;Greeting name=&quot;John&quot; /&gt;
-    &lt;Greeting name=&quot;Paul&quot; /&gt;
-    &lt;Greeting name=&quot;Jones&quot; /&gt;
-  &lt;/View&gt;
-);
-}
-}
-</code></pre></li>
-</ul>
-
-</section>
-				<section>
-
-<h2 id="etat-d-un-composant">Etat d&rsquo;un composant</h2>
-
-<ul>
-<li>Etat interne (données) d&rsquo;un composant, susceptible de changer au cours du temps (mutable).</li>
-
-<li><p>Modifié uniquement via <code>setState()</code>.</p>
-
-<pre><code class="language-jsx">import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-class Counter extends Component {
-constructor(props) {
-super(props);
-this.state = { count: 0 };
-setInterval(() =&gt; {
-  this.setState({ count: this.state.count + 1 });
-}, 1000);
-}
-
-render() {
-const { count } = this.state;
-const { color, size } = this.props;
-
-return &lt;Text style={{ color, fontSize: size }}&gt;{count}&lt;/Text&gt;;
-}
-}
-
-export default class CounterApp extends Component {
-render() {
-return (
-  &lt;View style={styles.container}&gt;
-    &lt;Counter color={&quot;red&quot;} size={30} /&gt;
-  &lt;/View&gt;
-);
-}
-}
-
-const styles = StyleSheet.create({
-container: {
-flex: 1,
-backgroundColor: &quot;#fff&quot;,
-alignItems: &quot;center&quot;,
-justifyContent: &quot;center&quot;
-}
-});
-</code></pre></li>
-</ul>
-
-</section>
-				<section>
-
-<h2 id="composants-de-base">Composants de base</h2>
-
-<p><img src="images/basic_components.png" alt="React Native core components" /></p>
-
-</section>
-				<section>
-
-<h2 id="composants-d-interface-utilisateur">Composants d&rsquo;interface utilisateur</h2>
-
-<p><img src="images/ui_components.png" alt="React native UI components" /></p>
-
-</section>
-
-</section>
-				<section>
-
-<h2 id="jsx">JSX</h2>
-
-<p>Syntaxe introduite pour le framework web <a href="https://reactjs.org/">React</a></p>
-
-<pre><code class="language-jsx">const a = &lt;View /&gt;
-const b = (
-  &lt;View
-    foo='hello'
-    bar={baz}&gt;
-    &lt;Text&gt;42&lt;/Text&gt;
-  &lt;/View&gt;
-)
-</code></pre>
-
-<pre><code class="language-js">var a = React.createElement(View, null);
-var b = React.createElement(
-  View,
-  {
-    foo: &quot;hello&quot;,
-    bar: baz
-  },
-  React.createElement(Text, null, &quot;42&quot;)
-);
-</code></pre>
+<h2 id="todo">TODO</h2>
 
 </section>
 				<section>

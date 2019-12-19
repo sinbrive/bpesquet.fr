@@ -36,8 +36,6 @@
 
     <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
 
-    <p><a href="">https://www.bpesquet.fr</a></p>
-
     
     
     <a href="https://github.com/ensc-mobi/RandomBeer"><img src="https://www.bpesquet.fr/images/GitHub-Mark-64px.png" alt="GitHub logo"></a>
@@ -51,8 +49,8 @@
 
 <ul>
 <li>L&rsquo;écosystème mobile</li>
-<li>Le JavaScript moderne</li>
 <li>Premiers pas avec React Native</li>
+<li>Anatomie d&rsquo;une application React Native</li>
 </ul>
 
 </section>
@@ -63,15 +61,17 @@
 </section>
 				<section>
 
-<section data-shortcode-section>
 <p><img src="images/smartphone_market_share_2016.jpg" alt="Smartphone platform market share" /></p>
 
 </section>
 				<section>
 
-<p><img src="images/mobile_os_fragmentation_2016.jpg" alt="Mobile OS Fragmentation" /></p>
+<p><img src="images/market-share-2015_2019.png" alt="Market share evolution 2015-2019" /></p>
 
 </section>
+				<section>
+
+<p><img src="images/os-fragmentation_2018.jpg" alt="Mobile OS Fragmentation" /></p>
 
 </section>
 				<section>
@@ -172,168 +172,6 @@
 </section>
 				<section>
 
-<h2 id="le-javascript-moderne">Le JavaScript moderne</h2>
-
-</section>
-				<section>
-
-<h2 id="un-pré-requis-essentiel">Un pré-requis essentiel</h2>
-
-<p>La majorité des solutions mobiles multi-plateformes est basée sur JavaScript.</p>
-
-<p><img src="images/mobile_logos.png" alt="Frameworks multi-plateformes" /></p>
-
-</section>
-				<section>
-
-<section data-shortcode-section>
-<h2 id="les-évolutions-du-langage">Les évolutions du langage</h2>
-
-<p>JavaScript est normalisé sous le nom <strong>ECMAScript</strong>.</p>
-
-<p><img src="images/js_history.png" alt="ECMAScript releases" /></p>
-
-<p>La norme <strong>ES2015</strong> (ou ES6) a apporté de très nombreuses améliorations au langage.</p>
-
-</section>
-				<section>
-
-<h2 id="let-et-const">Let et const</h2>
-
-<p>Les mots-clés <code>let</code> et <code>const</code> remplacent avantageusement <code>var</code> pour la déclaration des variables.</p>
-
-<p>La valeur d&rsquo;une variable déclarée avec <code>const</code> ne peut plus être modifiée.</p>
-
-<pre><code class="language-js">let a = 3.14;
-a = 6.28; // OK
-
-const b = 3.14;
-b = 6.28; // Erreur!
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="litéraux-de-modèle">Litéraux de modèle</h2>
-
-<p>Chaînes de caractères créées entre <em>backticks</em> et permettant d&rsquo;intégrer des expressions.</p>
-
-<pre><code class="language-js">const country = &quot;France&quot;;
-console.log(`I live in ${country}`); // &quot;I live in France&quot;
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="fonctions-fléchées">Fonctions fléchées</h2>
-
-<p>Nouvelle syntaxe pour créer des fonctions anonymes.</p>
-
-<pre><code class="language-js">// Syntaxe classique
-const hello = function(name) {
-  const message = `Hello, ${name}!`;
-  return message;
-};
-
-// Utilisation d'une fonction fléchée
-const hello = name =&gt; {
-  const message = `Hello, ${name}!`;
-  return message;
-};
-
-console.log(hello(&quot;Richard&quot;)); // &quot;Bonjour, Richard!&quot;
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="classes">Classes</h2>
-
-<pre><code class="language-js">class Character {
-  constructor(name, health, strength) {
-    this.name = name;
-    this.health = health;
-    this.strength = strength;
-  }
-  describe() {
-    return `${this.name} has ${this.health} health points
-      and ${this.strength} as strength`;
-  }
-}
-
-const aurora = new Character(&quot;Aurora&quot;, 150, 25);
-console.log(aurora.describe());
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="appels-asynchrones">Appels asynchrones</h2>
-
-<p>Une <strong>promesse</strong> (<em>promise</em>) est un objet qui encapsule une opération dont le résultat n&rsquo;est pas encore connu.</p>
-
-<pre><code class="language-js">// Envoie une requête HTTP asynchrone vers l'URL spécifiée
-fetch(url)
-  .then(() =&gt; {
-    // Code appelé ultérieurement si la requête réussit
-  })
-  .catch(() =&gt; {
-    // Code appelé ultérieurement si la requête échoue
-  });
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="consommation-d-api-web">Consommation d&rsquo;API web</h2>
-
-<pre><code class="language-js">// Envoi d'une requête HTTP asynchrone vers l'URL spécifiée
-// La réponse est reçue sous forme de données JSON
-fetch(&quot;http://my-api-url&quot;)
-  .then(response =&gt; response.json()) // JSON vers JavaScript
-  .then(content =&gt; {
-    // Utilisation de la réponse
-    // ...
-  })
-  .catch(err =&gt; {
-    console.error(err.message);
-  });
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="modules-et-imports">Modules et imports</h2>
-
-<p>JavaScript supporte la notion de <strong>module</strong> pour factoriser des éléments réutilisables.</p>
-
-<pre><code class="language-js">// Importe l'élément exporté par défaut par le module
-import React from &quot;react-native&quot;;
-
-// Importe d'autres éléments exportés grâce à leur nom
-import { View, Text, Image } from &quot;react-native&quot;;
-
-// Importe à la fois l'élément par défaut et d'autres éléments
-import React, { View, Text, Image } from &quot;react-native&quot;;
-</code></pre>
-
-</section>
-
-</section>
-				<section>
-
-<h2 id="les-outils">Les outils</h2>
-
-<ul>
-<li>Gestion des dépendances : <a href="https://www.npmjs.com/">npm</a> (ou <a href="https://yarnpkg.com/lang/en/">yarn</a>).</li>
-<li>Edition du code : <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</li>
-<li>Formatage du code : <a href="https://github.com/prettier/prettier">Prettier</a>.</li>
-<li>Analyse du code : <a href="https://eslint.org/">ESLint</a>.</li>
-</ul>
-
-</section>
-				<section>
-
 <h2 id="premiers-pas-avec-react-native">Premiers pas avec React Native</h2>
 
 </section>
@@ -350,38 +188,294 @@ import React, { View, Text, Image } from &quot;react-native&quot;;
 </section>
 				<section>
 
-<section data-shortcode-section>
+<h2 id="expo">Expo</h2>
+
+<p>Framework pour faciliter la création et le déploiement d&rsquo;applications React Native.</p>
+
+<p><img src="images/expo_logo.png" alt="Expo logo" /></p>
+
+<ul>
+<li><a href="https://github.com/expo/expo-cli">Expo CLI</a> : outil en ligne de commande pour le développement local.</li>
+<li><a href="https://expo.io">Expo client</a> : application mobile à installer sur le terminal cible pour le déploiement.</li>
+</ul>
+
+</section>
+				<section>
+
 <h2 id="création-d-une-application">Création d&rsquo;une application</h2>
 
-<p>Utilisation de l&rsquo;outil <a href="https://github.com/expo/expo-cli">Expo CLI</a> associé à l&rsquo;application mobile <a href="https://expo.io">Expo</a> pour le déploiement sur mobile.</p>
-
-<pre><code class="language-bash"># Avec npm
+<pre><code class="language-bash"># Install expo-cli globally
+# (Node.js and Git are prerequisites)
 npm install -g expo-cli
-expo init MyApp
+
+# Create a new app in the my-new-project subfolder
+expo init my-new-project
 </code></pre>
 
-<p>Expo CLI a remplacé l&rsquo;outil Create React Native App (CRNA) en septembre 2018 <a href="https://github.com/react-community/create-react-native-app/blob/master/CHANGELOG.md#201-september-21-2018">(détails)</a>.</p>
+<ul>
+<li><p>Workflow <strong>managé</strong> : projet entièrement géré par Expo (plus simple).</p></li>
+
+<li><p>Workflow <strong>bare</strong> : plus proche d&rsquo;un projet React Native pur.</p></li>
+</ul>
 
 </section>
 				<section>
 
 <h2 id="contenu-du-répertoire-créé">Contenu du répertoire créé</h2>
 
-<p><img src="images/rn_app_structure.png" alt="Arborescence React Native" /></p>
+<p><img src="images/rn-app-structure.png" alt="Arborescence React Native" /></p>
 
 </section>
 				<section>
 
-<h2 id="le-fichier-principal-app-js">Le fichier principal : App.js</h2>
+<h2 id="déploiement-de-l-application">Déploiement de l&rsquo;application</h2>
 
-<pre><code class="language-jsx">import React from &quot;react&quot;;
-import { StyleSheet, Text, View } from &quot;react-native&quot;;
+<pre><code class="language-bash">cd my-new-project # move into project directory
+npm start # Or 'expo start'
+</code></pre>
 
-export default class App extends React.Component {
+<p>Ensuite, scan du QR Code depuis l&rsquo;application Expo (Android) ou l&rsquo;appareil photo du smartphone (iOS).</p>
+
+<p><img src="images/expo_qrcode.png" alt="Expo QR Code" /></p>
+
+</section>
+				<section>
+
+<h2 id="détails-sur-le-déploiement">Détails sur le déploiement</h2>
+
+<ul>
+<li>L&rsquo;application est hébergée sur un serveur web local.</li>
+<li>Expo s&rsquo;y connecte pour la récupérer puis la lancer.</li>
+<li>Une interface de gestion s&rsquo;affiche dans le navigateur.</li>
+</ul>
+
+<p><img src="images/expo_management.png" alt="Expo Management" /></p>
+
+</section>
+				<section>
+
+<h2 id="connexion-au-serveur-expo">Connexion au serveur Expo</h2>
+
+<p>L&rsquo;application Expo client doit accéder au serveur web de la machine de développement pour pouvoir lancer l&rsquo;application RN.</p>
+
+<p>Il existe plusieurs modes de connexion :</p>
+
+<ul>
+<li><strong>LAN</strong> : utilisation du réseau Wifi local. Peut poser problème dans certains environnements.</li>
+<li><strong>Tunnel</strong> : création d&rsquo;un tunnel avec <a href="https://ngrok.com/">ngrok</a> pour accéder au serveur local via le web. Nécessite que le terminal mobile dispose d&rsquo;un accès internet.</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="rechargement-dynamique">Rechargement dynamique</h2>
+
+<p><a href="https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native/"><img src="images/expo_reload.jpeg" alt="Live Reload" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="exemple-d-application">Exemple d&rsquo;application</h2>
+
+<p><a href="https://github.com/ensc-mobi/RandomBeer">https://github.com/ensc-mobi/RandomBeer</a>
+<img src="images/random_beer.png" alt="Random Beer app" /></p>
+
+</section>
+				<section>
+
+<h2 id="anatomie-d-une-application-react-native">Anatomie d&rsquo;une application React Native</h2>
+
+</section>
+				<section>
+
+<h2 id="le-fichier-de-configuration-app-json">Le fichier de configuration app.json</h2>
+
+<pre><code class="language-json">{
+  &quot;expo&quot;: {
+    &quot;name&quot;: &quot;My New Project&quot;,
+    &quot;slug&quot;: &quot;my-new-project&quot;,
+    &quot;privacy&quot;: &quot;public&quot;,
+    &quot;sdkVersion&quot;: &quot;36.0.0&quot;,
+    &quot;platforms&quot;: [
+      &quot;ios&quot;,
+      &quot;android&quot;,
+      &quot;web&quot;
+    ],
+    &quot;version&quot;: &quot;1.0.0&quot;,
+    &quot;orientation&quot;: &quot;portrait&quot;,
+    &quot;icon&quot;: &quot;./assets/icon.png&quot;,
+    &quot;splash&quot;: {
+      &quot;image&quot;: &quot;./assets/splash.png&quot;,
+      &quot;resizeMode&quot;: &quot;contain&quot;,
+      &quot;backgroundColor&quot;: &quot;#ffffff&quot;
+    },
+    &quot;updates&quot;: {
+      &quot;fallbackToCacheTimeout&quot;: 0
+    },
+    &quot;assetBundlePatterns&quot;: [
+      &quot;**/*&quot;
+    ],
+    &quot;ios&quot;: {
+      &quot;supportsTablet&quot;: true
+    }
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="le-fichier-package-json">Le fichier package.json</h2>
+
+<pre><code class="language-json">{
+  &quot;main&quot;: &quot;node_modules/expo/AppEntry.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;expo start&quot;,
+    &quot;android&quot;: &quot;expo start --android&quot;,
+    &quot;ios&quot;: &quot;expo start --ios&quot;,
+    &quot;web&quot;: &quot;expo start --web&quot;,
+    &quot;eject&quot;: &quot;expo eject&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;expo&quot;: &quot;~36.0.0&quot;,
+    &quot;react&quot;: &quot;~16.9.0&quot;,
+    &quot;react-dom&quot;: &quot;~16.9.0&quot;,
+    &quot;react-native&quot;: &quot;https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz&quot;,
+    &quot;react-native-web&quot;: &quot;~0.11.7&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;babel-preset-expo&quot;: &quot;~8.0.0&quot;,
+    &quot;@babel/core&quot;: &quot;^7.0.0&quot;
+  },
+  &quot;private&quot;: true
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="le-fichier-principal-app-js">Le fichier principal App.js</h2>
+
+<pre><code class="language-jsx">import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text&gt;Open up App.js to start working on your app!&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="jsx">JSX</h2>
+
+<p>Syntaxe introduite pour le framework web <a href="https://reactjs.org/">React</a> permettant de décrire une UI en intégrant balisage et logique applicative.</p>
+
+<pre><code class="language-jsx">// JSX for React (web)
+const name = 'Clarisse Agbegnenou';
+const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
+</code></pre>
+
+<pre><code class="language-jsx">// JSX for React Native (mobile)
+const a = &lt;View /&gt;
+const b = (
+  &lt;View
+    foo='hello'
+    bar={baz}&gt;
+    &lt;Text&gt;42&lt;/Text&gt;
+  &lt;/View&gt;
+)
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="la-notion-de-composant">La notion de composant</h2>
+
+<ul>
+<li><p>Les <strong>composants</strong> sont les blocs de base d&rsquo;une application React (Native).</p></li>
+
+<li><p>Ils permettent de créer une UI sous forme <strong>déclarative</strong> par assemblage de composants.</p></li>
+
+<li><p>Ils doivent disposer d&rsquo;une méthode <code>render()</code> qui définit leur rendu visuel.</p></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="propriétés-props-d-un-composant">Propriétés (props) d&rsquo;un composant</h2>
+
+<p>Caractéristiques définies au moment de la création.
+Modifiables uniquement par le composant parent.</p>
+
+<pre><code class="language-jsx">import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+
+class Greeting extends Component {
+  render() {
+    return &lt;Text&gt;Hello {this.props.name}!&lt;/Text&gt;;
+  }
+}
+
+export default class LotsOfGreetings extends Component {
+  render() {
+    return (
+      &lt;View style={{ alignItems: &quot;center&quot; }}&gt;
+        &lt;Greeting name=&quot;John&quot; /&gt;
+        &lt;Greeting name=&quot;Paul&quot; /&gt;
+        &lt;Greeting name=&quot;Jones&quot; /&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="etat-d-un-composant">Etat d&rsquo;un composant</h2>
+
+<p>Etat interne (données) d&rsquo;un composant, susceptible de changer au cours du temps (mutable).
+Modifié uniquement via <code>setState()</code>.</p>
+
+<pre><code class="language-jsx">import React, { Component } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+    setInterval(() =&gt; {
+      this.setState({ count: this.state.count + 1 });
+    }, 1000);
+  }
+
+  render() {
+    const { count } = this.state;
+    const { color, size } = this.props;
+
+    return &lt;Text style={{ color, fontSize: size }}&gt;{count}&lt;/Text&gt;;
+  }
+}
+
+export default class CounterApp extends Component {
   render() {
     return (
       &lt;View style={styles.container}&gt;
-        &lt;Text&gt;Open up App.js to start working on your app!&lt;/Text&gt;
+        &lt;Counter color={&quot;red&quot;} size={30} /&gt;
       &lt;/View&gt;
     );
   }
@@ -398,55 +492,18 @@ const styles = StyleSheet.create({
 </code></pre>
 
 </section>
+				<section>
+
+<h2 id="composants-de-base">Composants de base</h2>
+
+<p><img src="images/basic_components.png" alt="React Native core components" /></p>
 
 </section>
 				<section>
 
-<section data-shortcode-section>
-<h2 id="déploiement-d-une-application">Déploiement d&rsquo;une application</h2>
+<h2 id="composants-d-interface-utilisateur">Composants d&rsquo;interface utilisateur</h2>
 
-<pre><code class="language-bash">cd MyApp
-npm start
-</code></pre>
-
-<p>Ensuite, scan du QR Code depuis l&rsquo;application Expo (Android) ou l&rsquo;appareil photo du smartphone (iOS).</p>
-
-<p><img src="images/expo_qrcode.png" alt="Expo QR Code" /></p>
-
-</section>
-				<section>
-
-<h2 id="détails-sur-le-déploiement">Détails sur le déploiement</h2>
-
-<ul>
-<li>L&rsquo;application est hébergée sur un serveur web local.</li>
-<li>Expo s&rsquo;y connecte pour la récupérer puis la lancer.</li>
-<li>Une interface de gestion s&rsquo;affiche dans le navigateur web local.</li>
-</ul>
-
-<p><img src="images/expo_management.png" alt="Expo Management" /></p>
-
-</section>
-				<section>
-
-<h2 id="live-reload">Live Reload</h2>
-
-<figure>
-    <img src="images/expo_reload.jpeg"/> <figcaption>
-            <p>
-                    <a href="https://openclassrooms.com/fr/courses/4902061-developpez-une-application-mobile-react-native/">Extrait du cours OpenClassrooms sur React Native</a></p>
-        </figcaption>
-</figure>
-
-</section>
-
-</section>
-				<section>
-
-<h2 id="exemple-d-application">Exemple d&rsquo;application</h2>
-
-<p><a href="https://github.com/ensc-mobi/RandomBeer">https://github.com/ensc-mobi/RandomBeer</a>
-<img src="images/random_beer.png" alt="Random Beer app" /></p>
+<p><img src="images/ui_components.png" alt="React native UI components" /></p>
 </section>
 				</div>
 	</div>

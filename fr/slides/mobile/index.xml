@@ -10,25 +10,35 @@
     
     
     <item>
+      <title>Le langage JavaScript</title>
+      <link>https://www.bpesquet.fr/fr/slides/mobile/javascript/</link>
+      <pubDate>Mon, 16 Dec 2019 21:50:46 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/fr/slides/mobile/javascript/</guid>
+      <description>Sommaire  Pourquoi JavaScript ? Syntaxe du langage Environnement de travail  Pourquoi JavaScript ? JavaScript is eating the world Un pré-requis essentiel La majorité des solutions mobiles multi-plateformes est basée sur JavaScript.
+Un langage modernisé JavaScript est normalisé sous le nom ECMAScript.
+La norme ES2015 (ou ES6) a apporté de très nombreuses améliorations au langage.
+La syntaxe du langage Déclaration de variables JavaScript est un langage à typage dynamique.</description>
+    </item>
+    
+    <item>
       <title>Introduction à React Native</title>
       <link>https://www.bpesquet.fr/fr/slides/mobile/intro-react-native/</link>
       <pubDate>Wed, 23 May 2018 23:34:24 +0200</pubDate>
       
       <guid>https://www.bpesquet.fr/fr/slides/mobile/intro-react-native/</guid>
-      <description>Sommaire  L&amp;rsquo;écosystème mobile Le JavaScript moderne Premiers pas avec React Native  L&amp;rsquo;écosystème mobile  Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
+      <description>Sommaire  L&amp;rsquo;écosystème mobile Premiers pas avec React Native Anatomie d&amp;rsquo;une application React Native  L&amp;rsquo;écosystème mobile Développement natif Création d&amp;rsquo;applications en utilisant la technologie prévue par le concepteur de l&amp;rsquo;OS.
  Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
     </item>
     
     <item>
-      <title>Création d&#39;applications mobiles avec React Native</title>
+      <title>(WIP) Création d&#39;applications mobiles avec React Native</title>
       <link>https://www.bpesquet.fr/fr/slides/mobile/app-react-native/</link>
       <pubDate>Thu, 10 Jan 2019 22:45:23 +0100</pubDate>
       
       <guid>https://www.bpesquet.fr/fr/slides/mobile/app-react-native/</guid>
-      <description>Sommaire  Les composants Navigation entre vues Gestion de l&amp;rsquo;état Interaction avec Firebase  Les composants La notion de composant Les composants sont les blocs de base d&amp;rsquo;une application React (Native).
-Ils permettent de créer une UI sous forme déclarative par assemblage de composants.
-Propriétés d&amp;rsquo;un composant  Caractéristiques définies au moment de la création. Modifiables uniquement par le composant parent.
-import React, { Component } from &#39;react&#39;; import { Text, View } from &#39;react-native&#39;; class Greeting extends Component { render() { return &amp;lt;Text&amp;gt;Hello {this.</description>
+      <description>Sommaire  TODO Navigation entre vues Gestion de l&amp;rsquo;état Interaction avec Firebase  TODO Gestion du style  Défini via la propriété style pour les composants de base. Semblable à CSS avec nommage camelCase.
+import React, { Component } from &#39;react&#39;; import { StyleSheet, Text, View } from &#39;react-native&#39;; const styles = StyleSheet.create({ bigblue: { color: &#39;blue&#39;, fontWeight: &#39;bold&#39;, fontSize: 30, }, red: { color: &#39;red&#39;, }, }); export default class LotsOfStyles extends Component { render() { return ( &amp;lt;View&amp;gt; &amp;lt;Text style={styles.</description>
     </item>
     
   </channel>

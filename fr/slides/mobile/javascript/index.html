@@ -1,0 +1,572 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Le langage JavaScript</title>
+
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/css/theme/white.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/reveal.js/lib/css/zenburn.css">
+
+	
+	<link rel="stylesheet" href="https://www.bpesquet.fr/css/reveal.css">
+
+	
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/pdf.css' : 'https:\/\/www.bpesquet.fr\/reveal.js\/css\/print\/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+    <h1>Le langage JavaScript</h1>
+
+    <p><a href="https://ensc.bordeaux-inp.fr">Ecole Nationale Supérieure de Cognitique</a></p>
+
+    <p><a href="https://www.bpesquet.fr">Baptiste Pesquet</a></p>
+
+    
+    
+    
+</section>
+
+			<section>
+
+<h2 id="sommaire">Sommaire</h2>
+
+<ul>
+<li>Pourquoi JavaScript ?</li>
+<li>Syntaxe du langage</li>
+<li>Environnement de travail</li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="pourquoi-javascript">Pourquoi JavaScript ?</h2>
+
+</section>
+				<section>
+
+<h2 id="javascript-is-eating-the-world">JavaScript is eating the world</h2>
+
+<p><img src="images/thus-javascript-is-eating-the-world.jpg" alt="JS is eating the world" /></p>
+
+</section>
+				<section>
+
+<h2 id="un-pré-requis-essentiel">Un pré-requis essentiel</h2>
+
+<p>La majorité des solutions mobiles multi-plateformes est basée sur JavaScript.</p>
+
+<p><img src="images/mobile_logos.png" alt="Frameworks multi-plateformes" /></p>
+
+</section>
+				<section>
+
+<h2 id="un-langage-modernisé">Un langage modernisé</h2>
+
+<p>JavaScript est normalisé sous le nom <strong>ECMAScript</strong>.</p>
+
+<p><img src="images/js_history.png" alt="ECMAScript releases" /></p>
+
+<p>La norme <strong>ES2015</strong> (ou ES6) a apporté de très nombreuses améliorations au langage.</p>
+
+</section>
+				<section>
+
+<h2 id="la-syntaxe-du-langage">La syntaxe du langage</h2>
+
+</section>
+				<section>
+
+<h2 id="déclaration-de-variables">Déclaration de variables</h2>
+
+<p>JavaScript est un langage à typage <strong>dynamique</strong>.</p>
+
+<p><code>let</code> et <code>const</code> remplacent avantageusement <code>var</code> pour la déclaration des variables.</p>
+
+<p>La valeur d&rsquo;une variable déclarée avec <code>const</code> ne peut plus être modifiée.</p>
+
+<pre><code class="language-js">let a = 3.14;
+a = 6.28; // OK
+
+const b = 3.14;
+b = 6.28; // Erreur!
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="chaînes-de-caractères">Chaînes de caractères</h2>
+
+<p>Créées avec des guillemets simples (<code>'...'</code>) ou doubles (<code>&quot;...&quot;</code>).</p>
+
+<p><strong>Litéraux de modèle</strong>: chaînes créées entre <em>backticks</em> (`) et permettant d&rsquo;intégrer des expressions.</p>
+
+<pre><code class="language-js">const country = &quot;France&quot;; // or 'France'
+console.log(`I live in ${country}`); // &quot;I live in France&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="déclaration-de-fonctions">Déclaration de fonctions</h2>
+
+<pre><code class="language-js">function sayHello(name) {
+  const message = `Hello, ${name}!`;
+  return message;
+}
+
+console.log(sayHello(&quot;Richard&quot;)); // &quot;Hello, Richard!&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="expressions-fonction">Expressions fonction</h2>
+
+<p>Permettent de créer des fonctions anonymes.</p>
+
+<p>La valeur d&rsquo;une variable JavaScript peut être une fonction.</p>
+
+<pre><code class="language-js">const hello = function(name) {
+  const message = `Hello, ${name}!`;
+  return message;
+};
+
+console.log(hello(&quot;Richard&quot;)); // &quot;Hello, Richard!&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="fonctions-fléchées">Fonctions fléchées</h2>
+
+<p>&ldquo;<em>Fat arrow functions</em>&rdquo;.</p>
+
+<p>Syntaxe plus concise pour créer des fonctions anonymes.</p>
+
+<pre><code class="language-js">const hello = name =&gt; {
+  const message = `Hello, ${name}!`;
+  return message;
+};
+
+// Syntaxe alternative encore plus concise
+// const hello = name =&gt; `Hello, ${name}!`;
+
+console.log(hello(&quot;Richard&quot;)); // &quot;Bonjour, Richard!&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="tableaux">Tableaux</h2>
+
+<p>Plusieurs syntaxes existent pour les parcourir.</p>
+
+<pre><code class="language-js">const movies = [&quot;The Wolf of Wall Street&quot;, &quot;Zootopia&quot;, &quot;Babysitting&quot;];
+console.log(movies.length); // 3
+
+for (let i = 0; i &lt; movies.length; i++) {
+  // Use movies[i] to access each array element one by one
+}
+
+movies.forEach(movie =&gt; {
+  // Use movie to access each array element one by one
+});
+
+for (const movie of movies) {
+  // Use movie to access each array element one by one
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="objets">Objets</h2>
+
+<p>Un objet JavaScript regroupe un ensemble de <strong>propriétés</strong> (paire clé/valeur).</p>
+
+<pre><code class="language-js">// Création d'un objet litéral
+const pen = {
+  type: &quot;ballpoint&quot;,
+  color: &quot;blue&quot;,
+  brand: &quot;Bic&quot;
+};
+
+// Modifcation de la valeur d'une propriété
+pen.color = &quot;red&quot;;
+
+console.log(pen.type);  // &quot;ballpoint&quot;
+console.log(pen.color); // &quot;red&quot;
+console.log(pen.brand); // &quot;Bic&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="création-d-objets-à-partir-de-variables">Création d&rsquo;objets à partir de variables</h2>
+
+<pre><code class="language-js">const firstName = &quot;Baptiste&quot;;
+const lastName = &quot;Pesquet&quot;;
+const twitterHandle = &quot;@bpesquet&quot;;
+
+const teacher = {firstName, lastName, twitterHandle};
+
+console.log(teacher.firstName); // &quot;Baptiste&quot;
+console.log(teacher.lastName); // &quot;Pesquet&quot;
+console.log(teacher.twitterHandle); // &quot;@bpesquet&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="déstructuration-d-objets">Déstructuration d&rsquo;objets</h2>
+
+<pre><code class="language-js">const pen = {
+  type: &quot;ballpoint&quot;,
+  color: &quot;blue&quot;,
+  brand: &quot;Bic&quot;
+};
+
+// Accès à 2 des propriétés de l'objet
+const { color, brand } = pen;
+
+console.log(color); // &quot;blue&quot;
+console.log(brand); // &quot;Bic&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="déstructuration-de-tableaux">Déstructuration de tableaux</h2>
+
+<pre><code class="language-js">const primaryColors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];
+
+const [red, green, blue] = primaryColors;
+
+console.log(red);   // &quot;red&quot;
+console.log(green); // &quot;red&quot;
+console.log(blue);  // &quot;blue&quot;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="opérateur-de-décomposition-spread">Opérateur de décomposition (&rdquo;<em>spread</em>&rdquo;)</h2>
+
+<p>Permet de développer une valeur itérable (chaîne, tableau&hellip;).</p>
+
+<pre><code class="language-js">const chaine = &quot;foo bar&quot;;
+console.log(chaine);      // &quot;foo bar&quot;
+console.log([...chaine]); // [&quot;f&quot;, &quot;o&quot;, &quot;o&quot;, &quot; &quot;, &quot;b&quot;, &quot;a&quot;, &quot;r&quot;]
+
+const numbers = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;];
+
+const [one, two, ...rest] = numbers;
+
+console.log(one);  // &quot;one&quot;
+console.log(two);  // &quot;two&quot;
+console.log(rest); // [&quot;three&quot;, &quot;four&quot;]
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="notion-de-méthode">Notion de méthode</h2>
+
+<p>La valeur d&rsquo;une propriété peut être une donnée ou une fonction. Dans le second cas, la propriété est une <strong>méthode</strong>.</p>
+
+<pre><code class="language-js">const aurora = {
+  name: &quot;Aurora&quot;,
+  health: 150,
+  strength: 25,
+
+  // Renvoie la description du personnage
+  describe() {
+    return `${this.name} has ${this.health} health points
+      and ${this.strength} as strength`;
+  }
+};
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="classes">Classes</h2>
+
+<pre><code class="language-js">class Character {
+  constructor(name, health, strength) {
+    this.name = name;
+    this.health = health;
+    this.strength = strength;
+  }
+  describe() {
+    return `${this.name} has ${this.health} health points
+      and ${this.strength} as strength`;
+  }
+}
+
+const aurora = new Character(&quot;Aurora&quot;, 150, 25);
+console.log(aurora.describe());
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="appels-asynchrones">Appels asynchrones</h2>
+
+<p>Une <strong>promesse</strong> (<em>promise</em>) est un objet qui encapsule une opération dont le résultat n&rsquo;est pas encore connu.</p>
+
+<pre><code class="language-js">// Envoie une requête HTTP asynchrone vers l'URL spécifiée
+fetch(url)
+  .then(() =&gt; {
+    // Code appelé ultérieurement si la requête réussit
+  })
+  .catch(() =&gt; {
+    // Code appelé ultérieurement si la requête échoue
+  });
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="consommation-d-api-web">Consommation d&rsquo;API web</h2>
+
+<pre><code class="language-js">// Envoi d'une requête HTTP asynchrone vers l'URL spécifiée
+// La réponse est reçue sous forme de données JSON
+fetch(&quot;http://my-api-url&quot;)
+  .then(response =&gt; response.json()) // JSON vers JavaScript
+  .then(content =&gt; {
+    // Utilisation du contenu de la réponse
+    // ...
+  })
+  .catch(err =&gt; {
+    console.error(err.message);
+  });
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="modules-et-imports">Modules et imports</h2>
+
+<p>JavaScript supporte la notion de <strong>module</strong> pour factoriser des éléments réutilisables.</p>
+
+<pre><code class="language-js">// Importe l'élément exporté par défaut par le module
+import React from &quot;react-native&quot;;
+
+// Importe d'autres éléments exportés grâce à leur nom
+import { View, Text, Image } from &quot;react-native&quot;;
+
+// Importe à la fois l'élément par défaut et d'autres éléments
+import React, { View, Text, Image } from &quot;react-native&quot;;
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="plus-de-détails-sur-javascript">Plus de détails sur JavaScript</h2>
+
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">https://developer.mozilla.org/fr/docs/Web/JavaScript</a></p>
+
+<p><a href="https://github.com/thejsway/thejsway/">https://github.com/thejsway/thejsway/</a></p>
+
+<p><a href="https://github.com/getify/You-Dont-Know-JS">https://github.com/getify/You-Dont-Know-JS</a></p>
+
+</section>
+				<section>
+
+<h2 id="environnement-de-travail">Environnement de travail</h2>
+
+</section>
+				<section>
+
+<p><img src="images/node-logo.png" alt="Node logo" /></p>
+
+<ul>
+<li><p>Plate-forme JavaScript basée sur le moteur d&rsquo;exécution V8 de Chrome.</p></li>
+
+<li><p>Permet de créer des applications JS hors du navigateur (serveur, mobile, etc).</p></li>
+
+<li><p>Supporte un riche écosystème de librairies en tout genre installables sous forme de <strong>packages</strong>.</p></li>
+</ul>
+
+</section>
+				<section>
+
+<h2 id="gestion-des-dépendances">Gestion des dépendances</h2>
+
+<p>Le standard historique est <a href="https://www.npmjs.com/">npm</a>.</p>
+
+<pre><code class="language-bash">npm init # Create a minimal package.json file
+
+npm install &lt;package name&gt; # Install &lt;package name&gt; locally
+npm install -g &lt;package name&gt; # Install &lt;package name&gt; globally
+npm install # Install all packages listed in package.json
+
+npm update    # Update local packages to latest version
+npm update -g # Update global packages to latest version
+
+npm list    # List locally installed packages
+npm list -g # List globally installed packages
+
+# Search the package index for &lt;package name&gt;
+npm search &lt;package name&gt;
+</code></pre>
+
+<p>Autre possibilité : <a href="https://yarnpkg.com/lang/en/">yarn</a> (plus récent).</p>
+
+</section>
+				<section>
+
+<h2 id="le-fichier-package-json">Le fichier package.json</h2>
+
+<p>Associé à un fichier verrou <code>package-lock.json</code>.</p>
+
+<pre><code class="language-json">{
+  &quot;main&quot;: &quot;node_modules/expo/AppEntry.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;expo start&quot;,
+    &quot;android&quot;: &quot;expo start --android&quot;,
+    &quot;ios&quot;: &quot;expo start --ios&quot;,
+    &quot;eject&quot;: &quot;expo eject&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;react-native&quot;: &quot;https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz&quot;,
+    &quot;expo&quot;: &quot;~35.0.0&quot;,
+    &quot;react&quot;: &quot;16.8.3&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;babel-preset-expo&quot;: &quot;~8.0.0&quot;
+  },
+  &quot;private&quot;: true
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="versionnage-des-dépendances">Versionnage des dépendances</h2>
+
+<p>Versionnage sémantique <strong>X.Y.Z</strong></p>
+
+<ul>
+<li>X = version majeure (changements potentiellement non rétrocompatibles).</li>
+<li>Y = version mineure.</li>
+<li>Z = patch.</li>
+</ul>
+
+<p><strong>^1.1.1</strong> équivaut à $\geq$ 1.1.1 et $&lt;$ 2.0.0</p>
+
+<p><strong>~1.1.1</strong> équivaut à $\geq$ 1.1.1 et $&lt;$ 1.2.0</p>
+
+<p><strong>1.1.1</strong> cible une version exacte.</p>
+
+</section>
+				<section>
+
+<h2 id="formatage-automatique-du-code">Formatage automatique du code</h2>
+
+<p><a href="https://prettier.io/">Prettier</a> est un outil indispensable.</p>
+
+<p><a href="https://prettier.io/"><img src="images/prettier-logo-light.png" alt="Prettier logo" /></a></p>
+
+</section>
+				<section>
+
+<h2 id="analyse-du-code">Analyse du code</h2>
+
+<p><a href="https://eslint.org/">ESLint</a> est l&rsquo;outil le plus utilisé. Sa configuration se fait via un fichier <code>.eslintrc.json</code>.</p>
+
+<pre><code>{
+  &quot;extends&quot;: [&quot;airbnb&quot;, &quot;prettier&quot;],
+  &quot;env&quot;: {
+    &quot;browser&quot;: true
+  },
+  &quot;plugins&quot;: [&quot;prettier&quot;],
+  &quot;rules&quot;: {
+    &quot;no-console&quot;: &quot;off&quot;,
+    &quot;no-alert&quot;: &quot;off&quot;,
+    &quot;no-plusplus&quot;: &quot;off&quot;,
+    &quot;default-case&quot;: &quot;off&quot;,
+    &quot;no-param-reassign&quot;: [
+      &quot;error&quot;,
+      {
+        &quot;props&quot;: false
+      }
+    ],
+    &quot;arrow-body-style&quot;: [
+      &quot;error&quot;,
+      &quot;as-needed&quot;,
+      { &quot;requireReturnForObjectLiteral&quot;: true }
+    ]
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="transpilation-du-code">Transpilation du code</h2>
+
+<ul>
+<li><a href="https://babeljs.io/">Babel</a> transforme le code JavaScript ES2015+ en code ES5 compatible avec tous les environnements d&rsquo;exécution JS.</li>
+<li>Il permet d&rsquo;utiliser sereinement les dernières évolutions du langage.</li>
+</ul>
+
+<p><a href="https://babeljs.io/"><img src="images/Babel-Javascript-compiler.png" alt="Babel logo" /></a></p>
+</section>
+				</div>
+	</div>
+	<div>
+		<a href="https://ensc.bordeaux-inp.fr">
+			<img src="https://www.bpesquet.fr/images/ENSC.jpg" style="position: absolute;
+						bottom: 10px;
+						left: 10px;" />
+		</a>
+	</div>
+
+	<script src="https://www.bpesquet.fr/reveal.js/lib/js/head.min.js"></script>
+	<script src="https://www.bpesquet.fr/reveal.js/js/reveal.js"></script>
+
+	<script>
+		
+		
+		
+		Reveal.initialize({
+			
+			history: false,
+			
+			slideNumber: true,
+			
+			transition: "convex",
+			math: {
+				mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+				config: 'TeX-MML-AM_HTMLorMML'  
+			},
+			dependencies: [
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/marked.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/markdown\/markdown.js' },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/notes\/notes.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/zoom-js\/zoom.js', async: true },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/highlight\/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https:\/\/www.bpesquet.fr\/reveal.js\/plugin\/math\/math.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
