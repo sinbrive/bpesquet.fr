@@ -43,16 +43,6 @@ La syntaxe du langage Déclaration de variables JavaScript est un langage à typ
     </item>
     
     <item>
-      <title>(WIP) Création d&#39;applications mobiles avec React Native</title>
-      <link>https://www.bpesquet.fr/fr/slides/mobile/app-react-native/</link>
-      <pubDate>Thu, 10 Jan 2019 22:45:23 +0100</pubDate>
-      
-      <guid>https://www.bpesquet.fr/fr/slides/mobile/app-react-native/</guid>
-      <description>Sommaire  TODO Navigation entre vues Gestion de l&amp;rsquo;état Interaction avec Firebase  TODO Gestion du style  Défini via la propriété style pour les composants de base. Semblable à CSS avec nommage camelCase.
-import React, { Component } from &#39;react&#39;; import { StyleSheet, Text, View } from &#39;react-native&#39;; const styles = StyleSheet.create({ bigblue: { color: &#39;blue&#39;, fontWeight: &#39;bold&#39;, fontSize: 30, }, red: { color: &#39;red&#39;, }, }); export default class LotsOfStyles extends Component { render() { return ( &amp;lt;View&amp;gt; &amp;lt;Text style={styles.</description>
-    </item>
-    
-    <item>
       <title>Python et la Data Science</title>
       <link>https://www.bpesquet.fr/fr/slides/ai/python-data-science/</link>
       <pubDate>Thu, 31 May 2018 21:59:13 +0200</pubDate>
