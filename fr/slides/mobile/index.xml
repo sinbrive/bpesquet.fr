@@ -31,5 +31,17 @@ La syntaxe du langage Déclaration de variables JavaScript est un langage à typ
  Android : Java IOS : Objective-C ou Swift  Ces technologies sont incompatibles. Avantages  Accès à l&amp;rsquo;intégralité des fonctionnalités matérielles et logicielles du terminal mobile. Performances optimales.  Inconvénient (majeur !) Nécessité de créer puis de faire évoluer une application pour chaque environnement.</description>
     </item>
     
+    <item>
+      <title>React Native : gestion de l&#39;UI</title>
+      <link>https://www.bpesquet.fr/fr/slides/mobile/react-native-ui/</link>
+      <pubDate>Tue, 07 Jan 2020 23:06:33 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/fr/slides/mobile/react-native-ui/</guid>
+      <description>Sommaire  Cycle de vie d&amp;rsquo;un composant Style et positionnement Gestion de la navigation  Cycle de vie d&amp;rsquo;un composant Notion de cycle de vie Les composants RN suivent un cycle de vie bien défini composé d&amp;rsquo;étapes : montage, rendu, mise à jour, démontage et suppression.
+
+Méthodes liées au cycle de vie Les redéfinir permet d&amp;rsquo;exécuter du code spécifique.
+ constructor(props) : initialisation des propriétés et de l&amp;rsquo;état. render() : renvoi d&amp;rsquo;un élément React Native.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/slides/mobile/javascript/</loc>
-    <lastmod>2019-12-20T00:08:58+01:00</lastmod>
+    <lastmod>2020-01-09T16:22:57+01:00</lastmod>
   </url>
   
   <url>
@@ -35,6 +35,11 @@
                 hreflang="fr"
                 href="https://www.bpesquet.fr/fr/slides/ai/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/fr/slides/mobile/react-native-ui/</loc>
+    <lastmod>2020-01-08T23:09:06+01:00</lastmod>
   </url>
   
   <url>
@@ -114,7 +119,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/</loc>
-    <lastmod>2020-01-08T23:09:06+01:00</lastmod>
+    <lastmod>2020-01-09T16:22:57+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
