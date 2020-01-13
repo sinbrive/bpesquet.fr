@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/fr/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Jan 2020 23:06:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 21:50:06 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/fr/index.xml" rel="self" type="application/rss+xml" />
     
@@ -61,6 +61,18 @@ Méthodes liées au cycle de vie Les redéfinir permet d&amp;rsquo;exécuter du 
       
       <guid>https://www.bpesquet.fr/fr/slides/ai/python-data-science/</guid>
       <description>Sommaire  Introduction à la Data Science Pourquoi Python ? Outils Python pour la Data Science  Installation simplifiée avec Anaconda Partage de code avec Jupyter Notebook Calcul mathématique avec NumPy Analyse de données avec Pandas Création de graphiques avec Matplotlib/Seaborn   Introduction à la Data Science Qu&amp;rsquo;est-ce que la Data Science ?  Objectif général : extraire de la connaissance à partir de données. Expression popularisée à partir de 1997 par certains statisticiens.</description>
+    </item>
+    
+    <item>
+      <title>React Native : gestion de l&#39;état</title>
+      <link>https://www.bpesquet.fr/fr/slides/mobile/react-native-state/</link>
+      <pubDate>Sun, 12 Jan 2020 21:50:06 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/fr/slides/mobile/react-native-state/</guid>
+      <description>Sommaire  Partage de l&amp;rsquo;état entre composants Centralisation de l&amp;rsquo;état Gestion de l&amp;rsquo;état avec MobX  Partage de l&amp;rsquo;état entre composants Rappels sur les propriétés Propriétés (props) = caractéristiques définies au moment de la création du composant.
+Les propriétés sont modifiables uniquement par le composant parent.
+Rappels sur l&amp;rsquo;état Etat (state) = ensemble des données susceptibles d&amp;rsquo;être modifiées pendant l&amp;rsquo;exécution de l&amp;rsquo;application.
+Chaque composant React Native possède un état interne, géré avec this.</description>
     </item>
     
     <item>

@@ -14,7 +14,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/slides/mobile/intro-react-native/</loc>
-    <lastmod>2020-01-08T23:09:06+01:00</lastmod>
+    <lastmod>2020-01-12T12:18:05+01:00</lastmod>
   </url>
   
   <url>
@@ -39,7 +39,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/slides/mobile/react-native-ui/</loc>
-    <lastmod>2020-01-08T23:09:06+01:00</lastmod>
+    <lastmod>2020-01-12T12:18:05+01:00</lastmod>
   </url>
   
   <url>
@@ -70,6 +70,11 @@
   <url>
     <loc>https://www.bpesquet.fr/fr/slides/realite-virtuelle/</loc>
     <lastmod>2019-09-24T16:33:53+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/fr/slides/mobile/react-native-state/</loc>
+    <lastmod>2020-01-12T21:50:06+01:00</lastmod>
   </url>
   
   <url>
@@ -119,7 +124,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/</loc>
-    <lastmod>2020-01-09T16:22:57+01:00</lastmod>
+    <lastmod>2020-01-12T21:50:06+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

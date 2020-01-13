@@ -43,5 +43,17 @@ Méthodes liées au cycle de vie Les redéfinir permet d&amp;rsquo;exécuter du 
  constructor(props) : initialisation des propriétés et de l&amp;rsquo;état. render() : renvoi d&amp;rsquo;un élément React Native.</description>
     </item>
     
+    <item>
+      <title>React Native : gestion de l&#39;état</title>
+      <link>https://www.bpesquet.fr/fr/slides/mobile/react-native-state/</link>
+      <pubDate>Sun, 12 Jan 2020 21:50:06 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/fr/slides/mobile/react-native-state/</guid>
+      <description>Sommaire  Partage de l&amp;rsquo;état entre composants Centralisation de l&amp;rsquo;état Gestion de l&amp;rsquo;état avec MobX  Partage de l&amp;rsquo;état entre composants Rappels sur les propriétés Propriétés (props) = caractéristiques définies au moment de la création du composant.
+Les propriétés sont modifiables uniquement par le composant parent.
+Rappels sur l&amp;rsquo;état Etat (state) = ensemble des données susceptibles d&amp;rsquo;être modifiées pendant l&amp;rsquo;exécution de l&amp;rsquo;application.
+Chaque composant React Native possède un état interne, géré avec this.</description>
+    </item>
+    
   </channel>
 </rss>
