@@ -115,6 +115,88 @@
 </section>
 				<section>
 
+<h2 id="utilisation-de-props-dans-les-composants-enfants">Utilisation de props dans les composants enfants</h2>
+
+<pre><code class="language-jsx">class TemperatureInput extends React.Component {
+  _onChangeText = text =&gt; {
+    // Callback passed as component prop is called
+    this.props.onTemperatureChange(text);
+  };
+
+  render() {
+    const temperature = this.props.temperature;
+    const scale = this.props.scale;
+    const placeholder = `Enter temperature in ${scaleNames[scale]}`;
+    return (
+      &lt;TextInput
+        style={styles.text}
+        placeholder={placeholder}
+        value={temperature}
+        onChangeText={this._onChangeText}
+      /&gt;
+    );
+  }
+}
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="remontée-de-l-état-dans-le-composant-parent">Remontée de l&rsquo;état dans le composant parent</h2>
+
+<pre><code class="language-jsx">class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    // Common state is lifted in closest parent of TemperatureInput components
+    // Temperature can be set either in Celsius or in Fahrenheit
+    this.state = { temperature: &quot;&quot;, scale: &quot;c&quot; };
+  }
+
+  _onCelsiusChange = temperature =&gt; {
+    this.setState({ scale: &quot;c&quot;, temperature });
+  };
+
+  _onFahrenheitChange = temperature =&gt; {
+    this.setState({ scale: &quot;f&quot;, temperature });
+  };
+  // ...
+</code></pre>
+
+</section>
+				<section>
+
+<h2 id="appel-aux-actions-définies-dans-le-parent">Appel aux actions définies dans le parent</h2>
+
+<pre><code class="language-jsx">  // ...
+  render() {
+    const scale = this.state.scale;
+    const temperature = this.state.temperature;
+    const tempCelsius =
+      scale === &quot;f&quot; ? tryConvert(temperature, toCelsius) : temperature;
+    const tempFahrenheit =
+      scale === &quot;c&quot; ? tryConvert(temperature, toFahrenheit) : temperature;
+
+    return (
+      &lt;View&gt;
+        &lt;TemperatureInput
+          scale=&quot;c&quot;
+          temperature={tempCelsius}
+          onTemperatureChange={this._onCelsiusChange}
+        /&gt;
+        &lt;TemperatureInput
+          scale=&quot;f&quot;
+          temperature={tempFahrenheit}
+          onTemperatureChange={this._onFahrenheitChange}
+        /&gt;
+        &lt;BoilingResult tempCelsius={parseFloat(tempCelsius)} /&gt;
+      &lt;/View&gt;
+    );
+  }
+</code></pre>
+
+</section>
+				<section>
+
 <h2 id="centralisation-de-l-état">Centralisation de l&rsquo;état</h2>
 
 </section>
