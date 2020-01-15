@@ -326,41 +326,6 @@ console.log(aurora.describe());
 </section>
 				<section>
 
-<h2 id="appels-asynchrones">Appels asynchrones</h2>
-
-<p>Une <strong>promesse</strong> (<em>promise</em>) est un objet qui encapsule une opération dont le résultat n&rsquo;est pas encore connu.</p>
-
-<pre><code class="language-js">// Envoie une requête HTTP asynchrone vers l'URL spécifiée
-fetch(url)
-  .then(() =&gt; {
-    // Code appelé ultérieurement si la requête réussit
-  })
-  .catch(() =&gt; {
-    // Code appelé ultérieurement si la requête échoue
-  });
-</code></pre>
-
-</section>
-				<section>
-
-<h2 id="consommation-d-api-web">Consommation d&rsquo;API web</h2>
-
-<pre><code class="language-js">// Envoi d'une requête HTTP asynchrone vers l'URL spécifiée
-// La réponse est reçue sous forme de données JSON
-fetch(&quot;http://my-api-url&quot;)
-  .then(response =&gt; response.json()) // JSON vers JavaScript
-  .then(content =&gt; {
-    // Utilisation du contenu de la réponse
-    // ...
-  })
-  .catch(err =&gt; {
-    console.error(err.message);
-  });
-</code></pre>
-
-</section>
-				<section>
-
 <h2 id="modules-et-imports">Modules et imports</h2>
 
 <p>JavaScript supporte la notion de <strong>module</strong> pour factoriser des éléments réutilisables.</p>
@@ -548,7 +513,7 @@ npm search &lt;package name&gt;
 		
 		Reveal.initialize({
 			
-			history: false,
+			history: true,
 			
 			slideNumber: true,
 			
