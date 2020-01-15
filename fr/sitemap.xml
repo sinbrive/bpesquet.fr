@@ -93,6 +93,11 @@
   </url>
   
   <url>
+    <loc>https://www.bpesquet.fr/fr/slides/mobile/react-native-api/</loc>
+    <lastmod>2020-01-14T10:14:10+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.bpesquet.fr/fr/slides/ai/neural-networks/</loc>
     <lastmod>2019-10-14T20:46:56+02:00</lastmod>
     <xhtml:link
@@ -124,7 +129,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/fr/</loc>
-    <lastmod>2020-01-13T23:12:00+01:00</lastmod>
+    <lastmod>2020-01-14T10:14:10+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

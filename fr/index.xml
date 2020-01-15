@@ -5,7 +5,7 @@
     <link>https://www.bpesquet.fr/fr/</link>
     <description>Recent content on Baptiste Pesquet</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 12 Jan 2020 21:50:06 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 10:14:10 +0100</lastBuildDate>
     
 	<atom:link href="https://www.bpesquet.fr/fr/index.xml" rel="self" type="application/rss+xml" />
     
@@ -83,6 +83,18 @@ Chaque composant React Native possède un état interne, géré avec this.</desc
       <guid>https://www.bpesquet.fr/fr/slides/ai/fondamentaux-ml/</guid>
       <description>Sommaire  Introduction au Machine Learning Anatomie d&amp;rsquo;un système de ML supervisé Les étapes d&amp;rsquo;un projet de ML  Introduction au Machine Learning La première définition  &amp;ldquo;The field of study that gives computers the ability to learn without being explicitly programmed&amp;rdquo; (Arthur Samuel, 1959).
  Des machines qui apprennent ? Le Machine Learning ou apprentissage automatique regroupe un ensemble de techniques (algorithmes) permettant à des machines de s’entraîner sur des bases d’exemples pour :</description>
+    </item>
+    
+    <item>
+      <title>React Native : utilisation d&#39;API web</title>
+      <link>https://www.bpesquet.fr/fr/slides/mobile/react-native-api/</link>
+      <pubDate>Tue, 14 Jan 2020 10:14:10 +0100</pubDate>
+      
+      <guid>https://www.bpesquet.fr/fr/slides/mobile/react-native-api/</guid>
+      <description>Sommaire  Introduction aux API web Appels réseau avec JavaScript Interactions avec un SGBDR via une API  Introduction aux API web La notion d&amp;rsquo;API Une API (Application Programming Interface) est un point d&amp;rsquo;entrée programmatique dans un système.
+Elle fournit un moyen d&amp;rsquo;interagir avec ce système.
+Les API permettent aux développeurs d&amp;rsquo;intégrer des services externes dans leurs applications.
+Spécificités des API web Une API web (appelée parfois service web) est une API accessible via les technologies du web : HTTP ou HTTPS.</description>
     </item>
     
     <item>
