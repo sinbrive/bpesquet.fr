@@ -4,15 +4,16 @@ body {
 }
 
 body {
-  padding-top: 55px;
+  padding-top: 50px;
   display: flex;
   text-align: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
   margin: auto;
-  padding: 25px;
+  /*padding: 25px;*/
   flex: 1 0 auto;
 }
 
@@ -24,24 +25,32 @@ main {
 
 /*home page*/
 
-.intro {
-  transform: translateY(10vh);
+.homepage {
+  display:flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro > h1 {
-  color: #212121;
-  font-size: 7vh;
-}
-
-.intro > h2 {
-  color: #757575;
-  font-size: 5vh;
+  /*color: #212121;*/
+  /*font-size: 5vh;*/
+  font-weight: bold;
 }
 
 .intro > .profile {
-  width: 20vh;
-  height: 20vh;
+  width: 18vh;
+  height: 18vh;
   border-radius: 50%;
+}
+
+.intro > .links {
+  margin-top: 15px;
+  font-size: 150%;
+}
+
+.intro i {
+  margin: 10px;
 }
 
 /*apply accent colour to links*/

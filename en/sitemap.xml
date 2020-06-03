@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/en/slides/ai/deconstructing-ai/</loc>
-    <lastmod>2020-01-27T19:23:39+01:00</lastmod>
+    <lastmod>2020-02-04T20:54:10+01:00</lastmod>
   </url>
   
   <url>
@@ -119,7 +119,7 @@
   
   <url>
     <loc>https://www.bpesquet.fr/en/</loc>
-    <lastmod>2020-01-27T19:23:39+01:00</lastmod>
+    <lastmod>2020-02-04T20:54:10+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -172,21 +172,6 @@
   </url>
   
   <url>
-    <loc>https://www.bpesquet.fr/en/publication/</loc>
-    <lastmod>2019-09-24T16:33:53+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://www.bpesquet.fr/fr/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.bpesquet.fr/en/publication/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.bpesquet.fr/en/slides/</loc>
     <lastmod>2019-09-24T16:33:53+02:00</lastmod>
     <xhtml:link
@@ -198,6 +183,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.bpesquet.fr/en/slides/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.bpesquet.fr/en/publication/</loc>
+    <lastmod>2019-09-24T16:33:53+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://www.bpesquet.fr/fr/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.bpesquet.fr/en/publication/"
                 />
   </url>
   
